@@ -1,0 +1,104 @@
+/* ==========================================================================
+   AURELIA SURFACES — Dark Mode Stylesheet (assets/css/dark-mode.css)
+   Deep Espresso (#1C1A18) & Warm Bronze (#A67C52) Luxury Nocturne Theme
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --bg-primary: #1C1A18;
+  --bg-elevated: #25221F;
+  --bg-secondary: #2F2B27;
+  --bg-secondary-soft: #221F1C;
+  --bg-dark: #141210;
+  --bg-dark-elevated: #1E1B18;
+
+  --text-primary: #F5F0E8;
+  --text-secondary: #C8BFB2;
+  --text-muted: #9A9287;
+
+  --accent: #B88B5E;
+  --accent-hover: #CCA072;
+  --accent-text: #D1A679;
+  --accent-soft: rgba(184, 139, 94, 0.2);
+
+  --state-error: #E08A7B;
+  --state-error-bg: #36221F;
+  --state-success: #9BB889;
+  --state-success-bg: #1F2B1C;
+  --state-warning: #D8B074;
+  --state-warning-bg: #30271A;
+
+  --border-subtle: rgba(245, 240, 232, 0.11);
+  --border-strong: rgba(245, 240, 232, 0.22);
+  --border-bronze: rgba(184, 139, 94, 0.44);
+
+  --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.36);
+  --shadow-elevated: 0 28px 64px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] body::before {
+  opacity: 0.035;
+  background-image: radial-gradient(#F5F0E8 0.65px, transparent 0.65px);
+}
+
+[data-theme="dark"] .site-header {
+  background-color: rgba(28, 26, 24, 0.92);
+}
+
+[data-theme="dark"] .site-header.is-scrolled {
+  background-color: rgba(28, 26, 24, 0.85);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .btn--dark {
+  background-color: var(--accent);
+  color: #141210;
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .btn--dark:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #141210;
+}
+
+[data-theme="dark"] .btn--primary {
+  color: #141210;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .btn--primary:hover {
+  color: #141210;
+}
+
+[data-theme="dark"] .card-glare {
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(215, 180, 140, 0.18) 0%,
+    rgba(215, 180, 140, 0) 62%
+  );
+}
+
+[data-theme="dark"] .lux-card__media::after {
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 225, 198, 0.22) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+[data-theme="dark"] .form-control {
+  background-color: #181614;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .editorial-split__tag {
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .showroom-map-card {
+  background-color: rgba(28, 26, 24, 0.94);
+  border-color: var(--accent);
+}
+

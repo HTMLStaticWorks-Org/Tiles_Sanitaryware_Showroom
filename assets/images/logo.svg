@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldIso" x1="12" y1="6" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0D498"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#8C6642"/>
+    </linearGradient>
+  </defs>
+  <!-- Top Golden Slab (Polished Marble Tile) -->
+  <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIso)" />
+  <!-- Left Slab (Deep Charcoal Architectural Ceramic) -->
+  <polygon points="7,17 22,26 22,43 7,34" fill="#2B2A28" />
+  <!-- Right Slab (Burnished Bronze Surface Slab) -->
+  <polygon points="26,26 41,17 41,34 26,43" fill="#A67C52" opacity="0.92" />
+</svg>

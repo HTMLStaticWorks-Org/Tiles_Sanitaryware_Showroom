@@ -1,0 +1,64 @@
+/* ==========================================================================
+   AURELIA SURFACES — Full RTL Stylesheet (assets/css/rtl.css)
+   Logical CSS Layout Overrides & Directional Symmetry for [dir="rtl"]
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: start;
+}
+
+/* Cards strictly preserve center alignment in all views (Rule 4) */
+[dir="rtl"] .lux-card,
+[dir="rtl"] .lux-card__body {
+  text-align: center;
+  align-items: center;
+}
+
+[dir="rtl"] .btn:hover svg {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] svg.lucide-arrow-right,
+[dir="rtl"] svg.lucide-chevron-right,
+[dir="rtl"] svg.lucide-chevron-left {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn:hover svg.lucide-arrow-right {
+  transform: scaleX(-1) translateX(3px);
+}
+
+[dir="rtl"] .page-hero__bg::after {
+  background: linear-gradient(270deg, rgba(28, 26, 24, 0.88) 0%, rgba(28, 26, 24, 0.52) 100%);
+}
+
+[dir="rtl"] .spec-modal {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .spec-modal__drawer {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .spec-modal.is-open .spec-modal__drawer {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .marquee__track {
+  animation-name: marqueeScrollRtl;
+}
+
+@keyframes marqueeScrollRtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .brand-logo__name,
+[dir="rtl"] .brand-logo__sub,
+[dir="rtl"] .nav-link,
+[dir="rtl"] .btn {
+  letter-spacing: 0.06em;
+}
+

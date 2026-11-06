@@ -1,0 +1,8 @@
+# Production robots.txt — Aurelia Surfaces Showroom
+# TODO: Replace domain placeholder below with your production domain
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://aureliasurfaces.example.com/sitemap.xml
+

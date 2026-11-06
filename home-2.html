@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architectural Surfaces &amp; Design | Aurelia Showroom</title>
+  <meta name="description" content="Experience architectural porcelain slabs, natural travertine, PVD bathware, and bespoke surface design inspiration at Aurelia Surfaces flagship atelier." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aureliasurfaces.example.com/home-2.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Architectural Surfaces &amp; Design | Aurelia Showroom" />
+  <meta property="og:description" content="Every surface tells a story. Explore large-format sintered slabs, tactile finishes, and luxury bathware." />
+  <meta property="og:image" content="assets/images/home2-hero-architectural-atrium.webp" />
+  <meta property="og:url" content="https://aureliasurfaces.example.com/home-2.html" />
+
+  <link rel="preload" as="image" href="assets/images/home2-hero-architectural-atrium.webp" imagesrcset="assets/images/home2-hero-architectural-atrium-sm.webp 600w, assets/images/home2-hero-architectural-atrium.webp 1600w" imagesizes="100vw" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-600.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-400.woff2" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeGoodsStore",
+    "name": "Aurelia Surfaces — Architectural Design Atelier",
+    "description": "Editorial destination for large-format porcelain slabs, natural stone finishes, and luxury bathroom architecture.",
+    "image": "assets/images/home2-hero-architectural-atrium.webp",
+    "telephone": "+44-20-7946-0920",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "42 Design District, King's Road",
+      "addressLocality": "London",
+      "addressRegion": "Greater London",
+      "postalCode": "SW10 0XE",
+      "addressCountry": "GB"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       SECTION 2: MAIN NAVIGATION (STICKY HEADER)
+       ===================================================================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldIsoH" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F0D498"/>
+                <stop offset="50%" stop-color="#C5A059"/>
+                <stop offset="100%" stop-color="#8C6642"/>
+              </linearGradient>
+            </defs>
+            <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoH)" />
+            <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+            <polygon points="26,26 41,17 41,34 26,43" fill="#A67C52" opacity="0.92" />
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">Aurelia</span>
+          <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link is-active" aria-current="page">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="visualizer-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products" title="Search (Ctrl+K)">
+          <i data-lucide="search" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+
+        <div class="header-ctas">
+          <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
+        </div>
+
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="home-2.html" class="is-active">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="mobile-nav__ctas">
+        <a href="products.html" class="btn btn--primary">Shop Collection</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ===================================================================
+         SECTION 3: EDITORIAL HERO – DESIGN BEYOND SURFACES (FULL-BLEED 100VH)
+         =================================================================== -->
+    <section class="hero-home2" aria-labelledby="home2-hero-heading">
+      <div class="hero-home2__bg">
+        <img
+          src="assets/images/home2-hero-architectural-atrium.webp"
+          srcset="assets/images/home2-hero-architectural-atrium-sm.webp 600w, assets/images/home2-hero-architectural-atrium.webp 1600w"
+          sizes="100vw"
+          width="1600"
+          height="1067"
+          fetchpriority="high"
+          alt="Full-bleed architectural residence featuring monolithic stone walls and warm sunlit travertine floors"
+        />
+      </div>
+      <div class="container hero-home2__content">
+        <span class="eyebrow" style="color: var(--accent);">Architectural Monograph · Edition IV</span>
+        <h1 id="home2-hero-heading" class="hero-home2__title">
+          Every Surface Tells a Story.
+        </h1>
+        <div class="hero-home2__bottom">
+          <p class="hero-home2__lead">
+            Where geological permanence meets contemporary spatial poetry—transforming ordinary rooms into extraordinary architectural sanctuaries through sintered stone, tactile ceramics, and sculpted brassware.
+          </p>
+          <div class="hero-home2__ctas">
+            <a href="#signature-collections" class="btn btn--primary">
+              Explore Our World <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="visualizer-gallery.html" class="btn btn--outline-light">
+              Find Your Style <i data-lucide="compass" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: INTRODUCTION – THE ART OF BEAUTIFUL SPACES
+         =================================================================== -->
+    <section class="section" aria-labelledby="art-spaces-heading">
+      <div class="container">
+        <div class="editorial-split reveal">
+          <div class="editorial-split__content">
+            <span class="eyebrow">The Art of Beautiful Spaces</span>
+            <h2 id="art-spaces-heading">Where Quarry Heritage Meets <em class="editorial-italic">Kiln Innovation</em></h2>
+            <p class="section-lead">
+              Architecture begins with the planes we walk upon and touch every morning. At Aurelia, we bridge centuries-old Italian and Iberian stone sensibilities with next-generation 1,250°C sintering technology.
+            </p>
+            <p>
+              Each surface in our atelier is selected for four non-negotiable pillars: authentic mineral depth, micro-tactile finish fidelity, structural longevity, and effortless harmony alongside natural timber, lime plaster, and brushed bronze bathware.
+            </p>
+            <a href="about.html" class="btn-link">Read Our Brand Philosophy <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="editorial-split__media reveal-clip">
+            <img src="assets/images/home2-intro-stone-craft.webp" srcset="assets/images/home2-intro-stone-craft-sm.webp 600w, assets/images/home2-intro-stone-craft.webp 1000w" sizes="(max-width: 959px) 94vw, 44vw" width="1000" height="1200" loading="lazy" alt="Minimalist carved travertine architectural staircase bathed in natural daylight" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: SIGNATURE COLLECTIONS (STICKY-IMAGE STORYTELLING)
+         =================================================================== -->
+    <section class="section section--stone" id="signature-collections" aria-labelledby="sig-collections-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Curated Material Chapters</span>
+          <h2 id="sig-collections-heading">Signature <em class="editorial-italic">Collections</em></h2>
+          <p class="section-lead">Scroll through four distinct architectural surface vocabularies curated for residential and hospitality landmarks.</p>
+        </div>
+
+        <div class="sticky-story">
+          <div class="sticky-story__visual" aria-hidden="true">
+            <div class="sticky-story__frame is-active" data-story-frame="marble">
+              <img src="assets/images/home2-sig-marble-elegance.webp" srcset="assets/images/home2-sig-marble-elegance-sm.webp 600w, assets/images/home2-sig-marble-elegance.webp 1200w" sizes="50vw" width="1200" height="1000" loading="lazy" alt="Marble Elegance bookmatched bathroom monolith" />
+            </div>
+            <div class="sticky-story__frame" data-story-frame="stone">
+              <img src="assets/images/home2-sig-natural-stone.webp" srcset="assets/images/home2-sig-natural-stone-sm.webp 600w, assets/images/home2-sig-natural-stone.webp 1200w" sizes="50vw" width="1200" height="1000" loading="lazy" alt="Natural Stone sandstone and limestone villa interior" />
+            </div>
+            <div class="sticky-story__frame" data-story-frame="concrete">
+              <img src="assets/images/home2-sig-contemporary-concrete.webp" srcset="assets/images/home2-sig-contemporary-concrete-sm.webp 600w, assets/images/home2-sig-contemporary-concrete.webp 1200w" sizes="50vw" width="1200" height="1000" loading="lazy" alt="Contemporary Concrete microcement-inspired architectural loft" />
+            </div>
+            <div class="sticky-story__frame" data-story-frame="wood">
+              <img src="assets/images/home2-sig-wood-inspired.webp" srcset="assets/images/home2-sig-wood-inspired-sm.webp 600w, assets/images/home2-sig-wood-inspired.webp 1200w" sizes="50vw" width="1200" height="1000" loading="lazy" alt="Wood Inspired warm timber porcelain planks in minimalist house" />
+            </div>
+          </div>
+
+          <div class="sticky-story__chapters">
+            <article class="story-chapter" data-story-chapter="marble">
+              <img class="story-chapter__mobile-img" src="assets/images/home2-sig-marble-elegance-sm.webp" width="600" height="500" loading="lazy" alt="Marble Elegance showcase" />
+              <span class="eyebrow">Chapter I · Apuan Alps Heritage</span>
+              <h3>Marble Elegance</h3>
+              <p style="margin-block: 1rem 1.25rem;">Dramatic Calacatta Oro, Sahara Noir, and Verde Alpi veins rendered across 6 mm and 12 mm sintered slabs. Ideal for continuous waterfall islands, floor-to-ceiling bath walls, and formal foyers.</p>
+              <a href="products.html?category=Marble%20%26%20Stone%20Finish%20Tiles" class="btn btn--outline btn--sm">Specify Marble Elegance</a>
+            </article>
+
+            <article class="story-chapter" data-story-chapter="stone">
+              <img class="story-chapter__mobile-img" src="assets/images/home2-sig-natural-stone-sm.webp" width="600" height="500" loading="lazy" alt="Natural Stone showcase" />
+              <span class="eyebrow">Chapter II · Geological Calm</span>
+              <h3>Natural Stone</h3>
+              <p style="margin-block: 1rem 1.25rem;">Warm Roman travertine, Jura fossil limestone, and Alpine quartzite with micro-engraved pores that respond organically to grazing daylight from courtyard windows.</p>
+              <a href="products.html?category=Floor%20Tiles" class="btn btn--outline btn--sm">Specify Natural Stone</a>
+            </article>
+
+            <article class="story-chapter" data-story-chapter="concrete">
+              <img class="story-chapter__mobile-img" src="assets/images/home2-sig-contemporary-concrete-sm.webp" width="600" height="500" loading="lazy" alt="Contemporary Concrete showcase" />
+              <span class="eyebrow">Chapter III · Quiet Minimalism</span>
+              <h3>Contemporary Concrete</h3>
+              <p style="margin-block: 1rem 1.25rem;">Trowel-soft microcement and architectural shuttered-concrete textures in warm greige, taupe, and charcoal—offering gallery serenity without hairline shrinkage cracks.</p>
+              <a href="products.html?category=Porcelain%20Slabs" class="btn btn--outline btn--sm">Specify Concrete Series</a>
+            </article>
+
+            <article class="story-chapter" data-story-chapter="wood" style="border-bottom: 0;">
+              <img class="story-chapter__mobile-img" src="assets/images/home2-sig-wood-inspired-sm.webp" width="600" height="500" loading="lazy" alt="Wood Inspired showcase" />
+              <span class="eyebrow">Chapter IV · Biophilic Warmth</span>
+              <h3>Wood Inspired</h3>
+              <p style="margin-block: 1rem 1.25rem;">Long-plank honey oak, smoked ash, and Canaletto walnut herringbone porcelain engineered to flow seamlessly from master bedrooms onto open rain-washed balconies.</p>
+              <a href="products.html?category=Wooden%20Finish%20Tiles" class="btn btn--outline btn--sm">Specify Wood Planks</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: EXPLORE BY LIFESTYLE (EXPANDING VERTICAL PANELS)
+         =================================================================== -->
+    <section class="section" aria-labelledby="lifestyle-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Aesthetic Moods</span>
+          <h2 id="lifestyle-heading">Explore by <em class="editorial-italic">Lifestyle</em></h2>
+          <p class="section-lead">Hover or select an aesthetic direction to expand curated surface recommendations.</p>
+        </div>
+
+        <div class="lifestyle-panels reveal">
+          <article class="lifestyle-panel is-active" tabindex="0">
+            <img src="assets/images/home2-life-minimalist.webp" srcset="assets/images/home2-life-minimalist-sm.webp 600w, assets/images/home2-life-minimalist.webp 900w" sizes="(max-width: 959px) 94vw, 38vw" width="900" height="1200" loading="lazy" alt="Minimalist Living interior with warm limestone floor tiles" />
+            <div class="lifestyle-panel__content">
+              <span class="eyebrow" style="color: var(--accent);">01</span>
+              <h3 class="lifestyle-panel__title">Minimalist Living</h3>
+              <p class="lifestyle-panel__desc">Monochromatic chalk, oatmeal limestone, and 1.5 mm tonal grout joints for calm, uncluttered rooms.</p>
+            </div>
+          </article>
+
+          <article class="lifestyle-panel" tabindex="0">
+            <img src="assets/images/home2-life-luxury.webp" srcset="assets/images/home2-life-luxury-sm.webp 600w, assets/images/home2-life-luxury.webp 900w" sizes="(max-width: 959px) 94vw, 38vw" width="900" height="1200" loading="lazy" alt="Luxury Interiors dining hall with bookmatched marble slabs" />
+            <div class="lifestyle-panel__content">
+              <span class="eyebrow" style="color: var(--accent);">02</span>
+              <h3 class="lifestyle-panel__title">Luxury Interiors</h3>
+              <p class="lifestyle-panel__desc">Bookmatched Calacatta Oro, Sahara Noir, and PVD champagne-bronze accents for statement residences.</p>
+            </div>
+          </article>
+
+          <article class="lifestyle-panel" tabindex="0">
+            <img src="assets/images/home2-life-modern-bath.webp" srcset="assets/images/home2-life-modern-bath-sm.webp 600w, assets/images/home2-life-modern-bath.webp 900w" sizes="(max-width: 959px) 94vw, 38vw" width="900" height="1200" loading="lazy" alt="Modern Bathrooms skylight wet room clad in charcoal stone" />
+            <div class="lifestyle-panel__content">
+              <span class="eyebrow" style="color: var(--accent);">03</span>
+              <h3 class="lifestyle-panel__title">Modern Bathrooms</h3>
+              <p class="lifestyle-panel__desc">Private wellness wet rooms pairing R10 silk slabs with ceiling-flush rain hydrotherapy.</p>
+            </div>
+          </article>
+
+          <article class="lifestyle-panel" tabindex="0">
+            <img src="assets/images/home2-life-warm-natural.webp" srcset="assets/images/home2-life-warm-natural-sm.webp 600w, assets/images/home2-life-warm-natural.webp 900w" sizes="(max-width: 959px) 94vw, 38vw" width="900" height="1200" loading="lazy" alt="Warm Natural Spaces villa room with terracotta and travertine textures" />
+            <div class="lifestyle-panel__content">
+              <span class="eyebrow" style="color: var(--accent);">04</span>
+              <h3 class="lifestyle-panel__title">Warm Natural Spaces</h3>
+              <p class="lifestyle-panel__desc">Raw terracotta, vein-cut travertine, and brushed honey-oak planks inspired by Mediterranean villas.</p>
+            </div>
+          </article>
+
+          <article class="lifestyle-panel" tabindex="0">
+            <img src="assets/images/home2-life-contemporary-arch.webp" srcset="assets/images/home2-life-contemporary-arch-sm.webp 600w, assets/images/home2-life-contemporary-arch.webp 900w" sizes="(max-width: 959px) 94vw, 38vw" width="900" height="1200" loading="lazy" alt="Contemporary Architecture stone pavilion and outdoor terrace" />
+            <div class="lifestyle-panel__content">
+              <span class="eyebrow" style="color: var(--accent);">05</span>
+              <h3 class="lifestyle-panel__title">Contemporary Architecture</h3>
+              <p class="lifestyle-panel__desc">Ventilated facade slabs, 20 mm structural pavers, and fluted architectural stone reliefs.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: LARGE FORMAT TILES SHOWCASE (DARK TECHNICAL SPEC BAND)
+         =================================================================== -->
+    <section class="section section--dark" aria-labelledby="large-format-heading">
+      <div class="container">
+        <div class="editorial-split reveal">
+          <div class="editorial-split__media reveal-clip" style="border-color: var(--border-on-dark);">
+            <img src="assets/images/home2-large-format-slab.webp" srcset="assets/images/home2-large-format-slab-sm.webp 600w, assets/images/home2-large-format-slab.webp 1400w" sizes="(max-width: 959px) 94vw, 56vw" width="1400" height="900" loading="lazy" alt="Oversized 1600x3200mm large-format porcelain slab installed seamlessly across wall and island" />
+          </div>
+          <div class="editorial-split__content">
+            <span class="eyebrow">Monolithic Engineering</span>
+            <h2 id="large-format-heading">Large-Format <em class="editorial-italic">Porcelain Slabs</em></h2>
+            <p>
+              Spanning up to 3.2 metres in height, our sintered stone slabs eliminate visual grid clutter—allowing uninterrupted marble veins across walls, islands, custom dining tables, and concealed doors.
+            </p>
+            <div style="width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-block: 1rem; border-block: 1px solid var(--border-on-dark);">
+              <div>
+                <strong style="color: var(--accent); font-family: var(--font-serif); font-size: 1.4rem; display: block;">1600×3200</strong>
+                <span style="font-size: 0.75rem; color: var(--text-on-dark-muted);">12 mm Counter &amp; Wall</span>
+              </div>
+              <div>
+                <strong style="color: var(--accent); font-family: var(--font-serif); font-size: 1.4rem; display: block;">1200×2800</strong>
+                <span style="font-size: 0.75rem; color: var(--text-on-dark-muted);">6 mm Zero-Cut Ceiling</span>
+              </div>
+              <div>
+                <strong style="color: var(--accent); font-family: var(--font-serif); font-size: 1.4rem; display: block;">1200×2400</strong>
+                <span style="font-size: 0.75rem; color: var(--text-on-dark-muted);">9 mm Floor &amp; Wet Zone</span>
+              </div>
+            </div>
+            <p style="font-size: 0.875rem;">
+              <strong>Finishes &amp; Applications:</strong> Bookmatched Polished, Honed Cashmere, Silk Satin · Countertops, Integrated Basins, Lift Lobbies &amp; Furniture Joinery.
+            </p>
+            <a href="products.html?category=Porcelain%20Slabs" class="btn btn--primary">Explore Porcelain Slabs <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: SANITARYWARE & BATHROOM ELEGANCE (5-PIECE LOOKBOOK MOSAIC)
+         =================================================================== -->
+    <section class="section" aria-labelledby="bath-elegance-heading">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__main">
+            <span class="eyebrow">Sculpted Water &amp; Stone</span>
+            <h2 id="bath-elegance-heading">Sanitaryware &amp; <em class="editorial-italic">Bathroom Elegance</em></h2>
+            <p class="section-lead">Complete your tile palette with architectural vessels, rimless WCs, and colour-matched PVD brassware.</p>
+          </div>
+          <a href="products.html?category=Washbasins" class="btn btn--outline">View Bathware Suite <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="bath-lookbook">
+          <article class="bath-lookbook__item reveal">
+            <div class="bath-lookbook__media">
+              <img src="assets/images/home2-bath-washbasin.webp" srcset="assets/images/home2-bath-washbasin-sm.webp 600w, assets/images/home2-bath-washbasin.webp 900w" sizes="(max-width: 767px) 94vw, 46vw" width="900" height="1000" loading="lazy" alt="Carved stone-resin and thin-rim ceramic modern washbasin" />
+            </div>
+            <span class="lux-card__code">01 · Vessel &amp; Pedestal</span>
+            <h3>Modern Washbasins</h3>
+            <p style="font-size: 0.9rem;">5 mm knife-rim fireclay vessels, monolithic freestanding pedestals, and mitred stone tops.</p>
+          </article>
+
+          <article class="bath-lookbook__item reveal">
+            <div class="bath-lookbook__media">
+              <img src="assets/images/home2-bath-designer-wc.webp" srcset="assets/images/home2-bath-designer-wc-sm.webp 600w, assets/images/home2-bath-designer-wc.webp 900w" sizes="(max-width: 767px) 94vw, 46vw" width="900" height="1000" loading="lazy" alt="Minimalist rimless wall-hung designer toilet in tiled bathroom" />
+            </div>
+            <span class="lux-card__code">02 · Rimless &amp; Intelligent</span>
+            <h3>Designer Toilets (WCs)</h3>
+            <p style="font-size: 0.9rem;">Whisper-vortex wall-hung pans in satin ivory or matte charcoal, plus smart Senso-Wash bidet suites.</p>
+          </article>
+
+          <article class="bath-lookbook__item reveal">
+            <div class="bath-lookbook__media">
+              <img src="assets/images/home2-bath-brushed-faucet.webp" srcset="assets/images/home2-bath-brushed-faucet-sm.webp 600w, assets/images/home2-bath-brushed-faucet.webp 900w" sizes="(max-width: 767px) 94vw, 30vw" width="900" height="1000" loading="lazy" alt="PVD brushed bronze basin mixer tap with knurled lever" />
+            </div>
+            <span class="lux-card__code">03 · Solid DZR Brass</span>
+            <h3>Faucets &amp; Mixers</h3>
+            <p style="font-size: 0.9rem;">PVD brushed bronze, champagne gold, and gunmetal taps with Swiss laminar aerators.</p>
+          </article>
+
+          <article class="bath-lookbook__item reveal">
+            <div class="bath-lookbook__media">
+              <img src="assets/images/home2-bath-rain-shower.webp" srcset="assets/images/home2-bath-rain-shower-sm.webp 600w, assets/images/home2-bath-rain-shower.webp 900w" sizes="(max-width: 767px) 94vw, 30vw" width="900" height="1000" loading="lazy" alt="Ceiling-flush thermostatic rain shower system in stone wet room" />
+            </div>
+            <span class="lux-card__code">04 · Hydrotherapy</span>
+            <h3>Shower Systems</h3>
+            <p style="font-size: 0.9rem;">Ceiling-flush rain heads, waterfall blades, and 38°C safe-stop thermostatic valves.</p>
+          </article>
+
+          <article class="bath-lookbook__item reveal">
+            <div class="bath-lookbook__media">
+              <img src="assets/images/home2-bath-accessories.webp" srcset="assets/images/home2-bath-accessories-sm.webp 600w, assets/images/home2-bath-accessories.webp 900w" sizes="(max-width: 767px) 94vw, 30vw" width="900" height="1000" loading="lazy" alt="Backlit bronze bathroom mirror and travertine vanity accessories" />
+            </div>
+            <span class="lux-card__code">05 · Finishing Details</span>
+            <h3>Bathroom Accessories</h3>
+            <p style="font-size: 0.9rem;">Heated brass towel rails, anti-fog halo mirrors, and carved travertine counter ensembles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: DESIGN INSPIRATION – BEFORE & AFTER (DRAGGABLE SLIDER)
+         =================================================================== -->
+    <section class="section section--stone" id="design-inspiration" aria-labelledby="ba-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Spatial Transformation</span>
+          <h2 id="ba-heading">Design Inspiration — <em class="editorial-italic">Before &amp; After</em></h2>
+          <p class="section-lead">Drag the bronze divider to witness how replacing small dated ceramics with vein-cut travertine slabs and PVD brassware transforms an ordinary room.</p>
+        </div>
+
+        <div class="ba-slider reveal" aria-label="Before and after bathroom renovation comparison">
+          <div class="ba-slider__after">
+            <img src="assets/images/home2-ba-after-room.webp" srcset="assets/images/home2-ba-after-room-sm.webp 600w, assets/images/home2-ba-after-room.webp 1200w" sizes="(max-width: 1360px) 94vw, 1280px" width="1200" height="800" loading="lazy" alt="After renovation: warm luxury marble and travertine spa bathroom with vessel basin" />
+            <span class="ba-slider__label ba-slider__label--after">After · Aurelia Travertine &amp; PVD Suite</span>
+          </div>
+          <div class="ba-slider__before">
+            <img src="assets/images/home2-ba-before-room.webp" srcset="assets/images/home2-ba-before-room-sm.webp 600w, assets/images/home2-ba-before-room.webp 1200w" sizes="(max-width: 1360px) 94vw, 1280px" width="1200" height="800" loading="lazy" alt="Before renovation: plain dated apartment bathroom with small white tiles" />
+            <span class="ba-slider__label ba-slider__label--before">Before · Standard Builder Tile</span>
+          </div>
+          <div class="ba-slider__handle" aria-hidden="true">
+            <span class="ba-slider__knob"><i data-lucide="move-horizontal"></i></span>
+          </div>
+          <label for="home2-ba-range" class="sr-only">Slide to compare before and after renovation</label>
+          <input type="range" id="home2-ba-range" class="ba-slider__range" min="5" max="95" value="50" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: MATERIAL & FINISH GUIDE (INTERACTIVE 6-TAB SELECTOR)
+         =================================================================== -->
+    <section class="section" aria-labelledby="finish-guide-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Technical Tactility</span>
+          <h2 id="finish-guide-heading">Material &amp; <em class="editorial-italic">Finish Guide</em></h2>
+          <p class="section-lead">Understanding surface micro-topography ensures every room receives the ideal balance of sheen, touch, and barefoot traction.</p>
+        </div>
+
+        <div class="finish-tabs__nav" role="tablist" aria-label="Tile surface finishes">
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="true" data-finish-tab="glossy">Glossy</button>
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="false" data-finish-tab="matte">Matte</button>
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="false" data-finish-tab="satin">Satin</button>
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="false" data-finish-tab="textured">Textured</button>
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="false" data-finish-tab="polished">Polished</button>
+          <button type="button" class="finish-tab-btn" role="tab" aria-selected="false" data-finish-tab="natural">Natural Stone</button>
+        </div>
+
+        <!-- Glossy -->
+        <div class="finish-panel is-active" role="tabpanel" data-finish-panel="glossy">
+          <img src="assets/images/home2-finish-glossy.webp" srcset="assets/images/home2-finish-glossy-sm.webp 600w, assets/images/home2-finish-glossy.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Glossy glazed tile finish reflecting ambient architectural light" />
+          <div>
+            <span class="eyebrow">85+ Gloss Units</span>
+            <h3>Glossy Glazed Finish</h3>
+            <p style="margin-top: 0.75rem;">Vitrified crystal overglaze creates liquid depth and bounces natural light deep into compact rooms and vertical shower elevations.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R9 (Dry Floors &amp; All Walls)</div>
+              <div><strong>Best For:</strong> Backsplashes, Bathroom Walls, Formal Halls</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Matte -->
+        <div class="finish-panel" role="tabpanel" data-finish-panel="matte">
+          <img src="assets/images/home2-finish-matte.webp" srcset="assets/images/home2-finish-matte-sm.webp 600w, assets/images/home2-finish-matte.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Matte non-reflective limestone porcelain finish" />
+          <div>
+            <span class="eyebrow">Zero Specular Glare</span>
+            <h3>Architectural Matte Finish</h3>
+            <p style="margin-top: 0.75rem;">Absorbs harsh downlight reflections for serene contemporary galleries, minimalist living zones, and high-traffic family kitchens.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R10 All-Round Grip</div>
+              <div><strong>Best For:</strong> Open-Plan Living, Kitchens, Bedrooms</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Satin -->
+        <div class="finish-panel" role="tabpanel" data-finish-panel="satin">
+          <img src="assets/images/home2-finish-satin.webp" srcset="assets/images/home2-finish-satin-sm.webp 600w, assets/images/home2-finish-satin.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Velvety satin silk honed cream porcelain surface" />
+          <div>
+            <span class="eyebrow">Cashmere Soft Touch</span>
+            <h3>Satin / Silk Honed Finish</h3>
+            <p style="margin-top: 0.75rem;">Micro-brushed with fine diamond pads after firing to achieve a warm, candlelit wax glow that feels extraordinarily smooth underfoot.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R9–R10 Barefoot Comfort</div>
+              <div><strong>Best For:</strong> Master Suites, Island Tops, Boutique Spas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textured -->
+        <div class="finish-panel" role="tabpanel" data-finish-panel="textured">
+          <img src="assets/images/home2-finish-textured.webp" srcset="assets/images/home2-finish-textured-sm.webp 600w, assets/images/home2-finish-textured.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Textured bush-hammered and fluted anti-slip stone surface" />
+          <div>
+            <span class="eyebrow">High Wet Traction</span>
+            <h3>Textured &amp; Structured Finish</h3>
+            <p style="margin-top: 0.75rem;">Three-dimensional bush-hammered, cleft-slate, and fluted reliefs engineered for monsoon balconies, pool decks, and architectural facade walls.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R11 – R12 Exterior Safe</div>
+              <div><strong>Best For:</strong> Pool Decks, Wet Showers, Driveways</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Polished -->
+        <div class="finish-panel" role="tabpanel" data-finish-panel="polished">
+          <img src="assets/images/home2-finish-polished.webp" srcset="assets/images/home2-finish-polished-sm.webp 600w, assets/images/home2-finish-polished.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Diamond-polished Nero and gold-veined porcelain slab" />
+          <div>
+            <span class="eyebrow">Mirror Clarity</span>
+            <h3>Diamond Polished &amp; Lappato</h3>
+            <p style="margin-top: 0.75rem;">Mechanically diamond-buffed sintered surfaces offering razor-sharp reflection and dramatic mineral colour saturation.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R9 Dry Luxury Zones</div>
+              <div><strong>Best For:</strong> Hotel Lobbies, Feature Walls, Dining Halls</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Natural Stone -->
+        <div class="finish-panel" role="tabpanel" data-finish-panel="natural">
+          <img src="assets/images/home2-finish-natural-stone.webp" srcset="assets/images/home2-finish-natural-stone-sm.webp 600w, assets/images/home2-finish-natural-stone.webp 1000w" sizes="(max-width: 899px) 92vw, 50vw" width="1000" height="750" loading="lazy" alt="Natural stone pore finish mimicking raw Roman travertine" />
+          <div>
+            <span class="eyebrow">Synchronized Digital Relief</span>
+            <h3>Natural Stone Grain Finish</h3>
+            <p style="margin-top: 0.75rem;">3D ink-and-carve synchronization aligns tiny travertine pits directly over mineral veins—indistinguishable from quarried block stone.</p>
+            <div class="finish-specs">
+              <div><strong>Slip Rating:</strong> R10 Natural Grip</div>
+              <div><strong>Best For:</strong> Biophilic Villas, Courtyards, Fireplaces</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 11: DESIGN FOR EVERY SPACE (INTERACTIVE SECTOR ROWS)
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="every-space-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Multi-Sector Specification</span>
+          <h2 id="every-space-heading">Design for <em class="editorial-italic">Every Space</em></h2>
+        </div>
+
+        <div class="sector-showcase reveal">
+          <div role="group" aria-label="Application sectors">
+            <button type="button" class="sector-row-btn is-active" data-sector-btn data-img="assets/images/home2-space-residential.webp" data-img-sm="assets/images/home2-space-residential-sm.webp" data-title="Private Residential Villas &amp; Penthouses" data-desc="Whole-home surface continuity from grand living slabs and bespoke islands to tranquil bedroom oak planks and spa bath suites." data-href="products.html?room=Living%20Room">
+              <span>01 · <strong>Residential</strong></span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="sector-row-btn" data-sector-btn data-img="assets/images/home2-space-commercial.webp" data-img-sm="assets/images/home2-space-commercial-sm.webp" data-title="Flagship Retail &amp; Commercial Galleries" data-desc="PEI-5 &amp; full-body porcelain engineered to endure heavy daily footfall in luxury boutiques, showrooms, and shopping concourses." data-href="products.html?room=Commercial%20Spaces">
+              <span>02 · <strong>Commercial</strong></span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="sector-row-btn" data-sector-btn data-img="assets/images/home2-space-hospitality.webp" data-img-sm="assets/images/home2-space-hospitality-sm.webp" data-title="Luxury Hospitality, Resorts &amp; Fine Dining" data-desc="Bookmatched reception monoliths, stain-impervious bar counters, and coordinated PVD brassware across guest suites." data-href="products.html?category=Porcelain%20Slabs">
+              <span>03 · <strong>Hospitality</strong></span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="sector-row-btn" data-sector-btn data-img="assets/images/home2-space-office.webp" data-img-sm="assets/images/home2-space-office-sm.webp" data-title="Corporate Atriums &amp; Executive Workspaces" data-desc="Low-glare acoustic-friendly stone floors, raised-access floor compatible tiles, and hygienic touchless commercial washrooms." data-href="products.html?room=Commercial%20Spaces">
+              <span>04 · <strong>Office Architecture</strong></span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" class="sector-row-btn" data-sector-btn data-img="assets/images/home2-space-outdoor.webp" data-img-sm="assets/images/home2-space-outdoor-sm.webp" data-title="Landscapes, Pool Decks &amp; Ventilated Facades" data-desc="20 mm structural outdoor pavers and lightweight UV-immune exterior cladding slabs built for extreme climates." data-href="products.html?category=Outdoor%20%26%20Parking%20Tiles">
+              <span>05 · <strong>Outdoor &amp; Facades</strong></span>
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="sector-preview">
+            <img id="sector-preview-img" src="assets/images/home2-space-residential.webp" srcset="assets/images/home2-space-residential-sm.webp 600w, assets/images/home2-space-residential.webp 1100w" sizes="(max-width: 959px) 94vw, 48vw" width="1100" height="750" loading="lazy" alt="Private Residential Villas and Penthouses" />
+            <div class="sector-preview__body">
+              <h3 id="sector-preview-title">Private Residential Villas &amp; Penthouses</h3>
+              <p id="sector-preview-desc" style="margin-block: 0.5rem 1rem;">Whole-home surface continuity from grand living slabs and bespoke islands to tranquil bedroom oak planks and spa bath suites.</p>
+              <a id="sector-preview-link" href="products.html?room=Living%20Room" class="btn-link">Browse Recommended SKUs <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 12: ARCHITECTS & INTERIOR DESIGNERS (TRADE ATELIER SPLIT)
+         =================================================================== -->
+    <section class="section" aria-labelledby="trade-atelier-heading">
+      <div class="container">
+        <div class="editorial-split editorial-split--reverse reveal">
+          <div class="editorial-split__media reveal-clip">
+            <img src="assets/images/home2-trade-architect-studio.webp" srcset="assets/images/home2-trade-architect-studio-sm.webp 600w, assets/images/home2-trade-architect-studio.webp 1100w" sizes="(max-width: 959px) 94vw, 48vw" width="1100" height="900" loading="lazy" alt="Architect and interior designer curating stone, tile, and PVD brass moodboards" />
+          </div>
+          <div class="editorial-split__content">
+            <span class="eyebrow">Trade Specification Desk</span>
+            <h2 id="trade-atelier-heading">Dedicated Support for <em class="editorial-italic">Architects, Designers &amp; Builders</em></h2>
+            <p>
+              Our private Trade Library is built as an extension of your studio—equipped with full sample drawers, calibrated CRI-97 daylight lamps, and dedicated specification engineers.
+            </p>
+            <ul style="display: grid; gap: 10px; font-size: 0.92rem; color: var(--text-secondary); margin-block: 0.5rem 1rem;">
+              <li><strong>01 · 24-Hour Sample Box Dispatch:</strong> Complimentary architectural swatch boxes couriered directly to your studio or client site.</li>
+              <li><strong>02 · BIM, CAD &amp; High-Res Seamless Maps:</strong> Ready-to-render PBR texture packs for 3ds Max, SketchUp, and Revit.</li>
+              <li><strong>03 · Custom Waterjet &amp; Mitre Fabrication:</strong> Precision factory cutting for stair treads, skirting, and integrated stone basins.</li>
+              <li><strong>04 · BOQ &amp; Shade-Batch Reservation:</strong> Locked commercial trade schedules for multi-villa and tower developments.</li>
+            </ul>
+            <a href="contact.html#quote-form" class="btn btn--dark">Book Trade Studio Table <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 13: CUSTOMER PROJECTS (MONOGRAPH CASE-STUDY STRIPS)
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__main">
+            <span class="eyebrow">Commissioned Works</span>
+            <h2 id="projects-heading">Completed <em class="editorial-italic">Customer Projects</em></h2>
+          </div>
+          <a href="visualizer-gallery.html" class="btn-link">Explore All Case Studies <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="editorial-rows">
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/home2-proj-villa-serena.webp" srcset="assets/images/home2-proj-villa-serena-sm.webp 600w, assets/images/home2-proj-villa-serena.webp 1200w" sizes="(max-width: 959px) 94vw, 54vw" width="1200" height="800" loading="lazy" alt="Villa Serena private residence paved in honed Roman travertine slabs" />
+              <span class="editorial-split__tag">8,400 Sq. Ft. Private Villa</span>
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Project 01 · Kensington &amp; Chelsea</span>
+              <h3>Villa Serena Courtyard Residence</h3>
+              <p>Continuous indoor-to-courtyard Travertino Romano slabs paired with custom carved stone-resin pedestal basins across six bathrooms.</p>
+              <a href="products.html?product=AUR-FL-101" class="btn-link">View Surface Schedule <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="editorial-split editorial-split--reverse reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/home2-proj-hotel-solaris.webp" srcset="assets/images/home2-proj-hotel-solaris-sm.webp 600w, assets/images/home2-proj-hotel-solaris.webp 1200w" sizes="(max-width: 959px) 94vw, 54vw" width="1200" height="800" loading="lazy" alt="Hotel Solaris luxury suite bathroom with Sahara Noir slab walls" />
+              <span class="editorial-split__tag">42-Key Boutique Hotel</span>
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Project 02 · Financial District</span>
+              <h3>The Solaris Sanctuary Suites</h3>
+              <p>Sahara Noir satin slabs, fluted limestone vanities, and PVD brushed bronze Pioggia rain shower suites specified across 42 luxury keys.</p>
+              <a href="products.html?product=AUR-SL-602" class="btn-link">View Surface Schedule <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/home2-proj-lumina-hq.webp" srcset="assets/images/home2-proj-lumina-hq-sm.webp 600w, assets/images/home2-proj-lumina-hq.webp 1200w" sizes="(max-width: 959px) 94vw, 54vw" width="1200" height="800" loading="lazy" alt="Lumina Pavilion commercial atrium clad in Fior Di Bosco large slabs" />
+              <span class="editorial-split__tag">Commercial Flagship Atrium</span>
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Project 03 · Canary Wharf Pavilion</span>
+              <h3>Lumina Architectural Pavilion</h3>
+              <p>12,000 sq. ft. of heavy-duty Basaltina Antracite flooring and Fior Di Bosco reception monoliths installed with precision 1.5 mm joints.</p>
+              <a href="products.html?product=AUR-SL-604" class="btn-link">View Surface Schedule <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 14: EXPERT CONSULTATION CTA
+         =================================================================== -->
+    <section class="section section--dark" aria-labelledby="expert-cta-heading">
+      <div class="container container--narrow" style="text-align: center; border: 1px solid var(--border-bronze); padding: clamp(2.5rem, 5vw, 4.5rem);">
+        <span class="eyebrow" style="justify-content: center;">Private Specification Concierge</span>
+        <h2 id="expert-cta-heading">Let's Create Something Beautiful Together.</h2>
+        <p class="section-lead" style="margin-inline: auto; max-width: 54ch; margin-bottom: 2rem;">
+          Share your architectural drawings, room dimensions, or moodboard with our surface specialists for a tailored material schedule and itemised quotation.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+          <a href="contact.html" class="btn btn--primary">Talk to Our Experts <i data-lucide="phone-call" aria-hidden="true"></i></a>
+          <a href="contact.html#quote-form" class="btn btn--outline-light">Request a Quote <i data-lucide="file-text" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       SECTION 15: GLOBAL FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+            <span class="brand-logo__mark" aria-hidden="true">
+              <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIsoF" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F3DC9B"/>
+                    <stop offset="50%" stop-color="#CCA072"/>
+                    <stop offset="100%" stop-color="#A67C52"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoF)" />
+                <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+                <polygon points="26,26 41,17 41,34 26,43" fill="#CCA072" opacity="0.95" />
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">Aurelia</span>
+              <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+            </span>
+          </a>
+          <p class="site-footer__desc">
+            Architectural porcelain slabs, natural stone finishes, and precision PVD sanitaryware curated for enduring residential and commercial interiors.
+          </p>
+          <div class="footer-socials" aria-label="Social Media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 01 — Showroom</a></li>
+            <li><a href="home-2.html">Home 02 — Architectural</a></li>
+            <li><a href="products.html">Complete Product Catalogue</a></li>
+            <li><a href="visualizer-gallery.html">Visualizer Gallery</a></li>
+            <li><a href="about.html">About Our Showroom</a></li>
+            <li><a href="contact.html">Request a Quotation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Collections</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Porcelain%20Slabs">Large-Format Porcelain Slabs</a></li>
+            <li><a href="products.html?category=Marble%20%26%20Stone%20Finish%20Tiles">Marble Elegance</a></li>
+            <li><a href="products.html?category=Floor%20Tiles">Natural Stone &amp; Limestone</a></li>
+            <li><a href="products.html?category=Wooden%20Finish%20Tiles">Wood Inspired Planks</a></li>
+            <li><a href="products.html?category=Washbasins">Designer Washbasins &amp; WCs</a></li>
+            <li><a href="products.html?category=Faucets%20%26%20Taps">PVD Brassware &amp; Showers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Showroom Address</h3>
+          <ul class="footer-links">
+            <li>42 Design District, King's Road, Chelsea, London SW10 0XE</li>
+            <li><a href="tel:+442079460920">+44 20 7946 0920</a></li>
+            <li><a href="mailto:concierge@aureliasurfaces.com">concierge@aureliasurfaces.com</a></li>
+            <li>Mon–Sat: 10:00 AM – 8:00 PM | Sun: 11:00 AM – 6:00 PM</li>
+          </ul>
+          <!-- Compact Footer Newsletter -->
+          <form action="https://app.convertkit.com/forms/placeholder/subscriptions" method="post" data-validate-form data-success-msg="Subscribed to Architectural Releases." novalidate style="margin-top: 1rem;">
+            <div class="hp-trap" aria-hidden="true"><input type="text" name="website_url" tabindex="-1" autocomplete="off" /></div>
+            <div class="form-field">
+              <label for="f2-email" class="sr-only">Newsletter Email</label>
+              <div style="display: flex; gap: 6px;">
+                <input type="email" id="f2-email" name="email" class="form-control" placeholder="Architect / Client Email" required style="min-height: 40px; padding: 6px 10px; font-size: 0.8rem;" />
+                <button type="submit" class="btn btn--primary btn--sm" style="min-height: 40px;">Join</button>
+              </div>
+              <span class="field-error" role="alert"></span>
+            </div>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aurelia Surfaces Ltd. All rights reserved.</p>
+        <p><a href="contact.html#map-section">Showroom Map</a> · <a href="sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-label" aria-hidden="true">
+    <div class="search-modal__panel">
+      <div class="search-modal__bar">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <label for="global-search-input" id="search-modal-label" class="sr-only">Search tiles and sanitaryware</label>
+        <input type="search" id="global-search-input" class="search-modal__input" placeholder="Search by name, category, finish or code..." autocomplete="off" />
+        <button type="button" class="icon-btn js-close-search" aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="search-modal__results" id="global-search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="floating-stack">
+    <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20would%20like%20to%20schedule%20an%20architectural%20consultation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+    <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+      <svg class="scroll-top-btn__ring" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="23" fill="none" stroke="rgba(166,124,82,0.2)" stroke-width="2"></circle>
+        <circle class="scroll-top-btn__progress" cx="26" cy="26" r="23" fill="none" stroke="var(--accent)" stroke-width="2"></circle>
+      </svg>
+      <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="mobile-visit-bar" role="region" aria-label="Quick showroom actions">
+    <a href="contact.html#visit-showroom"><i data-lucide="map-pin" aria-hidden="true"></i> Book Showroom Visit</a>
+    <a href="contact.html#quote-form"><i data-lucide="file-text" aria-hidden="true"></i> Request Quote</a>
+  </div>
+
+  <script src="assets/js/plugins/lucide.min.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

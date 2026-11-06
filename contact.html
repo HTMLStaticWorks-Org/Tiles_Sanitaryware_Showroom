@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Tile Quote or Book a Visit | Aurelia Showroom</title>
+  <meta name="description" content="Request an itemised tile and sanitaryware quotation or schedule a private consultation at Aurelia Surfaces flagship showroom in Chelsea, London." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aureliasurfaces.example.com/contact.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Request a Tile Quote or Book a Visit | Aurelia Showroom" />
+  <meta property="og:description" content="Let's find the perfect surfaces for your residential, hospitality, or commercial project." />
+  <meta property="og:image" content="assets/images/contact-hero-reception.webp" />
+  <meta property="og:url" content="https://aureliasurfaces.example.com/contact.html" />
+
+  <link rel="preload" as="image" href="assets/images/contact-hero-reception.webp" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-600.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-400.woff2" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Aurelia Surfaces & Request Quotation",
+    "description": "Showroom contact information, project quotation form, directions, and FAQs."
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldIsoH" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F0D498"/>
+                <stop offset="50%" stop-color="#C5A059"/>
+                <stop offset="100%" stop-color="#8C6642"/>
+              </linearGradient>
+            </defs>
+            <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoH)" />
+            <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+            <polygon points="26,26 41,17 41,34 26,43" fill="#A67C52" opacity="0.92" />
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">Aurelia</span>
+          <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="visualizer-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-ctas">
+          <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
+        </div>
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="contact.html" class="is-active">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="mobile-nav__ctas">
+        <a href="products.html" class="btn btn--primary">Shop Collection</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ===================================================================
+         SECTION 1: HERO – LET'S TALK ABOUT YOUR PROJECT
+         =================================================================== -->
+    <section class="page-hero" aria-labelledby="contact-hero-heading">
+      <div class="page-hero__bg">
+        <img src="assets/images/contact-hero-reception.webp" srcset="assets/images/contact-hero-reception-sm.webp 600w, assets/images/contact-hero-reception.webp 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" alt="Warm stone concierge reception desk inside Aurelia Surfaces flagship showroom" />
+      </div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="eyebrow" style="color: #E2BF84;">Showroom Concierge &amp; BOQ Desk</span>
+          <h1 id="contact-hero-heading">Let's Find the Perfect Surfaces for Your Space.</h1>
+          <p>Whether you are tiling a single powder room, building a private villa, or specifying a 100-key hotel, our surface specialists are ready with samples, layouts, and transparent quotations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: CONTACT INFORMATION CARDS (5 3D-TILT CENTERED CARDS)
+         =================================================================== -->
+    <section class="section" aria-labelledby="contact-cards-heading">
+      <div class="container">
+        <h2 id="contact-cards-heading" class="sr-only">Direct Showroom Contact Channels</h2>
+
+        <div class="card-grid card-grid--5">
+          <!-- Address -->
+          <article class="lux-card lux-card--contact reveal" data-tilt>
+            <div class="card-glare" aria-hidden="true"></div>
+            <div class="lux-card__body">
+              <span class="lux-card__icon" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+              <h3 class="lux-card__title">Showroom Address</h3>
+              <p class="lux-card__meta">
+                <span>42 Design District, King's Road,</span>
+                <span>Chelsea, London — SW10 0XE</span>
+              </p>
+              <div class="lux-card__actions">
+                <a href="https://maps.google.com/?q=Kings+Road+Chelsea+London" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">View Map</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phone -->
+          <article class="lux-card lux-card--contact reveal" data-tilt>
+            <div class="card-glare" aria-hidden="true"></div>
+            <div class="lux-card__body">
+              <span class="lux-card__icon" aria-hidden="true"><i data-lucide="phone"></i></span>
+              <h3 class="lux-card__title">Phone Number</h3>
+              <p class="lux-card__meta">
+                <a href="tel:+442079460920">+44 20 7946 0920</a>
+                <a href="tel:+447700900840">+44 7700 900840</a>
+              </p>
+              <div class="lux-card__actions">
+                <a href="tel:+442079460920" class="btn btn--outline btn--sm">Call Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Email -->
+          <article class="lux-card lux-card--contact reveal" data-tilt>
+            <div class="card-glare" aria-hidden="true"></div>
+            <div class="lux-card__body">
+              <span class="lux-card__icon" aria-hidden="true"><i data-lucide="mail"></i></span>
+              <h3 class="lux-card__title">Email Address</h3>
+              <p class="lux-card__meta">
+                <a href="mailto:concierge@aureliasurfaces.com" class="lux-card__email">concierge@aureliasurfaces.com</a>
+                <a href="mailto:trade@aureliasurfaces.com" class="lux-card__email">trade@aureliasurfaces.com</a>
+              </p>
+              <div class="lux-card__actions">
+                <a href="mailto:concierge@aureliasurfaces.com" class="btn btn--outline btn--sm">Email Us</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Opening Hours -->
+          <article class="lux-card lux-card--contact reveal" data-tilt>
+            <div class="card-glare" aria-hidden="true"></div>
+            <div class="lux-card__body">
+              <span class="lux-card__icon" aria-hidden="true"><i data-lucide="clock"></i></span>
+              <h3 class="lux-card__title">Opening Hours</h3>
+              <p class="lux-card__meta">
+                <span>Mon – Sat: 10 AM – 8 PM</span>
+                <span>Sunday: 11 AM – 6 PM</span>
+              </p>
+              <div class="lux-card__actions">
+                <a href="#quote-form" class="btn btn--outline btn--sm">Book Visit</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- WhatsApp -->
+          <article class="lux-card lux-card--contact reveal" data-tilt>
+            <div class="card-glare" aria-hidden="true"></div>
+            <div class="lux-card__body">
+              <span class="lux-card__icon" aria-hidden="true"><i data-lucide="message-circle"></i></span>
+              <h3 class="lux-card__title">WhatsApp Desk</h3>
+              <p class="lux-card__meta">
+                <span>Instant swatch photos</span>
+                <span>&amp; stock check</span>
+              </p>
+              <div class="lux-card__actions">
+                <a href="https://wa.me/447700900840" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Chat Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: REQUEST A QUOTE FORM
+         =================================================================== -->
+    <section class="section section--stone" id="quote-form" aria-labelledby="quote-form-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Itemised BOQ &amp; Sample Dispatch</span>
+          <h2 id="quote-form-heading">Request a <em class="editorial-italic">Project Quotation</em></h2>
+          <p class="section-lead">Complete your project parameters below. Our specification engineers respond within 4 business hours with pricing, box coverage, and showroom appointment slots.</p>
+        </div>
+
+        <div style="max-width: 920px; margin-inline: auto; background: var(--bg-elevated); border: 1px solid var(--border-strong); padding: clamp(1.5rem, 4vw, 3rem); box-shadow: var(--shadow-soft);">
+          <!-- TODO: Replace Formspree / Netlify placeholder action URL with your live form endpoint -->
+          <form name="aurelia-quote-request" action="https://formspree.io/f/placeholder-quote" method="POST" data-netlify="true" data-validate-form data-success-msg="Thank you! Your quotation request has been registered. A Senior Surface Advisor will contact you within 4 business hours." novalidate>
+            <div class="hp-trap" aria-hidden="true">
+              <label for="quote-hp">Do not fill this out</label>
+              <input type="text" id="quote-hp" name="bot_field" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="quote-name" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="quote-name" name="name" class="form-control" placeholder="e.g. Eleanor Vance" required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-phone" class="form-label">Phone / WhatsApp Number <span class="req">*</span></label>
+                <input type="tel" id="quote-phone" name="phone" class="form-control" placeholder="+44 7700 900840" required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-email" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="quote-email" name="email" class="form-control" placeholder="name@domain.com" required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-project-type" class="form-label">Project Type <span class="req">*</span></label>
+                <select id="quote-project-type" name="project_type" class="form-control" required>
+                  <option value="Residential">Residential (Home / Villa / Penthouse)</option>
+                  <option value="Commercial">Commercial (Retail / Office / Gallery)</option>
+                  <option value="Hospitality">Hospitality (Hotel / Resort / Restaurant)</option>
+                  <option value="Renovation">Renovation (Bathroom / Kitchen Remodel)</option>
+                  <option value="Other">Other / Custom Fabrication</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-category" class="form-label">Primary Product Category <span class="req">*</span></label>
+                <select id="quote-category" name="product_category" class="form-control" required>
+                  <option value="">Select Category</option>
+                  <option value="Full-Home Tiles & Sanitaryware">Full-Home Tiles &amp; Sanitaryware Package</option>
+                  <option value="Porcelain Slabs">Large-Format Porcelain Slabs</option>
+                  <option value="Floor Tiles">Floor Tiles</option>
+                  <option value="Wall & Bathroom Tiles">Wall &amp; Bathroom Tiles</option>
+                  <option value="Kitchen Tiles & Countertops">Kitchen Tiles &amp; Countertops</option>
+                  <option value="Outdoor & Parking Tiles">Outdoor &amp; 20mm Parking Tiles</option>
+                  <option value="Marble & Wooden Finish">Marble &amp; Wooden Finish Tiles</option>
+                  <option value="Sanitaryware & PVD Brassware">Washbasins, WCs, Faucets &amp; Showers</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-tile-type" class="form-label">Preferred Tile Look / Finish <span class="req">*</span></label>
+                <input type="text" id="quote-tile-type" name="preferred_tile_type" class="form-control" placeholder="e.g. Honed Travertine, Bookmatched Marble, Oak Plank" required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-location" class="form-label">Project City / Neighbourhood <span class="req">*</span></label>
+                <input type="text" id="quote-location" name="project_location" class="form-control" placeholder="e.g. Chelsea, London / Mayfair" required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="quote-area" class="form-label">Approximate Area (sq. ft.) <span class="req">*</span></label>
+                <input type="text" id="quote-area" name="approximate_area_sqft" class="form-control" placeholder="e.g. 2800" data-validate-number required />
+                <span class="field-error" role="alert"></span>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="quote-budget" class="form-label">Indicative Budget Range (Optional)</label>
+                <select id="quote-budget" name="budget_range" class="form-control">
+                  <option value="">Prefer to review options first</option>
+                  <option value="Under £10,000">Under £10,000 (Single Room / Renovation)</option>
+                  <option value="£10,000 – £35,000">£10,000 – £35,000 (Apartment / Multi-Bath)</option>
+                  <option value="£35,000 – £100,000">£35,000 – £100,000 (Luxury Residence / Full Slab Spec)</option>
+                  <option value="£100,000+">£100,000+ (Commercial / Multi-Unit Development)</option>
+                </select>
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="quote-desc" class="form-label">Project Description &amp; Timeline <span class="req">*</span></label>
+                <textarea id="quote-desc" name="project_description" class="form-control" placeholder="Tell us which rooms you are finishing, expected delivery month, or whether you would like to book a showroom walkthrough..." required></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+              <p style="font-size: 0.8rem;">Your details remain strictly confidential with Aurelia's in-house advisory desk.</p>
+              <button type="submit" class="btn btn--primary">Send Quote Request <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: PROJECT TYPE SELECTION (INTERACTIVE WORKFLOW SYNC)
+         =================================================================== -->
+    <section class="section" aria-labelledby="project-type-heading">
+      <div class="container container--narrow" style="text-align: center;">
+        <span class="eyebrow" style="justify-content: center;">Tailored Specification Pathways</span>
+        <h2 id="project-type-heading">Select Your <em class="editorial-italic">Project Type</em></h2>
+        <p class="section-lead" style="margin-bottom: 1.75rem;">Click your project category below to preview our dedicated support workflow and pre-select it in the quotation form above.</p>
+
+        <div class="pill-rail" style="justify-content: center; margin-bottom: 1.5rem;" role="group" aria-label="Select project type">
+          <button type="button" class="filter-pill is-active" data-project-type-pill="Residential" data-note="Residential Pathway: Includes 1-on-1 showroom stylist walkthrough, room-wise 7% wastage calculation, epoxy grout colour matching, and single-lot villa delivery.">Residential</button>
+          <button type="button" class="filter-pill" data-project-type-pill="Commercial" data-note="Commercial Pathway: Includes PEI-5 abrasion & R10/R11 slip certification sheets, BIM/CAD files, and phased commercial site dispatch.">Commercial</button>
+          <button type="button" class="filter-pill" data-project-type-pill="Hospitality" data-note="Hospitality Pathway: Includes mock-up guest suite package pricing, custom waterjet vanity fabrication, and coordinated PVD brassware schedules.">Hospitality</button>
+          <button type="button" class="filter-pill" data-project-type-pill="Renovation" data-note="Renovation Pathway: Includes ready-stock fast-dispatch 6mm slim overlay slabs and exposed thermostatic shower columns ideal for rapid remodels.">Renovation</button>
+          <button type="button" class="filter-pill" data-project-type-pill="Other" data-note="Bespoke & Custom Fabrication: Includes dining tabletops, stair treads, swimming pool coping, and ventilated exterior facade cladding.">Other</button>
+        </div>
+
+        <div id="project-type-advisory" style="padding: 1.25rem 1.75rem; background: var(--bg-secondary-soft); border: 1px solid var(--border-bronze); font-size: 0.95rem; color: var(--text-primary);">
+          Residential Pathway: Includes 1-on-1 showroom stylist walkthrough, room-wise 7% wastage calculation, epoxy grout colour matching, and single-lot villa delivery.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: VISIT OUR SHOWROOM
+         =================================================================== -->
+    <section class="section section--stone" id="visit-showroom" aria-labelledby="visit-showroom-heading">
+      <div class="container">
+        <div class="editorial-split reveal">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <img src="assets/images/contact-showroom-facade.webp" srcset="assets/images/contact-showroom-facade-sm.webp 600w, assets/images/contact-showroom-facade.webp 1100w" sizes="(max-width: 959px) 46vw, 26vw" width="1100" height="800" loading="lazy" alt="Aurelia Surfaces modern stone and glass showroom exterior facade" style="border: 1px solid var(--border-subtle); height: 100%;" />
+            <img src="assets/images/contact-showroom-gallery.webp" srcset="assets/images/contact-showroom-gallery-sm.webp 600w, assets/images/contact-showroom-gallery.webp 1100w" sizes="(max-width: 959px) 46vw, 26vw" width="1100" height="800" loading="lazy" alt="Interior display gallery of Aurelia showroom with warm architectural lighting" style="border: 1px solid var(--border-subtle); height: 100%;" />
+          </div>
+
+          <div class="editorial-split__content">
+            <span class="eyebrow">Flagship Destination</span>
+            <h2 id="visit-showroom-heading">Visit Our <em class="editorial-italic">Showroom</em></h2>
+            <p>Walk-ins are warmly welcomed seven days a week. For full-home specifications, booking ahead ensures a dedicated private moodboard table and senior advisor await your arrival.</p>
+            <ul style="font-size: 0.92rem; color: var(--text-secondary); display: grid; gap: 8px; margin-block: 0.5rem 1rem;">
+              <li><strong>Address:</strong> 42 Design District, King's Road, Chelsea, London SW10 0XE</li>
+              <li><strong>Mon – Sat:</strong> 10:00 AM – 8:00 PM</li>
+              <li><strong>Sunday:</strong> 11:00 AM – 6:00 PM</li>
+              <li><strong>Facilities:</strong> Valet Parking · Wheelchair Elevator · Espresso Bar · CAD Suite</li>
+            </ul>
+            <a href="#map-section" class="btn btn--dark">Get Directions <i data-lucide="navigation" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: GOOGLE MAPS LOCATION
+         =================================================================== -->
+    <section class="section" id="map-section" aria-labelledby="map-heading">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__main">
+            <span class="eyebrow">Showroom Coordinates</span>
+            <h2 id="map-heading">Interactive <em class="editorial-italic">Showroom Location</em></h2>
+          </div>
+          <a href="https://maps.google.com/?q=42+Kings+Road+Chelsea+London+SW10+0XE" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Open in Google Maps <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+
+        <!-- Interactive Google Map with Overlay Flagship Card -->
+        <div class="showroom-map-container" role="region" aria-label="Aurelia Surfaces showroom interactive map location">
+          <iframe 
+            class="showroom-map-frame"
+            src="https://maps.google.com/maps?q=42+King%27s+Road%2C+Chelsea%2C+London+SW10+0XE&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aurelia Surfaces Flagship Showroom Chelsea London Map"
+            allowfullscreen>
+          </iframe>
+
+          <div class="showroom-map-card">
+            <span class="lux-card__icon" style="margin-bottom: 0.75rem;"><i data-lucide="map-pin" aria-hidden="true"></i></span>
+            <h3>Aurelia Surfaces Flagship</h3>
+            <p style="font-size: 0.875rem; margin-block: 0.5rem 1rem;">42 Design District, King's Road, Chelsea<br />200m from Imperial Wharf Station · Dedicated Valet</p>
+            <a href="https://maps.google.com/?q=42+Kings+Road+Chelsea+London+SW10+0XE" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Turn-by-Turn Navigation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: FREQUENTLY ASKED QUESTIONS (ACCESSIBLE ACCORDION)
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="faq-heading">
+      <div class="container container--narrow">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Specification &amp; Logistics Answers</span>
+          <h2 id="faq-heading">Frequently Asked <em class="editorial-italic">Questions</em></h2>
+        </div>
+
+        <div class="lux-accordion" data-single-open="true">
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="true" aria-controls="faq-1" id="faq-btn-1">
+                <span>What tile sizes and slab thicknesses do you stock?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-1" class="accordion-panel" role="region" aria-labelledby="faq-btn-1">
+              We carry artisanal wall formats from 100×100 mm and 300×600 mm, popular rectified floor formats in 600×600 mm, 600×1200 mm, and 800×1600 mm, timber planks in 200×1200 mm, outdoor pavers in 16–20 mm thickness, and sintered slabs in 1200×2400 mm, 1200×2800 mm, and 1600×3200 mm (6 mm, 9 mm, and 12 mm).
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">
+                <span>Are products available in ready stock or made-to-order?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-2" class="accordion-panel" role="region" aria-labelledby="faq-btn-2" hidden>
+              Over 85% of our catalogue is held in ready single-lot stock at our 65,000 sq. ft. climate-secure logistics hub for 48–72 hour dispatch. Bespoke Italian bookmatched slabs and special PVD finishes carry a 3–5 week scheduled lead time.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">
+                <span>Do I need an appointment to visit the showroom?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-3" class="accordion-panel" role="region" aria-labelledby="faq-btn-3" hidden>
+              Walk-in visitors are welcome daily during opening hours. However, if you are selecting surfaces for multiple rooms or bringing architectural drawings, booking an appointment reserves a dedicated stylist and private sample table.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">
+                <span>How do you handle large-slab delivery and transit breakage?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-4" class="accordion-panel" role="region" aria-labelledby="faq-btn-4" hidden>
+              Large-format slabs travel upright on steel A-frames inside air-ride trucks. Any crate documented with transit damage upon unloading is replaced free of charge within 48 hours from the exact same shade lot.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-btn-5">
+                <span>Do you provide tile installation or contractor guidance?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-5" class="accordion-panel" role="region" aria-labelledby="faq-btn-5" hidden>
+              We supply certified C2TE-S1/S2 polymer adhesives, levelling clips, and colour-matched epoxy grouts, plus a complimentary technical site briefing for your contractor—or introductions to our vetted master slab-laying teams.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-btn-6">
+                <span>Do you offer bulk commercial pricing for builders and hotels?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-6" class="accordion-panel" role="region" aria-labelledby="faq-btn-6" hidden>
+              Yes. Our Trade &amp; Project Division offers tiered volume BOQ pricing, shade-lot reservation for up to 9 months, and floor-by-floor scheduled site deliveries for multi-unit developments.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-7" id="faq-btn-7">
+                <span>How quickly will I receive my itemised quotation?</span>
+                <i data-lucide="plus" aria-hidden="true"></i>
+              </button>
+            </h3>
+            <div id="faq-7" class="accordion-panel" role="region" aria-labelledby="faq-btn-7" hidden>
+              Standard enquiries receive a formal itemised PDF quotation (including recommended 7–10% cutting wastage, box rounding, and GST breakdown) within 4 business hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: FINAL CTA
+         =================================================================== -->
+    <section class="section section--dark" aria-labelledby="final-cta-heading">
+      <div class="container container--narrow" style="text-align: center;">
+        <span class="eyebrow" style="justify-content: center;">Immediate Assistance</span>
+        <h2 id="final-cta-heading">Your Dream Space Starts Here.</h2>
+        <p class="section-lead" style="margin-inline: auto; max-width: 50ch; margin-bottom: 2rem;">
+          Speak directly with a senior surface specialist right now or message our showroom concierge on WhatsApp.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+          <a href="tel:+442079460920" class="btn btn--primary"><i data-lucide="phone" aria-hidden="true"></i> Call Us</a>
+          <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20would%20like%20a%20project%20quotation." target="_blank" rel="noopener noreferrer" class="btn btn--outline-light"><i data-lucide="message-circle" aria-hidden="true"></i> WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       SECTION 9: GLOBAL FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+            <span class="brand-logo__mark" aria-hidden="true">
+              <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIsoF" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F3DC9B"/>
+                    <stop offset="50%" stop-color="#CCA072"/>
+                    <stop offset="100%" stop-color="#A67C52"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoF)" />
+                <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+                <polygon points="26,26 41,17 41,34 26,43" fill="#CCA072" opacity="0.95" />
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">Aurelia</span>
+              <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+            </span>
+          </a>
+          <p class="site-footer__desc">
+            Architectural porcelain slabs, natural stone finishes, and precision PVD sanitaryware curated for enduring residential and commercial interiors.
+          </p>
+          <div class="footer-socials" aria-label="Social Media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 01 — Showroom</a></li>
+            <li><a href="home-2.html">Home 02 — Architectural</a></li>
+            <li><a href="products.html">Complete Product Catalogue</a></li>
+            <li><a href="visualizer-gallery.html">Visualizer Gallery</a></li>
+            <li><a href="about.html">About Our Showroom</a></li>
+            <li><a href="contact.html">Contact &amp; Quotations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Popular Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Porcelain%20Slabs">Porcelain Slabs</a></li>
+            <li><a href="products.html?category=Floor%20Tiles">Floor Tiles</a></li>
+            <li><a href="products.html?category=Washbasins">Washbasins &amp; WCs</a></li>
+            <li><a href="products.html?category=Faucets%20%26%20Taps">PVD Faucets &amp; Taps</a></li>
+            <li><a href="products.html?category=Shower%20Systems">Shower Systems</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Flagship Showroom</h3>
+          <ul class="footer-links">
+            <li>42 Design District, King's Road, Chelsea, London SW10 0XE</li>
+            <li><a href="tel:+442079460920">+44 20 7946 0920</a></li>
+            <li><a href="mailto:concierge@aureliasurfaces.com">concierge@aureliasurfaces.com</a></li>
+            <li>Mon–Sat: 10:00 AM – 8:00 PM | Sun: 11:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aurelia Surfaces Ltd. All rights reserved.</p>
+        <p><a href="sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-label" aria-hidden="true">
+    <div class="search-modal__panel">
+      <div class="search-modal__bar">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <label for="global-search-input" id="search-modal-label" class="sr-only">Search tiles and sanitaryware</label>
+        <input type="search" id="global-search-input" class="search-modal__input" placeholder="Search by name, category, finish or code..." autocomplete="off" />
+        <button type="button" class="icon-btn js-close-search" aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="search-modal__results" id="global-search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="floating-stack">
+    <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20am%20on%20your%20Contact%20page%20and%20need%20assistance." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+    <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+      <svg class="scroll-top-btn__ring" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="23" fill="none" stroke="rgba(166,124,82,0.2)" stroke-width="2"></circle>
+        <circle class="scroll-top-btn__progress" cx="26" cy="26" r="23" fill="none" stroke="var(--accent)" stroke-width="2"></circle>
+      </svg>
+      <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="mobile-visit-bar" role="region" aria-label="Quick showroom actions">
+    <a href="tel:+442079460920"><i data-lucide="phone" aria-hidden="true"></i> Call Showroom</a>
+    <a href="#quote-form"><i data-lucide="file-text" aria-hidden="true"></i> Fill Quote Form</a>
+  </div>
+
+  <script src="assets/js/plugins/lucide.min.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

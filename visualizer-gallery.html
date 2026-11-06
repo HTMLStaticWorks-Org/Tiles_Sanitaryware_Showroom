@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Tile Visualizer &amp; Room Gallery | Aurelia</title>
+  <meta name="description" content="Explore real-life luxury interiors by room and style. Preview floor and wall tile combinations, before-and-after renovations, and exact bathware specs." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aureliasurfaces.example.com/visualizer-gallery.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Interior Tile Visualizer &amp; Room Gallery | Aurelia" />
+  <meta property="og:description" content="See the possibilities and discover your style across real residential and commercial tile installations." />
+  <meta property="og:image" content="assets/images/viz-hero-luxury-interior.webp" />
+  <meta property="og:url" content="https://aureliasurfaces.example.com/visualizer-gallery.html" />
+
+  <link rel="preload" as="image" href="assets/images/viz-hero-luxury-interior.webp" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-600.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-400.woff2" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Aurelia Surfaces Real Interior Visualizer Gallery",
+    "description": "Curated gallery of real luxury residential and commercial rooms featuring porcelain slabs, marble tiles, and designer sanitaryware."
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldIsoH" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F0D498"/>
+                <stop offset="50%" stop-color="#C5A059"/>
+                <stop offset="100%" stop-color="#8C6642"/>
+              </linearGradient>
+            </defs>
+            <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoH)" />
+            <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+            <polygon points="26,26 41,17 41,34 26,43" fill="#A67C52" opacity="0.92" />
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">Aurelia</span>
+          <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="visualizer-gallery.html" class="nav-link is-active" aria-current="page">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-ctas">
+          <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
+        </div>
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="visualizer-gallery.html" class="is-active">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="mobile-nav__ctas">
+        <a href="products.html" class="btn btn--primary">Shop Collection</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ===================================================================
+         SECTION 1: HERO – IMAGINE YOUR SPACE
+         =================================================================== -->
+    <section class="page-hero" aria-labelledby="viz-hero-heading">
+      <div class="page-hero__bg">
+        <img src="assets/images/viz-hero-luxury-interior.webp" srcset="assets/images/viz-hero-luxury-interior-sm.webp 600w, assets/images/viz-hero-luxury-interior.webp 1600w" sizes="100vw" width="1600" height="1000" fetchpriority="high" alt="Luxury open-plan villa interior clad in large-format travertine and marble tiles" />
+      </div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="eyebrow" style="color: #E2BF84;">Real Interior Applications</span>
+          <h1 id="viz-hero-heading">See the Possibilities. Discover Your Style.</h1>
+          <p>Step inside real completed residences, spa suites, culinary islands, and commercial spaces to experience how Aurelia tiles and bathware perform in natural light.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: GALLERY INTRODUCTION
+         =================================================================== -->
+    <section class="section" aria-labelledby="viz-intro-heading" style="padding-bottom: 2.5rem;">
+      <div class="container container--narrow" style="text-align: center;">
+        <span class="eyebrow" style="justify-content: center;">From Swatch to Completed Architecture</span>
+        <h2 id="viz-intro-heading">Explore Real-Life <em class="editorial-italic">Surface Combinations</em></h2>
+        <p class="section-lead">
+          Selecting a single tile sample in isolation can feel daunting. Use the dual Room and Design Style filters below to examine completed interior spaces, launch full-screen lightbox inspections, and jump directly to the exact SKU specification used in each room.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3 & 4: EXPLORE BY ROOM & EXPLORE BY STYLE FILTERS
+         =================================================================== -->
+    <section class="section section--stone" aria-label="Gallery Room and Style Filters" style="padding-block: 2.5rem;">
+      <div class="container">
+        <div style="margin-bottom: 1.5rem;">
+          <h3 class="footer-heading" style="color: var(--accent-text); margin-bottom: 0.75rem;">01 · Explore by Room</h3>
+          <div class="pill-rail" role="group" aria-label="Filter gallery by room">
+            <button type="button" class="filter-pill is-active" data-viz-room="all">All Rooms</button>
+            <button type="button" class="filter-pill" data-viz-room="Living Room">Living Room</button>
+            <button type="button" class="filter-pill" data-viz-room="Bedroom">Bedroom</button>
+            <button type="button" class="filter-pill" data-viz-room="Kitchen">Kitchen</button>
+            <button type="button" class="filter-pill" data-viz-room="Bathroom">Bathroom</button>
+            <button type="button" class="filter-pill" data-viz-room="Balcony">Balcony</button>
+            <button type="button" class="filter-pill" data-viz-room="Outdoor">Outdoor</button>
+            <button type="button" class="filter-pill" data-viz-room="Commercial Spaces">Commercial Spaces</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h3 class="footer-heading" style="color: var(--accent-text); margin-bottom: 0.75rem;">02 · Explore by Style</h3>
+          <div class="pill-rail" role="group" aria-label="Filter gallery by interior style">
+            <button type="button" class="filter-pill is-active" data-viz-style="all">All Styles</button>
+            <button type="button" class="filter-pill" data-viz-style="Modern">Modern</button>
+            <button type="button" class="filter-pill" data-viz-style="Minimalist">Minimalist</button>
+            <button type="button" class="filter-pill" data-viz-style="Luxury">Luxury</button>
+            <button type="button" class="filter-pill" data-viz-style="Classic">Classic</button>
+            <button type="button" class="filter-pill" data-viz-style="Rustic">Rustic</button>
+            <button type="button" class="filter-pill" data-viz-style="Industrial">Industrial</button>
+            <button type="button" class="filter-pill" data-viz-style="Contemporary">Contemporary</button>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+          <p id="viz-result-count" aria-live="polite" style="font-weight: 600; color: var(--text-primary);">Showing 12 of 12 real interior installations</p>
+          <button type="button" id="viz-reset-btn" class="btn btn--outline btn--sm">Reset Room &amp; Style</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: FEATURED INTERIOR PROJECTS (MASONRY + LIGHTBOX)
+         =================================================================== -->
+    <section class="section" aria-labelledby="viz-projects-heading">
+      <div class="container">
+        <h2 id="viz-projects-heading" class="sr-only">Featured Completed Interior Spaces</h2>
+
+        <div id="viz-empty-msg" hidden style="text-align: center; padding: 3rem; border: 1px solid var(--border-subtle); background: var(--bg-elevated); margin-bottom: 2rem;">
+          <h3>No Exact Room + Style Combination</h3>
+          <p style="margin-top: 0.5rem;">Click "Reset Room &amp; Style" above to view all 12 interior spaces.</p>
+        </div>
+
+        <div class="masonry-grid" id="viz-gallery-grid">
+          <!-- 01 Living Room · Luxury -->
+          <article class="masonry-item" data-room="Living Room" data-style="Luxury">
+            <img src="assets/images/viz-proj-01-living-luxury.webp" srcset="assets/images/viz-proj-01-living-luxury-sm.webp 600w, assets/images/viz-proj-01-living-luxury.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="1200" loading="lazy" alt="Luxury living room with bookmatched Calacatta Oro fireplace wall and honed travertine floor" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Living Room · Luxury</span>
+              <h3 class="masonry-item__title">Calacatta Hearth Lounge</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-01-living-luxury.webp" data-title="Calacatta Hearth Lounge (Living Room · Luxury)" data-meta="Slab: Calacatta Oro Monolith 1600×3200 mm (AUR-SL-601)" data-sku="AUR-SL-601">Full View</button>
+                <a href="products.html?product=AUR-SL-601" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 Bathroom · Minimalist -->
+          <article class="masonry-item" data-room="Bathroom" data-style="Minimalist">
+            <img src="assets/images/viz-proj-02-bathroom-minimalist.webp" srcset="assets/images/viz-proj-02-bathroom-minimalist-sm.webp 600w, assets/images/viz-proj-02-bathroom-minimalist.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Minimalist wet-room shower clad in Sabbia Limestone matte porcelain tiles" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Bathroom · Minimalist</span>
+              <h3 class="masonry-item__title">Monochrome Limestone Ensuite</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-02-bathroom-minimalist.webp" data-title="Monochrome Limestone Ensuite (Bathroom · Minimalist)" data-meta="Surface: Jura Beige Fossil Stone (AUR-MS-703) + Conca Vessel Basin" data-sku="AUR-MS-703">Full View</button>
+                <a href="products.html?product=AUR-MS-703" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 Kitchen · Modern -->
+          <article class="masonry-item" data-room="Kitchen" data-style="Modern">
+            <img src="assets/images/viz-proj-03-kitchen-modern.webp" srcset="assets/images/viz-proj-03-kitchen-modern-sm.webp 600w, assets/images/viz-proj-03-kitchen-modern.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="1200" loading="lazy" alt="Modern architectural kitchen featuring Pietra Lavica sintered stone island" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Kitchen · Modern</span>
+              <h3 class="masonry-item__title">Sintered Culinary Monolith</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-03-kitchen-modern.webp" data-title="Sintered Culinary Monolith (Kitchen · Modern)" data-meta="Island &amp; Floor: Pietra Lavica Culinary 12mm (AUR-KT-402)" data-sku="AUR-KT-402">Full View</button>
+                <a href="products.html?product=AUR-KT-402" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 Bedroom · Classic -->
+          <article class="masonry-item" data-room="Bedroom" data-style="Classic">
+            <img src="assets/images/viz-proj-04-bedroom-classic.webp" srcset="assets/images/viz-proj-04-bedroom-classic-sm.webp 600w, assets/images/viz-proj-04-bedroom-classic.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Classic master bedroom laid with Noce Canaletto walnut herringbone porcelain planks" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Bedroom · Classic</span>
+              <h3 class="masonry-item__title">Canaletto Parquet Suite</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-04-bedroom-classic.webp" data-title="Canaletto Parquet Suite (Bedroom · Classic)" data-meta="Floor: Noce Canaletto Herringbone (AUR-WD-802)" data-sku="AUR-WD-802">Full View</button>
+                <a href="products.html?product=AUR-WD-802" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 Outdoor · Rustic -->
+          <article class="masonry-item" data-room="Outdoor" data-style="Rustic">
+            <img src="assets/images/viz-proj-05-outdoor-rustic.webp" srcset="assets/images/viz-proj-05-outdoor-rustic-sm.webp 600w, assets/images/viz-proj-05-outdoor-rustic.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="1200" loading="lazy" alt="Mediterranean rustic outdoor dining courtyard paved in 20mm porphyry stone pavers" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Outdoor · Rustic</span>
+              <h3 class="masonry-item__title">Tuscan Pergola Courtyard</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-05-outdoor-rustic.webp" data-title="Tuscan Pergola Courtyard (Outdoor · Rustic)" data-meta="Paver: Porphyry Cobble Forte 20mm (AUR-OD-501)" data-sku="AUR-OD-501">Full View</button>
+                <a href="products.html?product=AUR-OD-501" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 Commercial Spaces · Industrial -->
+          <article class="masonry-item" data-room="Commercial Spaces" data-style="Industrial">
+            <img src="assets/images/viz-proj-06-commercial-industrial.webp" srcset="assets/images/viz-proj-06-commercial-industrial-sm.webp 600w, assets/images/viz-proj-06-commercial-industrial.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Industrial specialty coffee bar paved in Basaltina Antracite porcelain tiles" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Commercial Spaces · Industrial</span>
+              <h3 class="masonry-item__title">Roastery &amp; Gallery Bar</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-06-commercial-industrial.webp" data-title="Roastery &amp; Gallery Bar (Commercial · Industrial)" data-meta="Floor: Basaltina Antracite R11 (AUR-FL-104)" data-sku="AUR-FL-104">Full View</button>
+                <a href="products.html?product=AUR-FL-104" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07 Balcony · Contemporary -->
+          <article class="masonry-item" data-room="Balcony" data-style="Contemporary">
+            <img src="assets/images/viz-proj-07-balcony-contemporary.webp" srcset="assets/images/viz-proj-07-balcony-contemporary-sm.webp 600w, assets/images/viz-proj-07-balcony-contemporary.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Contemporary sky-deck balcony featuring Rovere Miel outdoor wood-look planks" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Balcony · Contemporary</span>
+              <h3 class="masonry-item__title">Sky-Villa Panorama Deck</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-07-balcony-contemporary.webp" data-title="Sky-Villa Panorama Deck (Balcony · Contemporary)" data-meta="Deck Plank: Rovere Miel 200×1200 mm (AUR-WD-801)" data-sku="AUR-WD-801">Full View</button>
+                <a href="products.html?product=AUR-WD-801" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 08 Bathroom · Luxury -->
+          <article class="masonry-item" data-room="Bathroom" data-style="Luxury">
+            <img src="assets/images/viz-proj-08-bathroom-luxury.webp" srcset="assets/images/viz-proj-08-bathroom-luxury-sm.webp 600w, assets/images/viz-proj-08-bathroom-luxury.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="1200" loading="lazy" alt="Luxury hotel bathroom clad in Onyx Avorio Cloud lappato slabs with brass bathware" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Bathroom · Luxury</span>
+              <h3 class="masonry-item__title">Onyx &amp; Brushed Bronze Bath</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-08-bathroom-luxury.webp" data-title="Onyx &amp; Brushed Bronze Bath (Bathroom · Luxury)" data-meta="Wall: Onyx Avorio Cloud (AUR-BT-303) + Cilindro Tall Mixer" data-sku="AUR-BT-303">Full View</button>
+                <a href="products.html?product=AUR-BT-303" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 09 Living Room · Minimalist -->
+          <article class="masonry-item" data-room="Living Room" data-style="Minimalist">
+            <img src="assets/images/viz-proj-09-living-minimalist.webp" srcset="assets/images/viz-proj-09-living-minimalist-sm.webp 600w, assets/images/viz-proj-09-living-minimalist.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Airy minimalist living room paved in Sabbia Limestone Warm rectified tiles" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Living Room · Minimalist</span>
+              <h3 class="masonry-item__title">Sunlit Chalk Pavilion</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-09-living-minimalist.webp" data-title="Sunlit Chalk Pavilion (Living Room · Minimalist)" data-meta="Floor: Sabbia Limestone Warm (AUR-FL-103)" data-sku="AUR-FL-103">Full View</button>
+                <a href="products.html?product=AUR-FL-103" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 Kitchen · Classic -->
+          <article class="masonry-item" data-room="Kitchen" data-style="Classic">
+            <img src="assets/images/viz-proj-10-kitchen-classic.webp" srcset="assets/images/viz-proj-10-kitchen-classic-sm.webp 600w, assets/images/viz-proj-10-kitchen-classic.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Classic bespoke kitchen with Taj Mahal Quartzite worktops and chevron ceramic backsplash" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Kitchen · Classic</span>
+              <h3 class="masonry-item__title">Heritage Quartzite Kitchen</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-10-kitchen-classic.webp" data-title="Heritage Quartzite Kitchen (Kitchen · Classic)" data-meta="Worktop: Taj Mahal Quartzite Slab (AUR-SL-603) + Biselado Backsplash" data-sku="AUR-SL-603">Full View</button>
+                <a href="products.html?product=AUR-SL-603" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11 Commercial Spaces · Modern -->
+          <article class="masonry-item" data-room="Commercial Spaces" data-style="Modern">
+            <img src="assets/images/viz-proj-11-commercial-modern.webp" srcset="assets/images/viz-proj-11-commercial-modern-sm.webp 600w, assets/images/viz-proj-11-commercial-modern.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="1200" loading="lazy" alt="Modern spa hotel corridor clad in fluted architectural wall tiles and honed travertine" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Commercial Spaces · Modern</span>
+              <h3 class="masonry-item__title">Wellness Spa Reception</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-11-commercial-modern.webp" data-title="Wellness Spa Reception (Commercial · Modern)" data-meta="Wall: Lino Fluted Architectural (AUR-WL-202)" data-sku="AUR-WL-202">Full View</button>
+                <a href="products.html?product=AUR-WL-202" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 Outdoor · Contemporary -->
+          <article class="masonry-item" data-room="Outdoor" data-style="Contemporary">
+            <img src="assets/images/viz-proj-12-outdoor-contemporary.webp" srcset="assets/images/viz-proj-12-outdoor-contemporary-sm.webp 600w, assets/images/viz-proj-12-outdoor-contemporary.webp 1000w" sizes="(max-width: 639px) 94vw, (max-width: 1023px) 46vw, 31vw" width="1000" height="800" loading="lazy" alt="Contemporary infinity pool terrace with Quarzite Alpina structured outdoor slabs" />
+            <div class="masonry-item__overlay">
+              <span class="masonry-item__tag">Outdoor · Contemporary</span>
+              <h3 class="masonry-item__title">Horizon Pool Terrace</h3>
+              <div class="masonry-item__actions">
+                <button type="button" class="btn btn--primary btn--sm js-lightbox-trigger" data-src="assets/images/viz-proj-12-outdoor-contemporary.webp" data-title="Horizon Pool Terrace (Outdoor · Contemporary)" data-meta="Deck: Quarzite Alpina R11 (AUR-OD-502)" data-sku="AUR-OD-502">Full View</button>
+                <a href="products.html?product=AUR-OD-502" class="btn btn--outline-light btn--sm">View Related Product</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: TILE COMBINATION IDEAS (MOODBOARD PAIRINGS)
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="combo-ideas-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Stylist Moodboards</span>
+          <h2 id="combo-ideas-heading">Tile <em class="editorial-italic">Combination Ideas</em></h2>
+          <p class="section-lead">Three foolproof floor, wall, and brassware trios pre-matched by our showroom colourists.</p>
+        </div>
+
+        <div class="editorial-rows">
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-combo-travertine-oak.webp" srcset="assets/images/viz-combo-travertine-oak-sm.webp 600w, assets/images/viz-combo-travertine-oak.webp 1000w" sizes="(max-width: 959px) 94vw, 52vw" width="1000" height="800" loading="lazy" alt="Moodboard pairing warm travertine floor tiles with honey oak planks and bronze brassware" />
+              <span class="editorial-split__tag">Palette 01 · Warm Mediterranean</span>
+            </div>
+            <div class="editorial-split__content">
+              <h3>Vein-Cut Travertine + Honey Oak + Brushed Bronze</h3>
+              <p><strong>Floor:</strong> Travertino Romano Honed (AUR-FL-101) · <strong>Accent Wall:</strong> Lino Fluted Architectural (AUR-WL-202) · <strong>Bedroom Transition:</strong> Rovere Miel Plank (AUR-WD-801).</p>
+              <a href="products.html?category=Floor%20Tiles" class="btn-link">Explore This Palette <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="editorial-split editorial-split--reverse reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-combo-terrazzo-sage.webp" srcset="assets/images/viz-combo-terrazzo-sage-sm.webp 600w, assets/images/viz-combo-terrazzo-sage.webp 1000w" sizes="(max-width: 959px) 94vw, 52vw" width="1000" height="800" loading="lazy" alt="Venetian terrazzo floor paired with artisanal sage green glazed ceramic brick tiles" />
+              <span class="editorial-split__tag">Palette 02 · Botanical Artisanal</span>
+            </div>
+            <div class="editorial-split__content">
+              <h3>Palladiana Terrazzo + Salvia Glazed Brick + Ivory Vessel</h3>
+              <p><strong>Floor:</strong> Venezia Palladiana Terrazzo (AUR-DS-901) · <strong>Wet Wall:</strong> Salvia Artisanal Brick (AUR-KT-403) · <strong>Vanity:</strong> Conca Matte Ivory Basin (AUR-WB-1001).</p>
+              <a href="products.html?category=Designer%20Tiles" class="btn-link">Explore This Palette <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-combo-charcoal-bronze.webp" srcset="assets/images/viz-combo-charcoal-bronze-sm.webp 600w, assets/images/viz-combo-charcoal-bronze.webp 1000w" sizes="(max-width: 959px) 94vw, 52vw" width="1000" height="800" loading="lazy" alt="Moody charcoal Sahara Noir slab paired with brushed champagne bronze tapware" />
+              <span class="editorial-split__tag">Palette 03 · Nocturnal Suite</span>
+            </div>
+            <div class="editorial-split__content">
+              <h3>Sahara Noir Satin + Ceppo Grip Floor + PVD Bronze</h3>
+              <p><strong>Feature Wall:</strong> Sahara Noir Gold Vein (AUR-SL-602) · <strong>Shower Floor:</strong> Ceppo Di Gre R11 (AUR-BT-302) · <strong>Tapware:</strong> Linea Concealed Wall Spout (AUR-FC-1202).</p>
+              <a href="products.html?category=Porcelain%20Slabs" class="btn-link">Explore This Palette <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: BEFORE & AFTER TRANSFORMATIONS (DRAGGABLE SLIDER)
+         =================================================================== -->
+    <section class="section" aria-labelledby="viz-ba-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Renovation Impact</span>
+          <h2 id="viz-ba-heading">Before &amp; After <em class="editorial-italic">Transformations</em></h2>
+          <p class="section-lead">Slide across this culinary renovation to compare a closed, dated apartment kitchen against an open-plan sintered stone island and chevron splashback.</p>
+        </div>
+
+        <div class="ba-slider reveal" aria-label="Before and after kitchen renovation comparison">
+          <div class="ba-slider__after">
+            <img src="assets/images/viz-ba-after-kitchen.webp" srcset="assets/images/viz-ba-after-kitchen-sm.webp 600w, assets/images/viz-ba-after-kitchen.webp 1200w" sizes="(max-width: 1360px) 94vw, 1280px" width="1200" height="800" loading="lazy" alt="After renovation: bespoke marble-slab waterfall kitchen island and warm brass lighting" />
+            <span class="ba-slider__label ba-slider__label--after">After · Taj Mahal 12mm Sintered Slab</span>
+          </div>
+          <div class="ba-slider__before">
+            <img src="assets/images/viz-ba-before-kitchen.webp" srcset="assets/images/viz-ba-before-kitchen-sm.webp 600w, assets/images/viz-ba-before-kitchen.webp 1200w" sizes="(max-width: 1360px) 94vw, 1280px" width="1200" height="800" loading="lazy" alt="Before renovation: dated small laminate apartment kitchen" />
+            <span class="ba-slider__label ba-slider__label--before">Before · Original Laminate Counter</span>
+          </div>
+          <div class="ba-slider__handle" aria-hidden="true">
+            <span class="ba-slider__knob"><i data-lucide="move-horizontal"></i></span>
+          </div>
+          <label for="viz-ba-range" class="sr-only">Slide to compare kitchen before and after renovation</label>
+          <input type="range" id="viz-ba-range" class="ba-slider__range" min="5" max="95" value="50" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: PRODUCT USED IN THIS SPACE (INTERACTIVE ROOM BREAKDOWN)
+         =================================================================== -->
+    <section class="section section--dark" aria-labelledby="used-in-space-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Exact SKU Specification</span>
+          <h2 id="used-in-space-heading">Products Used in <em class="editorial-italic">These Spaces</em></h2>
+          <p class="section-lead">Select a featured room below to inspect every individual tile and bathware SKU specified to achieve the look.</p>
+        </div>
+
+        <div class="pill-rail" role="tablist" aria-label="Select room breakdown" style="margin-bottom: 2rem;">
+          <button type="button" class="filter-pill is-active" role="tab" aria-selected="true" data-space-tab="spa">01 · Onyx &amp; Bronze Master Bath</button>
+          <button type="button" class="filter-pill" role="tab" aria-selected="false" data-space-tab="living">02 · Calacatta Hearth Living Suite</button>
+          <button type="button" class="filter-pill" role="tab" aria-selected="false" data-space-tab="kitchen">03 · Sintered Culinary Island</button>
+        </div>
+
+        <!-- Panel 1: Spa Bath -->
+        <div data-space-panel="spa">
+          <ol class="numbered-ledger">
+            <li class="ledger-row">
+              <span class="ledger-row__index">A</span>
+              <div><h3>Onyx Avorio Cloud (800×1600 mm)</h3><span style="font-size: 0.8rem; color: var(--accent);">Feature Wet Wall · AUR-BT-303</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>Polished Lappato Vitrified</span>
+                <a href="products.html?product=AUR-BT-303" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-row__index">B</span>
+              <div><h3>Conca Vessel Countertop Basin</h3><span style="font-size: 0.8rem; color: var(--accent);">Vanity Centerpiece · AUR-WB-1001</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>5 mm Thin-Rim Matte Warm Ivory</span>
+                <a href="products.html?product=AUR-WB-1001" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-row__index">C</span>
+              <div><h3>Pioggia Ceiling-Flush Rain System</h3><span style="font-size: 0.8rem; color: var(--accent);">Hydrotherapy · AUR-SH-1301</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>400×400 mm PVD Brushed Bronze</span>
+                <a href="products.html?product=AUR-SH-1301" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Panel 2: Living Suite -->
+        <div data-space-panel="living" hidden>
+          <ol class="numbered-ledger">
+            <li class="ledger-row">
+              <span class="ledger-row__index">A</span>
+              <div><h3>Calacatta Oro Monolith (1600×3200 mm)</h3><span style="font-size: 0.8rem; color: var(--accent);">Hearth Cladding · AUR-SL-601</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>12 mm Bookmatched Sintered Slab</span>
+                <a href="products.html?product=AUR-SL-601" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-row__index">B</span>
+              <div><h3>Travertino Romano Vein-Cut (800×1600 mm)</h3><span style="font-size: 0.8rem; color: var(--accent);">Main Living Floor · AUR-FL-101</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>Honed Silk Matte R10</span>
+                <a href="products.html?product=AUR-FL-101" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Panel 3: Kitchen -->
+        <div data-space-panel="kitchen" hidden>
+          <ol class="numbered-ledger">
+            <li class="ledger-row">
+              <span class="ledger-row__index">A</span>
+              <div><h3>Pietra Lavica Culinary (1200×2400 mm)</h3><span style="font-size: 0.8rem; color: var(--accent);">Waterfall Island · AUR-KT-402</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>12 mm Heat-Proof Sintered Stone</span>
+                <a href="products.html?product=AUR-KT-402" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-row__index">B</span>
+              <div><h3>Kitkat Artisanal Ivory (300×600 mm)</h3><span style="font-size: 0.8rem; color: var(--accent);">Coffee Niche Wall · AUR-WL-201</span></div>
+              <div class="ledger-row__desc" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <span>Scored Finger-Mosaic Glaze</span>
+                <a href="products.html?product=AUR-WL-201" class="btn btn--primary btn--sm">View Product</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: DESIGN INSPIRATION STORIES (EDITORIAL JOURNAL)
+         =================================================================== -->
+    <section class="section" aria-labelledby="stories-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">The Aurelia Editorial</span>
+          <h2 id="stories-heading">Design Inspiration <em class="editorial-italic">Stories &amp; Guides</em></h2>
+          <p class="section-lead">Practical specification insights written by our showroom interior architects.</p>
+        </div>
+
+        <div class="editorial-rows">
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-story-slab-proportions.webp" srcset="assets/images/viz-story-slab-proportions-sm.webp 600w, assets/images/viz-story-slab-proportions.webp 1000w" sizes="(max-width: 959px) 94vw, 48vw" width="1000" height="700" loading="lazy" alt="Minimalist hallway laid with large-format stone floor slabs" />
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Guide 01 · Tile Proportions · 4 Min Read</span>
+              <h3>Selecting Large-Format Slab Proportions for Seamless Interiors</h3>
+              <p>Why large 800×1600 mm and 1200×2400 mm formats actually make compact urban rooms feel wider—and how to plan grout joint sightlines before laying begins.</p>
+              <button type="button" class="btn-link js-open-story" data-story="proportions">Read Full Guide <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="editorial-split editorial-split--reverse reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-story-warm-undertones.webp" srcset="assets/images/viz-story-warm-undertones-sm.webp 600w, assets/images/viz-story-warm-undertones.webp 1000w" sizes="(max-width: 959px) 94vw, 48vw" width="1000" height="700" loading="lazy" alt="Warm sunlit travertine wall paired with neutral lime plaster" />
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Guide 02 · Colour Harmony · 3 Min Read</span>
+              <h3>The Art of Warm Undertone Matching: Travertine, Bronze &amp; Oak</h3>
+              <p>How to prevent cool-grey clashes when combining stone flooring, timber joinery, and metallic bathroom hardware under 3000K LEDs.</p>
+              <button type="button" class="btn-link js-open-story" data-story="undertones">Read Full Guide <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+
+          <article class="editorial-split reveal">
+            <div class="editorial-split__media">
+              <img src="assets/images/viz-story-wetzone-finishes.webp" srcset="assets/images/viz-story-wetzone-finishes-sm.webp 600w, assets/images/viz-story-wetzone-finishes.webp 1000w" sizes="(max-width: 959px) 94vw, 48vw" width="1000" height="700" loading="lazy" alt="Walk-in wet room shower with anti-slip stone floor and linear drain" />
+            </div>
+            <div class="editorial-split__content">
+              <span class="lux-card__code">Guide 03 · Wet-Zone Safety · 4 Min Read</span>
+              <h3>Matte vs. Honed Silk Finishes in Barefoot Wet Zones</h3>
+              <p>Decoding R9, R10, and R11 slip ratings so elderly family members and children stay safe without sacrificing spa aesthetics.</p>
+              <button type="button" class="btn-link js-open-story" data-story="wetzones">Read Full Guide <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: GET EXPERT DESIGN ASSISTANCE CTA
+         =================================================================== -->
+    <section class="section section--beige" aria-labelledby="design-assist-heading">
+      <div class="container container--narrow" style="text-align: center;">
+        <span class="eyebrow" style="justify-content: center;">1-on-1 Moodboard Styling</span>
+        <h2 id="design-assist-heading">Not Sure Which Design Suits Your Space?</h2>
+        <p class="section-lead" style="margin-inline: auto; max-width: 54ch; margin-bottom: 2rem;">
+          Share smartphone photos of your room or your architect's floor plan—our stylists will assemble three physical tile &amp; brassware pairings ready on our showroom table.
+        </p>
+        <a href="contact.html#quote-form" class="btn btn--primary">Get Design Advice <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       SECTION 11: GLOBAL FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+            <span class="brand-logo__mark" aria-hidden="true">
+              <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIsoF" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F3DC9B"/>
+                    <stop offset="50%" stop-color="#CCA072"/>
+                    <stop offset="100%" stop-color="#A67C52"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoF)" />
+                <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+                <polygon points="26,26 41,17 41,34 26,43" fill="#CCA072" opacity="0.95" />
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">Aurelia</span>
+              <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+            </span>
+          </a>
+          <p class="site-footer__desc">
+            Architectural porcelain slabs, natural stone finishes, and precision PVD sanitaryware curated for enduring residential and commercial interiors.
+          </p>
+          <div class="footer-socials" aria-label="Social Media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Important Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 01 — Showroom</a></li>
+            <li><a href="home-2.html">Home 02 — Architectural</a></li>
+            <li><a href="products.html">Complete Product Catalogue</a></li>
+            <li><a href="visualizer-gallery.html">Visualizer Gallery</a></li>
+            <li><a href="about.html">About Our Showroom</a></li>
+            <li><a href="contact.html">Contact &amp; Quotations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Explore By Room</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?room=Living%20Room">Living Room Slabs</a></li>
+            <li><a href="products.html?room=Bathroom">Bathroom Suites</a></li>
+            <li><a href="products.html?room=Kitchen">Kitchen Countertops &amp; Walls</a></li>
+            <li><a href="products.html?room=Bedroom">Bedroom Wood Planks</a></li>
+            <li><a href="products.html?room=Terrace">Outdoor &amp; Pool Decks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Contact Details</h3>
+          <ul class="footer-links">
+            <li>42 Design District, King's Road, Chelsea, London SW10 0XE</li>
+            <li><a href="tel:+442079460920">+44 20 7946 0920</a></li>
+            <li><a href="mailto:concierge@aureliasurfaces.com">concierge@aureliasurfaces.com</a></li>
+            <li>Mon–Sat: 10:00 AM – 8:00 PM | Sun: 11:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aurelia Surfaces Ltd. All rights reserved.</p>
+        <p><a href="contact.html#map-section">Showroom Map</a> · <a href="sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fullscreen Lightbox -->
+  <div class="lightbox" id="global-lightbox" role="dialog" aria-modal="true" aria-label="Interior image preview" aria-hidden="true">
+    <button type="button" class="lightbox__close" aria-label="Close preview"><i data-lucide="x" aria-hidden="true"></i></button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Previous image"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+    <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next image"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+    <div class="lightbox__inner">
+      <div class="lightbox__img-wrap">
+        <img id="lightbox-img" src="assets/images/viz-proj-01-living-luxury.webp" width="1200" height="850" loading="lazy" alt="Interior surface preview" />
+      </div>
+      <div class="lightbox__caption-bar">
+        <div>
+          <h3 id="lightbox-title" style="color: #FAF7F2; font-size: 1.3rem;">Interior Preview</h3>
+          <p id="lightbox-meta" style="color: rgba(245,240,232,0.8); font-size: 0.85rem;"></p>
+        </div>
+        <a id="lightbox-product-link" href="products.html" class="btn btn--primary btn--sm">View Related Product</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Story Reader Modal -->
+  <div class="compare-modal" id="story-reader-modal" role="dialog" aria-modal="true" aria-labelledby="story-modal-title" aria-hidden="true">
+    <div class="compare-modal__box" style="max-width: 720px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+        <div>
+          <span id="story-modal-meta" class="lux-card__code"></span>
+          <h3 id="story-modal-title" style="margin-top: 4px;"></h3>
+        </div>
+        <button type="button" class="icon-btn js-close-story" aria-label="Close article"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div id="story-modal-body" style="line-height: 1.75; margin-bottom: 1.5rem;"></div>
+      <a href="products.html" class="btn btn--primary btn--sm">Explore Referenced Surfaces</a>
+    </div>
+  </div>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-label" aria-hidden="true">
+    <div class="search-modal__panel">
+      <div class="search-modal__bar">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <label for="global-search-input" id="search-modal-label" class="sr-only">Search tiles and sanitaryware</label>
+        <input type="search" id="global-search-input" class="search-modal__input" placeholder="Search by name, category, finish or code..." autocomplete="off" />
+        <button type="button" class="icon-btn js-close-search" aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="search-modal__results" id="global-search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="floating-stack">
+    <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20saw%20an%20interior%20in%20your%20Visualizer%20Gallery%20and%20would%20like%20details." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+    <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+      <svg class="scroll-top-btn__ring" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="23" fill="none" stroke="rgba(166,124,82,0.2)" stroke-width="2"></circle>
+        <circle class="scroll-top-btn__progress" cx="26" cy="26" r="23" fill="none" stroke="var(--accent)" stroke-width="2"></circle>
+      </svg>
+      <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="mobile-visit-bar" role="region" aria-label="Quick showroom actions">
+    <a href="contact.html#visit-showroom"><i data-lucide="map-pin" aria-hidden="true"></i> Book Showroom Visit</a>
+    <a href="contact.html#quote-form"><i data-lucide="file-text" aria-hidden="true"></i> Request Quote</a>
+  </div>
+
+  <script src="assets/js/plugins/lucide.min.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

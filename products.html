@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiles, Porcelain Slabs &amp; Bathware Catalogue | Aurelia</title>
+  <meta name="description" content="Browse 46+ architectural floor tiles, wall tiles, porcelain slabs, wooden planks, washbasins, WCs, and PVD showers. Filter by room, size, and finish." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aureliasurfaces.example.com/products.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tiles, Porcelain Slabs &amp; Bathware Catalogue | Aurelia" />
+  <meta property="og:description" content="Find the perfect surface for every space—filter across 14 tile and sanitaryware categories." />
+  <meta property="og:image" content="assets/images/products-hero-surface-gallery.webp" />
+  <meta property="og:url" content="https://aureliasurfaces.example.com/products.html" />
+
+  <link rel="preload" as="image" href="assets/images/products-hero-surface-gallery.webp" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-600.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-400.woff2" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Aurelia Surfaces Complete Product Catalogue",
+    "description": "Complete specification catalogue of floor tiles, wall tiles, sintered porcelain slabs, and luxury sanitaryware."
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor" aria-hidden="true"></div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldIsoH" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F0D498"/>
+                <stop offset="50%" stop-color="#C5A059"/>
+                <stop offset="100%" stop-color="#8C6642"/>
+              </linearGradient>
+            </defs>
+            <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoH)" />
+            <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+            <polygon points="26,26 41,17 41,34 26,43" fill="#A67C52" opacity="0.92" />
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">Aurelia</span>
+          <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home 1</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link is-active" aria-current="page">Products</a>
+        <a href="visualizer-gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-ctas">
+          <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
+        </div>
+        <button type="button" class="hamburger-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-overlay">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="products.html" class="is-active">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="mobile-nav__ctas">
+        <a href="products.html" class="btn btn--primary">Shop Collection</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- ===================================================================
+         SECTION 1: PAGE HERO – EXPLORE OUR PRODUCTS
+         =================================================================== -->
+    <section class="page-hero" aria-labelledby="products-hero-heading">
+      <div class="page-hero__bg">
+        <img src="assets/images/products-hero-surface-gallery.webp" srcset="assets/images/products-hero-surface-gallery-sm.webp 600w, assets/images/products-hero-surface-gallery.webp 1600w" sizes="100vw" width="1600" height="900" fetchpriority="high" alt="Architectural flatlay of marble, travertine, wood-grain porcelain, and PVD bronze samples" />
+      </div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="eyebrow" style="color: #E2BF84;">Complete Specification Catalogue · 14 Departments</span>
+          <h1 id="products-hero-heading">Find the Perfect Surface for Every Space.</h1>
+          <p>Filter across rectified porcelain slabs, natural stone finishes, timber planks, designer wall reliefs, washbasins, rimless WCs, and PVD brassware—each backed by full technical specifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: BREADCRUMB NAVIGATION
+         =================================================================== -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">Products</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ===================================================================
+         SECTION 3 & 4: PRODUCT CATEGORIES & SHOP BY ROOM
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="cat-browse-heading" style="padding-block: 2.5rem;">
+      <div class="container">
+        <div style="margin-bottom: 1.75rem;">
+          <h2 id="cat-browse-heading" class="footer-heading" style="color: var(--accent-text); margin-bottom: 0.75rem;">01 · Browse by Product Category</h2>
+          <div class="pill-rail" id="category-pill-rail" role="group" aria-label="Product category quick filters">
+            <!-- Dynamically populated with all 14 categories + counts by products.js -->
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer-heading" style="color: var(--accent-text); margin-bottom: 0.75rem;">02 · Shop by Room Application</h2>
+          <div class="pill-rail" id="room-pill-rail" role="group" aria-label="Room application filters">
+            <button type="button" class="filter-pill is-active" data-room-pill="All">All Spaces</button>
+            <button type="button" class="filter-pill" data-room-pill="Living Room">Living Room</button>
+            <button type="button" class="filter-pill" data-room-pill="Bedroom">Bedroom</button>
+            <button type="button" class="filter-pill" data-room-pill="Kitchen">Kitchen</button>
+            <button type="button" class="filter-pill" data-room-pill="Bathroom">Bathroom</button>
+            <button type="button" class="filter-pill" data-room-pill="Balcony">Balcony</button>
+            <button type="button" class="filter-pill" data-room-pill="Terrace">Terrace</button>
+            <button type="button" class="filter-pill" data-room-pill="Commercial Spaces">Commercial Spaces</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5 & 6: PRODUCT FILTERS, SORTING & CATALOGUE GRID
+         =================================================================== -->
+    <section class="section" aria-labelledby="catalogue-grid-heading">
+      <div class="container">
+        <h2 id="catalogue-grid-heading" class="sr-only">Filterable Product Catalogue</h2>
+
+        <!-- Multi-Attribute Filter & Sort Toolbar -->
+        <div class="filter-toolbar" role="region" aria-label="Product specifications filter and sort">
+          <div class="filter-toolbar__grid">
+            <div class="form-field">
+              <label for="filter-category" class="form-label">Category</label>
+              <select id="filter-category" class="form-control">
+                <option value="All">All 14 Categories</option>
+                <option value="Floor Tiles">Floor Tiles</option>
+                <option value="Wall Tiles">Wall Tiles</option>
+                <option value="Bathroom Tiles">Bathroom Tiles</option>
+                <option value="Kitchen Tiles">Kitchen Tiles</option>
+                <option value="Outdoor & Parking Tiles">Outdoor &amp; Parking Tiles</option>
+                <option value="Porcelain Slabs">Porcelain Slabs</option>
+                <option value="Marble & Stone Finish Tiles">Marble &amp; Stone Finish Tiles</option>
+                <option value="Wooden Finish Tiles">Wooden Finish Tiles</option>
+                <option value="Designer Tiles">Designer Tiles</option>
+                <option value="Washbasins">Washbasins</option>
+                <option value="Water Closets (WC)">Water Closets (WC)</option>
+                <option value="Faucets & Taps">Faucets &amp; Taps</option>
+                <option value="Shower Systems">Shower Systems</option>
+                <option value="Bathroom Accessories">Bathroom Accessories</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-room" class="form-label">Room</label>
+              <select id="filter-room" class="form-control">
+                <option value="All">All Rooms</option>
+                <option value="Living Room">Living Room</option>
+                <option value="Bedroom">Bedroom</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Bathroom">Bathroom</option>
+                <option value="Balcony">Balcony</option>
+                <option value="Terrace">Terrace &amp; Outdoor</option>
+                <option value="Commercial Spaces">Commercial Spaces</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-size" class="form-label">Dimensions / Size</label>
+              <select id="filter-size" class="form-control">
+                <option value="All">All Dimensions</option>
+                <option value="300×600 mm">300×600 mm</option>
+                <option value="600×600 mm">600×600 mm</option>
+                <option value="200×1200 mm">200×1200 mm Planks</option>
+                <option value="600×1200 mm">600×1200 mm</option>
+                <option value="800×1600 mm">800×1600 mm</option>
+                <option value="1200×2400 mm">1200×2400 mm Slabs</option>
+                <option value="1600×3200 mm">1600×3200 mm Monoliths</option>
+                <option value="Sanitaryware / Custom">Sanitaryware / Bathware</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-colour" class="form-label">Colour Palette</label>
+              <select id="filter-colour" class="form-control">
+                <option value="All">All Tones</option>
+                <option value="Ivory & Cream">Ivory &amp; Cream</option>
+                <option value="Warm Beige & Travertine">Warm Beige &amp; Travertine</option>
+                <option value="Carrara White">Carrara White</option>
+                <option value="Charcoal & Slate">Charcoal &amp; Slate</option>
+                <option value="Walnut & Oak">Walnut &amp; Oak</option>
+                <option value="Terracotta & Bronze">Terracotta &amp; Bronze</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-material" class="form-label">Material</label>
+              <select id="filter-material" class="form-control">
+                <option value="All">All Materials</option>
+                <option value="Glazed Vitrified Porcelain">Glazed Vitrified Porcelain</option>
+                <option value="Full-Body Porcelain">Full-Body Porcelain</option>
+                <option value="Sintered Stone Slab">Sintered Stone Slab</option>
+                <option value="Ceramic Wall">Ceramic Wall</option>
+                <option value="Vitreous China">Vitreous China</option>
+                <option value="Stone Resin">Stone Resin</option>
+                <option value="Solid Brass PVD">Solid Brass PVD</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-finish" class="form-label">Surface Finish</label>
+              <select id="filter-finish" class="form-control">
+                <option value="All">All Finishes</option>
+                <option value="Honed Matte">Honed Matte</option>
+                <option value="Satin Matte">Satin Matte</option>
+                <option value="High Gloss">High Gloss</option>
+                <option value="Polished Lappato">Polished Lappato</option>
+                <option value="Textured Anti-Slip">Textured Anti-Slip</option>
+                <option value="Brushed Bronze PVD">Brushed Bronze PVD</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-price" class="form-label">Indicative Price Band</label>
+              <select id="filter-price" class="form-control">
+                <option value="All">All Price Tiers</option>
+                <option value="entry">₹125 – ₹165 / sq.ft.</option>
+                <option value="mid">₹170 – ₹275 / sq.ft.</option>
+                <option value="luxury">₹340 – ₹580 / sq.ft. (Slabs)</option>
+                <option value="bathware">Luxury Bathware &amp; Brass</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="filter-sort" class="form-label">Sort By</label>
+              <select id="filter-sort" class="form-control">
+                <option value="popular">Popularity &amp; Best-Sellers</option>
+                <option value="newest">Newest Arrivals First</option>
+                <option value="price-asc">Price Band: Low to High</option>
+                <option value="name">Alphabetical (A – Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-toolbar__footer">
+            <p id="product-result-count" aria-live="polite" style="font-weight: 600; color: var(--text-primary);">Showing 46 of 46 architectural specifications</p>
+            <button type="button" id="clear-filters-btn" class="btn btn--outline btn--sm">Clear All Filters</button>
+          </div>
+        </div>
+
+        <!-- Product Catalogue Grid (Populated by products.js) -->
+        <div class="card-grid card-grid--3" id="product-catalogue-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: FEATURED PRODUCT COLLECTION (EDITORIAL SPOTLIGHT)
+         =================================================================== -->
+    <section class="section section--dark" id="featured-collections" aria-labelledby="featured-prod-heading">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__main">
+            <span class="eyebrow">Showroom Signatures</span>
+            <h2 id="featured-prod-heading">Featured <em class="editorial-italic">Product Highlights</em></h2>
+            <p class="section-lead">Our three most specified flagship pieces across residential penthouses and boutique hotels this season.</p>
+          </div>
+        </div>
+
+        <ol class="numbered-ledger">
+          <li class="ledger-row reveal">
+            <span class="ledger-row__index">01</span>
+            <div>
+              <span class="lux-card__code" style="color: var(--accent);">Best-Selling Monolith · AUR-SL-601</span>
+              <h3>Calacatta Oro Monolith (1600×3200 mm)</h3>
+            </div>
+            <div class="ledger-row__desc" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+              <p>A+B bookmatched sintered slab in 12 mm thickness for seamless waterfall islands and living walls.</p>
+              <button type="button" class="btn btn--primary btn--sm js-open-product" data-code="AUR-SL-601">Inspect Spec</button>
+            </div>
+          </li>
+
+          <li class="ledger-row reveal">
+            <span class="ledger-row__index">02</span>
+            <div>
+              <span class="lux-card__code" style="color: var(--accent);">Premium Bathware · AUR-WB-1002</span>
+              <h3>Monolite Pedestal Freestanding Basin</h3>
+            </div>
+            <div class="ledger-row__desc" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+              <p>Hand-honed cast stone resin column basin designed as the sculptural centerpiece of powder rooms.</p>
+              <button type="button" class="btn btn--primary btn--sm js-open-product" data-code="AUR-WB-1002">Inspect Spec</button>
+            </div>
+          </li>
+
+          <li class="ledger-row reveal">
+            <span class="ledger-row__index">03</span>
+            <div>
+              <span class="lux-card__code" style="color: var(--accent);">Newly Launched · AUR-SH-1301</span>
+              <h3>Pioggia Ceiling-Flush PVD Bronze Rain Suite</h3>
+            </div>
+            <div class="ledger-row__desc" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+              <p>400×400 mm air-infused rain shower with 38°C thermostatic push-button control in PVD brushed bronze.</p>
+              <button type="button" class="btn btn--primary btn--sm js-open-product" data-code="AUR-SH-1301">Inspect Spec</button>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: PRODUCT DETAIL INFORMATION (INLINE ACTIVE SPECIMEN)
+         =================================================================== -->
+    <section class="section" id="product-detail-showcase" aria-labelledby="spec-detail-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Technical Specification Sheet</span>
+          <h2 id="spec-detail-heading">Product Detail <em class="editorial-italic">Information</em></h2>
+          <p class="section-lead">Hover over the specimen photograph to zoom into surface grain. Click "View Details" on any product above to load its full sheet here and in the quick-view drawer.</p>
+        </div>
+
+        <div id="inline-product-detail" style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); padding: clamp(1.25rem, 3vw, 2.5rem);">
+          <!-- Dynamically populated by products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: RELATED PRODUCTS (COMPLEMENTARY PAIRINGS)
+         =================================================================== -->
+    <section class="section section--stone" aria-labelledby="related-products-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Coordinated Pairings</span>
+          <h2 id="related-products-heading">Related &amp; <em class="editorial-italic">Complementary Products</em></h2>
+          <p class="section-lead">Matching wall elevations, floor surfaces, and coordinating sanitaryware curated for your selected specimen.</p>
+        </div>
+
+        <div class="card-grid card-grid--3" id="related-products-grid">
+          <!-- Dynamically populated by products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: REQUEST PRODUCT ENQUIRY FORM
+         =================================================================== -->
+    <section class="section" id="request-product-enquiry" aria-labelledby="enquiry-form-heading">
+      <div class="container">
+        <div class="editorial-split">
+          <div class="editorial-split__content">
+            <span class="eyebrow">Trade &amp; Retail Pricing Desk</span>
+            <h2 id="enquiry-form-heading">Request Product <em class="editorial-italic">Enquiry &amp; Sample</em></h2>
+            <p class="section-lead">
+              Need exact box coverage, batch availability, adhesive calculation, or project trade pricing? Submit your selected SKU and approximate area below.
+            </p>
+            <ul style="display: grid; gap: 10px; font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">
+              <li><strong>✓ Rapid Response:</strong> Itemised PDF quotation within 4 business hours.</li>
+              <li><strong>✓ Wastage Calculation:</strong> Includes recommended 7–10% laying &amp; mitre allowance.</li>
+              <li><strong>✓ Physical Swatches:</strong> Request showroom pickup or studio courier delivery.</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-elevated); border: 1px solid var(--border-strong); padding: clamp(1.5rem, 3vw, 2.5rem); width: 100%;">
+            <!-- TODO: Replace Formspree endpoint placeholder with your live endpoint -->
+            <form action="https://formspree.io/f/placeholder-product-enquiry" method="POST" data-validate-form data-success-msg="Product enquiry received! Our Specification Desk has logged your SKU and quantity and will share pricing shortly." novalidate>
+              <div class="hp-trap" aria-hidden="true">
+                <label for="enq-hp">Leave empty</label>
+                <input type="text" id="enq-hp" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-field form-field--full">
+                  <label for="enq-product-name" class="form-label">Product Name / Code <span class="req">*</span></label>
+                  <input type="text" id="enq-product-name" name="product_name" class="form-control" value="Travertino Romano Vein-Cut (AUR-FL-101)" required />
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="enq-quantity" class="form-label">Required Area (sq.ft.) / Units <span class="req">*</span></label>
+                  <input type="text" id="enq-quantity" name="quantity_sqft" class="form-control" placeholder="e.g. 1450" data-validate-number required />
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="enq-project-type" class="form-label">Project Type <span class="req">*</span></label>
+                  <select id="enq-project-type" name="project_type" class="form-control" required>
+                    <option value="">Select Project Type</option>
+                    <option value="Residential Home / Villa">Residential Home / Villa</option>
+                    <option value="Apartment Renovation">Apartment Renovation</option>
+                    <option value="Architect / Interior Studio">Architect / Interior Studio</option>
+                    <option value="Commercial / Hospitality">Commercial / Hospitality</option>
+                    <option value="Builder / Bulk Development">Builder / Bulk Development</option>
+                  </select>
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="enq-name" class="form-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="enq-name" name="full_name" class="form-control" placeholder="Your full name" required />
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="enq-phone" class="form-label">Phone / WhatsApp <span class="req">*</span></label>
+                  <input type="tel" id="enq-phone" name="phone" class="form-control" placeholder="+44 7700 900840" required />
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field form-field--full">
+                  <label for="enq-email" class="form-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="enq-email" name="email" class="form-control" placeholder="you@domain.com" required />
+                  <span class="field-error" role="alert"></span>
+                </div>
+
+                <div class="form-field form-field--full">
+                  <label for="enq-notes" class="form-label">Delivery City &amp; Specification Notes</label>
+                  <textarea id="enq-notes" name="notes" class="form-control" placeholder="Mention delivery city, preferred finish, or sample request..."></textarea>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.25rem;">
+                <button type="submit" class="btn btn--primary" style="width: 100%;">Submit Product Enquiry <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+              <div class="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 11: PRODUCT CONSULTATION CTA
+         =================================================================== -->
+    <section class="section section--beige" aria-labelledby="prod-consult-heading">
+      <div class="container">
+        <div class="overlap-banner">
+          <div class="overlap-banner__media">
+            <img src="assets/images/products-cta-consultation.webp" srcset="assets/images/products-cta-consultation-sm.webp 600w, assets/images/products-cta-consultation.webp 1500w" sizes="(max-width: 959px) 94vw, 60vw" width="1500" height="800" loading="lazy" alt="Showroom surface specialist comparing honed stone tiles with an interior architect" />
+          </div>
+          <div class="overlap-banner__card">
+            <span class="eyebrow">Complimentary Advisory</span>
+            <h2 id="prod-consult-heading">Need Help Choosing the Right Tiles?</h2>
+            <p style="margin-block: 1rem 1.5rem;">Unsure whether R9 lappato or R10 honed silk suits your floor, or how to pair grout shades with brushed bronze? Sit down with our in-house surface architects.</p>
+            <a href="contact.html" class="btn btn--primary">Speak to an Expert <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       SECTION 12: GLOBAL FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="brand-logo" aria-label="Aurelia Surfaces Home">
+            <span class="brand-logo__mark" aria-hidden="true">
+              <svg class="brand-logo__svg" width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIsoF" x1="12" y1="5" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F3DC9B"/>
+                    <stop offset="50%" stop-color="#CCA072"/>
+                    <stop offset="100%" stop-color="#A67C52"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="24,5 41,15 24,25 7,15" fill="url(#goldIsoF)" />
+                <polygon points="7,17 22,26 22,43 7,34" fill="currentColor" />
+                <polygon points="26,26 41,17 41,34 26,43" fill="#CCA072" opacity="0.95" />
+              </svg>
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">Aurelia</span>
+              <span class="brand-logo__sub">Surfaces &amp; Bath</span>
+            </span>
+          </a>
+          <p class="site-footer__desc">
+            Architectural porcelain slabs, natural stone finishes, and precision PVD sanitaryware curated for enduring residential and commercial interiors.
+          </p>
+          <div class="footer-socials" aria-label="Social Media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i data-lucide="youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 01 — Showroom</a></li>
+            <li><a href="home-2.html">Home 02 — Architectural</a></li>
+            <li><a href="products.html">Complete Product Catalogue</a></li>
+            <li><a href="visualizer-gallery.html">Visualizer Gallery</a></li>
+            <li><a href="about.html">About Our Showroom</a></li>
+            <li><a href="contact.html">Contact &amp; Quotations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Top Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Porcelain%20Slabs">Porcelain Slabs</a></li>
+            <li><a href="products.html?category=Floor%20Tiles">Floor Tiles</a></li>
+            <li><a href="products.html?category=Bathroom%20Tiles">Bathroom Tiles</a></li>
+            <li><a href="products.html?category=Washbasins">Washbasins</a></li>
+            <li><a href="products.html?category=Water%20Closets%20(WC)">Water Closets (WC)</a></li>
+            <li><a href="products.html?category=Shower%20Systems">Shower Systems</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Showroom Contact</h3>
+          <ul class="footer-links">
+            <li>42 Design District, King's Road, Chelsea, London SW10 0XE</li>
+            <li><a href="tel:+442079460920">+44 20 7946 0920</a></li>
+            <li><a href="mailto:concierge@aureliasurfaces.com">concierge@aureliasurfaces.com</a></li>
+            <li>Mon–Sat: 10:00 AM – 8:00 PM | Sun: 11:00 AM – 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 Aurelia Surfaces Ltd. All rights reserved.</p>
+        <p><a href="contact.html#map-section">Showroom Directions</a> · <a href="sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Product Specification Drawer -->
+  <div class="spec-modal" id="product-spec-modal" role="dialog" aria-modal="true" aria-label="Product technical specification" aria-hidden="true">
+    <div class="spec-modal__drawer">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+        <span class="eyebrow" style="margin-bottom: 0;">Specification Sheet</span>
+        <button type="button" class="icon-btn js-close-spec-modal" aria-label="Close specification drawer"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div id="product-spec-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Sticky Compare Up-To-3 Products Tray -->
+  <aside class="compare-bar" id="compare-bar" aria-label="Product comparison tray">
+    <div class="container compare-bar__inner">
+      <div class="compare-bar__slots" id="compare-slots"></div>
+      <div style="display: flex; gap: 10px;">
+        <button type="button" id="open-compare-modal-btn" class="btn btn--primary btn--sm">Compare Selected (Max 3)</button>
+        <button type="button" id="clear-compare-btn" class="btn btn--outline-light btn--sm">Clear</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product Comparison Modal -->
+  <div class="compare-modal" id="compare-modal" role="dialog" aria-modal="true" aria-labelledby="compare-modal-title" aria-hidden="true">
+    <div class="compare-modal__box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <h3 id="compare-modal-title">Side-by-Side Surface Comparison</h3>
+        <button type="button" class="icon-btn js-close-compare-modal" aria-label="Close comparison table"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div id="compare-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-label" aria-hidden="true">
+    <div class="search-modal__panel">
+      <div class="search-modal__bar">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <label for="global-search-input" id="search-modal-label" class="sr-only">Search tiles and sanitaryware</label>
+        <input type="search" id="global-search-input" class="search-modal__input" placeholder="Search by name, category, finish or code..." autocomplete="off" />
+        <button type="button" class="icon-btn js-close-search" aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="search-modal__results" id="global-search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="floating-stack">
+    <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20am%20browsing%20your%20product%20catalogue%20and%20need%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+    <button type="button" class="scroll-top-btn" aria-label="Scroll back to top">
+      <svg class="scroll-top-btn__ring" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="23" fill="none" stroke="rgba(166,124,82,0.2)" stroke-width="2"></circle>
+        <circle class="scroll-top-btn__progress" cx="26" cy="26" r="23" fill="none" stroke="var(--accent)" stroke-width="2"></circle>
+      </svg>
+      <i data-lucide="arrow-up" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="mobile-visit-bar" role="region" aria-label="Quick showroom actions">
+    <a href="contact.html#visit-showroom"><i data-lucide="map-pin" aria-hidden="true"></i> Book Showroom Visit</a>
+    <a href="#request-product-enquiry"><i data-lucide="file-text" aria-hidden="true"></i> Product Quote</a>
+  </div>
+
+  <script src="assets/js/plugins/lucide.min.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

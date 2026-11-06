@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurelia Surfaces — Logo Design Showcase & Switcher</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <style>
+    :root {
+      --bg-primary: #F5F0E8;
+      --bg-elevated: #FAF7F2;
+      --text-primary: #2B2A28;
+      --text-muted: #8A837A;
+      --accent: #A67C52;
+      --accent-hover: #8C6642;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      padding: 40px 20px 80px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+    .card {
+      background: var(--bg-elevated);
+      border: 2px solid rgba(43,42,40,0.1);
+      border-radius: 14px;
+      padding: 26px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(166,124,82,0.16);
+    }
+    .card.is-active {
+      border-color: var(--accent);
+      background: #FFFFFF;
+      box-shadow: 0 12px 32px rgba(166,124,82,0.2);
+    }
+    .card-badge {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--accent);
+      color: #FAF7F2;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .card-concept {
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .preview-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(43,42,40,0.06);
+      border-radius: 10px;
+      padding: 22px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .preview-box.dark {
+      background: #1C1A18;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .brand-logo-unit {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .brand-logo-unit:hover .brand-mark {
+      transform: scale(1.06);
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #2B2A28;
+    }
+    .brand-sub {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #8A837A;
+      margin-top: 4px;
+    }
+    .preview-box.dark .brand-name { color: #FAF7F2; }
+    .preview-box.dark .brand-sub { color: #C2B8AA; }
+    .card-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-top: 10px;
+      flex-grow: 1;
+    }
+    .btn-select {
+      margin-top: 18px;
+      padding: 10px 16px;
+      background: var(--text-primary);
+      color: #FAF7F2;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      width: 100%;
+    }
+    .btn-select:hover {
+      background: var(--accent);
+    }
+    .card.is-active .btn-select {
+      background: var(--accent);
+      cursor: default;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+    .header-mockup {
+      background: #FFFFFF;
+      border: 1px solid rgba(43,42,40,0.1);
+      border-radius: 12px;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+    .nav-mock {
+      display: flex;
+      gap: 22px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-secondary);
+    }
+    .nav-mock span.active {
+      color: var(--accent);
+    }
+    .cta-mock {
+      background: var(--accent);
+      color: #FFF;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Aurelia Surfaces Logo Suite</h1>
+      <p>Select the logo that best represents the elegance, architectural prestige, and luxury craftsmanship of the showroom.</p>
+    </div>
+
+    <!-- Live Header Mockup -->
+    <div class="header-mockup" id="live-header">
+      <div id="header-logo-slot">
+        <!-- Will be filled by active logo -->
+      </div>
+      <div class="nav-mock">
+        <span class="active">Home</span>
+        <span>About</span>
+        <span>Products</span>
+        <span>Visualizer</span>
+        <span>Contact</span>
+      </div>
+      <div class="cta-mock">Shop Collection</div>
+    </div>
+
+    <div class="grid">
+      <!-- OPTION 1: THE ARCHITECTURAL ISOMETRIC SLABS -->
+      <div class="card is-active" id="card-1">
+        <span class="card-badge">Current Choice</span>
+        <h3 class="card-title">1. Isometric Ceramic Slabs</h3>
+        <span class="card-concept">Architectural · 3D Surfaces</span>
+        
+        <div class="preview-box">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIso1" x1="12" y1="6" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#E8C788"/>
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <!-- Top Golden Slab (Polished Marble Tile) -->
+                <polygon points="24,6 40,15 24,24 8,15" fill="url(#goldIso1)" />
+                <!-- Left Slab (Deep Charcoal Architectural Ceramic) -->
+                <polygon points="8,17 22,25 22,42 8,33" fill="#2B2A28" />
+                <!-- Right Slab (Burnished Bronze Surface Slab) -->
+                <polygon points="26,25 40,17 40,33 26,42" fill="#A67C52" opacity="0.9" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-box dark">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Top Golden Slab -->
+                <polygon points="24,6 40,15 24,24 8,15" fill="url(#goldIso1)" />
+                <!-- Left Slab (Alabaster Ivory Stone) -->
+                <polygon points="8,17 22,25 22,42 8,33" fill="#FAF7F2" />
+                <!-- Right Slab (Warm Bronze) -->
+                <polygon points="26,25 40,17 40,33 26,42" fill="#CCA072" opacity="0.9" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-desc">Three intersecting porcelain & marble slabs in isometric 3D perspective. Represents large-format slabs, floor tiling, and structural precision. Clean, modern, and instantly identifiable.</p>
+        <button class="btn-select" onclick="activateOption(1)">Applied to Website</button>
+      </div>
+
+      <!-- OPTION 2: THE SCULPTURAL WATER & STONE ARC -->
+      <div class="card" id="card-2">
+        <h3 class="card-title">2. Sculptural Wave & Slabs</h3>
+        <span class="card-concept">Harmonic · Bath & Surfaces</span>
+        
+        <div class="preview-box">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldWave2" x1="4" y1="8" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37"/>
+                    <stop offset="60%" stop-color="#A67C52"/>
+                    <stop offset="100%" stop-color="#7A5633"/>
+                  </linearGradient>
+                </defs>
+                <!-- Architectural Tile Pillar Left -->
+                <rect x="8" y="10" width="7" height="28" rx="2" fill="#2B2A28" />
+                <!-- Center Ceramic Tier Slab -->
+                <rect x="18" y="18" width="6" height="20" rx="1.5" fill="#A67C52" opacity="0.8" />
+                <!-- Sculptural Fluid Bath Wave Right (Water & Sanitaryware) -->
+                <path d="M28 38C28 22 41 18 41 10C35 18 34 26 34 38H28Z" fill="url(#goldWave2)" />
+                <circle cx="37" cy="8" r="2.5" fill="url(#goldWave2)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-box dark">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="7" height="28" rx="2" fill="#FAF7F2" />
+                <rect x="18" y="18" width="6" height="20" rx="1.5" fill="#CCA072" opacity="0.8" />
+                <path d="M28 38C28 22 41 18 41 10C35 18 34 26 34 38H28Z" fill="url(#goldWave2)" />
+                <circle cx="37" cy="8" r="2.5" fill="url(#goldWave2)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-desc">Juxtaposes straight architectural ceramic slabs on the left with a flowing sculptural water drop and bath curve on the right. Directly captures both "Surfaces" and "Bath".</p>
+        <button class="btn-select" onclick="activateOption(2)">Choose This Design</button>
+      </div>
+
+      <!-- OPTION 3: THE INTERLOCKING GOLDEN CHEVRONS (PARQUET & CERAMIC WEAVE) -->
+      <div class="card" id="card-3">
+        <h3 class="card-title">3. Royal Chevron Tessellation</h3>
+        <span class="card-concept">Symmetry · Luxury Inlay</span>
+        
+        <div class="preview-box">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldChev3" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#E8C788"/>
+                    <stop offset="50%" stop-color="#B88B5E"/>
+                    <stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <!-- Top Chevron Tile -->
+                <path d="M24 7L38 18L32 23L24 16.5L16 23L10 18L24 7Z" fill="url(#goldChev3)" />
+                <!-- Middle Chevron Tile (Charcoal) -->
+                <path d="M24 19L38 30L32 35L24 28.5L16 35L10 30L24 19Z" fill="#2B2A28" />
+                <!-- Golden Diamond Pivot -->
+                <rect x="22.5" y="36.5" width="4.5" height="4.5" transform="rotate(45 24.75 38.75)" fill="url(#goldChev3)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-box dark">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 7L38 18L32 23L24 16.5L16 23L10 18L24 7Z" fill="url(#goldChev3)" />
+                <path d="M24 19L38 30L32 35L24 28.5L16 35L10 30L24 19Z" fill="#FAF7F2" />
+                <rect x="22.5" y="36.5" width="4.5" height="4.5" transform="rotate(45 24.75 38.75)" fill="url(#goldChev3)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-desc">Interlocking architectural chevron tiles, reminiscent of French herringbone parquet and Italian ceramic cladding. Dynamic, prestigious, and timeless.</p>
+        <button class="btn-select" onclick="activateOption(3)">Choose This Design</button>
+      </div>
+
+      <!-- OPTION 4: THE MONOLITHIC MONOGRAM A (HAUTE DESIGN) -->
+      <div class="card" id="card-4">
+        <h3 class="card-title">4. Minimalist Atelier 'A'</h3>
+        <span class="card-concept">Pure Luxury · High Fashion</span>
+        
+        <div class="preview-box">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldMono4" x1="10" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37"/>
+                    <stop offset="50%" stop-color="#A67C52"/>
+                    <stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <!-- Left Slender Column -->
+                <path d="M12 40L22 8H26L16 40H12Z" fill="#2B2A28" />
+                <!-- Right Beveled Slab Column -->
+                <path d="M36 40L24 8H28L40 40H36Z" fill="url(#goldMono4)" />
+                <!-- Floating Surface Horizon Bar -->
+                <path d="M16 28H33V31H16Z" fill="url(#goldMono4)" />
+                <!-- Precision Sanitaryware Arch Below -->
+                <path d="M21 34C21 37 27 37 27 34" stroke="url(#goldMono4)" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-box dark">
+          <div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 40L22 8H26L16 40H12Z" fill="#FAF7F2" />
+                <path d="M36 40L24 8H28L40 40H36Z" fill="url(#goldMono4)" />
+                <path d="M16 28H33V31H16Z" fill="url(#goldMono4)" />
+                <path d="M21 34C21 37 27 37 27 34" stroke="url(#goldMono4)" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="card-desc">No heavy border or enclosed box. An airy, confident haute-architecture monogram "A" featuring dual marble/bronze stems and a sanitaryware basin curve. Like Bulgari or Armani/Casa.</p>
+        <button class="btn-select" onclick="activateOption(4)">Choose This Design</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const options = {
+      1: `<div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldIsoH" x1="12" y1="6" x2="36" y2="24" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#E8C788"/><stop offset="50%" stop-color="#C5A059"/><stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="24,6 40,15 24,24 8,15" fill="url(#goldIsoH)" />
+                <polygon points="8,17 22,25 22,42 8,33" fill="#2B2A28" />
+                <polygon points="26,25 40,17 40,33 26,42" fill="#A67C52" opacity="0.9" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>`,
+      2: `<div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldWaveH" x1="4" y1="8" x2="44" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37"/><stop offset="60%" stop-color="#A67C52"/><stop offset="100%" stop-color="#7A5633"/>
+                  </linearGradient>
+                </defs>
+                <rect x="8" y="10" width="7" height="28" rx="2" fill="#2B2A28" />
+                <rect x="18" y="18" width="6" height="20" rx="1.5" fill="#A67C52" opacity="0.8" />
+                <path d="M28 38C28 22 41 18 41 10C35 18 34 26 34 38H28Z" fill="url(#goldWaveH)" />
+                <circle cx="37" cy="8" r="2.5" fill="url(#goldWaveH)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>`,
+      3: `<div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldChevH" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#E8C788"/><stop offset="50%" stop-color="#B88B5E"/><stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <path d="M24 7L38 18L32 23L24 16.5L16 23L10 18L24 7Z" fill="url(#goldChevH)" />
+                <path d="M24 19L38 30L32 35L24 28.5L16 35L10 30L24 19Z" fill="#2B2A28" />
+                <rect x="22.5" y="36.5" width="4.5" height="4.5" transform="rotate(45 24.75 38.75)" fill="url(#goldChevH)" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>`,
+      4: `<div class="brand-logo-unit">
+            <div class="brand-mark">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="goldMonoH" x1="10" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37"/><stop offset="50%" stop-color="#A67C52"/><stop offset="100%" stop-color="#8C6642"/>
+                  </linearGradient>
+                </defs>
+                <path d="M12 40L22 8H26L16 40H12Z" fill="#2B2A28" />
+                <path d="M36 40L24 8H28L40 40H36Z" fill="url(#goldMono4)" />
+                <path d="M16 28H33V31H16Z" fill="url(#goldMono4)" />
+                <path d="M21 34C21 37 27 37 27 34" stroke="url(#goldMono4)" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Aurelia</span>
+              <span class="brand-sub">Surfaces &amp; Bath</span>
+            </div>
+          </div>`
+    };
+
+    function activateOption(id) {
+      document.getElementById('header-logo-slot').innerHTML = options[id];
+      for(let i=1; i<=4; i++) {
+        const c = document.getElementById('card-' + i);
+        if(i === id) {
+          c.classList.add('is-active');
+          c.querySelector('.btn-select').textContent = 'Selected';
+        } else {
+          c.classList.remove('is-active');
+          c.querySelector('.btn-select').textContent = 'Choose This Design';
+        }
+      }
+    }
+
+    activateOption(1);
+  </script>
+</body>
+</html>
+
