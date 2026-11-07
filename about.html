@@ -21,9 +21,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
+  <!-- Core & Theme Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- View-Specific Stylesheets (Separated Codes for Mobile, Tab, and 1024 Views) -->
+  <link rel="stylesheet" href="assets/css/mobile.css" media="(max-width: 767.98px)" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)" />
+  <link rel="stylesheet" href="assets/css/desktop-1024.css" media="(min-width: 1024px)" />
 
   <script type="application/ld+json">
   {
@@ -73,9 +79,11 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-actions__tools">
+          <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        </div>
         <div class="header-ctas">
           <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
         </div>
@@ -88,13 +96,18 @@
 
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
     <nav aria-label="Mobile Navigation">
+      <div class="mobile-nav__actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+      </div>
       <ul class="mobile-nav__list">
-        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="about.html" class="is-active">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html" class="is-active">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="visualizer-gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="mobile-nav__ctas">
         <a href="products.html" class="btn btn--primary">Shop Collection</a>
@@ -138,7 +151,7 @@
             <p>
               Over nearly two decades, we forged direct provenance agreements with premier sintering kilns and solid-brass PVD foundries, inspecting planar calibration, glaze depth, and water conservation before a single SKU earns a place on our gallery walls.
             </p>
-            <div style="width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+            <div class="about-milestones-grid" style="width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
               <div>
                 <strong class="serif-heading" style="font-size: 1.5rem; color: var(--accent-text);">2008 — Origin</strong>
                 <p style="font-size: 0.82rem;">Opened our first 3,500 sq. ft. Italian porcelain studio.</p>
@@ -266,28 +279,28 @@
           <p class="section-lead">Designed around natural skylights and quiet material tables so you can compose an entire home in complete comfort.</p>
         </div>
 
-        <div class="bath-lookbook">
-          <article class="bath-lookbook__item reveal" style="grid-column: span 2;">
+        <div class="bath-lookbook showroom-exp-grid">
+          <article class="bath-lookbook__item reveal">
             <div class="bath-lookbook__media">
-              <img src="assets/images/about-exp-mockup-bays.webp" srcset="assets/images/about-exp-mockup-bays-sm.webp 600w, assets/images/about-exp-mockup-bays.webp 1000w" sizes="(max-width: 767px) 94vw, 31vw" width="1000" height="800" loading="lazy" alt="Walk-in bathroom mock-up bay displaying tiles, vanity basin, and brass tapware" />
+              <img src="assets/images/about-exp-mockup-bays.webp" srcset="assets/images/about-exp-mockup-bays-sm.webp 600w, assets/images/about-exp-mockup-bays.webp 1000w" sizes="(max-width: 767px) 94vw, (max-width: 1023px) 31vw, 360px" width="1000" height="800" loading="lazy" alt="Walk-in bathroom mock-up bay displaying tiles, vanity basin, and brass tapware" />
             </div>
             <span class="lux-card__code">Zone 01 · 38 Walk-In Suites</span>
             <h3>Live Bathroom Mock-Up Bays</h3>
             <p style="font-size: 0.9rem;">Step inside fully tiled, life-size bathroom suites with pressurized water displays to test shower spray patterns firsthand.</p>
           </article>
 
-          <article class="bath-lookbook__item reveal" style="grid-column: span 2;">
+          <article class="bath-lookbook__item reveal">
             <div class="bath-lookbook__media">
-              <img src="assets/images/about-exp-sample-library.webp" srcset="assets/images/about-exp-sample-library-sm.webp 600w, assets/images/about-exp-sample-library.webp 1000w" sizes="(max-width: 767px) 94vw, 31vw" width="1000" height="800" loading="lazy" alt="Architectural sample library drawers with stone, wood, grout, and metal swatches" />
+              <img src="assets/images/about-exp-sample-library.webp" srcset="assets/images/about-exp-sample-library-sm.webp 600w, assets/images/about-exp-sample-library.webp 1000w" sizes="(max-width: 767px) 94vw, (max-width: 1023px) 31vw, 360px" width="1000" height="800" loading="lazy" alt="Architectural sample library drawers with stone, wood, grout, and metal swatches" />
             </div>
             <span class="lux-card__code">Zone 02 · CRI-97 Lighting Lab</span>
             <h3>Tactile Sample &amp; Grout Library</h3>
             <p style="font-size: 0.9rem;">Combine loose tile cuts, timber joinery chips, epoxy grout sticks, and PVD brass discs under tunable warm-to-cool LEDs.</p>
           </article>
 
-          <article class="bath-lookbook__item reveal" style="grid-column: span 2;">
+          <article class="bath-lookbook__item reveal">
             <div class="bath-lookbook__media">
-              <img src="assets/images/about-exp-consult-lounge.webp" srcset="assets/images/about-exp-consult-lounge-sm.webp 600w, assets/images/about-exp-consult-lounge.webp 1000w" sizes="(max-width: 767px) 94vw, 31vw" width="1000" height="800" loading="lazy" alt="Private consultation lounge with espresso bar and architectural blueprint screen" />
+              <img src="assets/images/about-exp-consult-lounge.webp" srcset="assets/images/about-exp-consult-lounge-sm.webp 600w, assets/images/about-exp-consult-lounge.webp 1000w" sizes="(max-width: 767px) 94vw, (max-width: 1023px) 31vw, 360px" width="1000" height="800" loading="lazy" alt="Private consultation lounge with espresso bar and architectural blueprint screen" />
             </div>
             <span class="lux-card__code">Zone 03 · Espresso &amp; CAD Suites</span>
             <h3>Private Consultation Lounges</h3>
@@ -377,7 +390,7 @@
           <div class="editorial-split__content">
             <span class="eyebrow">Who We Serve</span>
             <h2 id="segments-heading">Dedicated Workflows for <em class="editorial-italic">Six Client Segments</em></h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.75rem;">
+            <div class="about-segments-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.75rem;">
               <div>
                 <h4>01 · Homeowners</h4>
                 <p style="font-size: 0.85rem;">Guided room-by-room selection, wastage calculation &amp; doorstep villa delivery.</p>
@@ -419,7 +432,7 @@
           42 Design District, King's Road, Chelsea, London SW10 0XE<br />
           <strong>Open Mon–Sat:</strong> 10:00 AM – 8:00 PM · <strong>Sunday:</strong> 11:00 AM – 6:00 PM · <strong>Phone:</strong> +44 20 7946 0920
         </p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 2rem;">
+        <div class="btn-group-mobile" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 2rem;">
           <a href="contact.html#map-section" class="btn btn--primary">Get Directions <i data-lucide="map-pin" aria-hidden="true"></i></a>
           <a href="contact.html#quote-form" class="btn btn--dark">Request a Quotation <i data-lucide="arrow-right" aria-hidden="true"></i></a>
         </div>

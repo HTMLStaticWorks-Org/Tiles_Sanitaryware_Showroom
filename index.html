@@ -23,10 +23,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
-  <!-- Stylesheets -->
+  <!-- Core & Theme Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- View-Specific Stylesheets (Separated Codes for Mobile, Tab, and 1024 Views) -->
+  <link rel="stylesheet" href="assets/css/mobile.css" media="(max-width: 767.98px)" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)" />
+  <link rel="stylesheet" href="assets/css/desktop-1024.css" media="(min-width: 1024px)" />
 
   <!-- JSON-LD LocalBusiness / Store Structured Data -->
   <!-- TODO: Update address, geo coordinates, and phone number for your physical showroom -->
@@ -106,13 +111,15 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn js-open-search" aria-label="Search products by name, category or code" title="Search (Ctrl+K)">
-          <i data-lucide="search" aria-hidden="true"></i>
-        </button>
-        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme">
-          <i data-lucide="moon" aria-hidden="true"></i>
-        </button>
-        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-actions__tools">
+          <button type="button" class="icon-btn js-open-search" aria-label="Search products by name, category or code" title="Search (Ctrl+K)">
+            <i data-lucide="search" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme">
+            <i data-lucide="moon" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        </div>
 
         <div class="header-ctas">
           <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
@@ -128,13 +135,22 @@
   <!-- Mobile Fullscreen Navigation Overlay -->
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
     <nav aria-label="Mobile Navigation">
+      <div class="mobile-nav__actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products by name, category or code" title="Search">
+          <i data-lucide="search" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+      </div>
       <ul class="mobile-nav__list">
-        <li><a href="index.html" class="is-active">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="index.html" class="is-active">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="visualizer-gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="mobile-nav__ctas">
         <a href="products.html" class="btn btn--primary">Shop Collection</a>
@@ -954,7 +970,7 @@
               <li><strong>Opening Hours:</strong> Mon–Sat: 10:00 AM – 8:00 PM · Sun: 11:00 AM – 6:00 PM</li>
               <li><strong>Concierge:</strong> Complimentary Valet Parking &amp; Take-Home Sample Swatches</li>
             </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <div class="btn-group-mobile" style="display: flex; flex-wrap: wrap; gap: 12px;">
               <a href="contact.html#quote-form" class="btn btn--primary">Book a Visit <i data-lucide="calendar" aria-hidden="true"></i></a>
               <a href="contact.html#map-section" class="btn btn--outline">Get Directions</a>
             </div>
@@ -980,7 +996,7 @@
             <label for="nl-hp">Leave blank</label>
             <input type="text" id="nl-hp" name="website_url" tabindex="-1" autocomplete="off" />
           </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
+          <div class="newsletter-form-row" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
             <div class="form-field" style="flex: 1 1 260px; text-align: start;">
               <label for="nl-email" class="sr-only">Email Address</label>
               <input type="email" id="nl-email" name="email_address" class="form-control" placeholder="Enter your email address (e.g., studio@domain.com)" required />

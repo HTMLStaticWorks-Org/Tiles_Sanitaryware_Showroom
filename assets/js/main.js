@@ -204,6 +204,14 @@
 
     document.addEventListener('click', (e) => {
       if (e.target.closest('.js-open-search')) {
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const hamburger = document.querySelector('.hamburger-btn');
+        if (overlay && overlay.classList.contains('is-open')) {
+          overlay.classList.remove('is-open');
+          overlay.setAttribute('aria-hidden', 'true');
+          if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
         openSearch();
         return;
       }
@@ -468,6 +476,22 @@
       if (qNext) qNext.addEventListener('click', () => showQuote(qIdx + 1));
       quoteDots.forEach((d, i) => d.addEventListener('click', () => showQuote(i)));
     }
+
+    // E. Masonry Gallery Touch/Tap Support (Mobile & Tablet)
+    document.addEventListener('click', (e) => {
+      const item = e.target.closest('.masonry-item');
+      if (!item) {
+        document.querySelectorAll('.masonry-item.is-active').forEach((el) => el.classList.remove('is-active'));
+        return;
+      }
+      if (e.target.closest('button, a')) return;
+
+      const wasActive = item.classList.contains('is-active');
+      document.querySelectorAll('.masonry-item.is-active').forEach((el) => el.classList.remove('is-active'));
+      if (!wasActive) {
+        item.classList.add('is-active');
+      }
+    });
   }
 
   /**
@@ -495,7 +519,7 @@
             frames.forEach((f) => f.classList.toggle('is-active', f.getAttribute('data-story-frame') === id));
           }
         });
-      }, { threshold: 0.45 });
+      }, { threshold: 0.25 });
       chapters.forEach((c) => obs.observe(c));
     }
 

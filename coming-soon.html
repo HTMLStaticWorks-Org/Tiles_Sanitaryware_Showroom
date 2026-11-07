@@ -10,9 +10,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
+  <!-- Core & Theme Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- View-Specific Stylesheets (Separated Codes for Mobile, Tab, and 1024 Views) -->
+  <link rel="stylesheet" href="assets/css/mobile.css" media="(max-width: 767.98px)" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)" />
+  <link rel="stylesheet" href="assets/css/desktop-1024.css" media="(min-width: 1024px)" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -84,7 +90,7 @@
         <!-- VIP Preview Invitation Form -->
         <form action="https://app.convertkit.com/forms/placeholder-vip/subscriptions" method="post" data-validate-form data-success-msg="You are on the Private Preview Guest List. We will dispatch your embossed invitation prior to opening night." novalidate style="max-width: 540px; margin-inline: auto;">
           <div class="hp-trap" aria-hidden="true"><input type="text" name="website_url" tabindex="-1" autocomplete="off" /></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+          <div class="newsletter-form-row" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
             <div class="form-field" style="flex: 1 1 260px; text-align: start;">
               <label for="vip-email" class="sr-only">Email Address for VIP Invitation</label>
               <input type="email" id="vip-email" name="email" class="form-control" placeholder="Enter your email for preview invitation..." required />

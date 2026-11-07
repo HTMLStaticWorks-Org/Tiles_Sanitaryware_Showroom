@@ -1,0 +1,562 @@
+/* ==========================================================================
+   AURELIA SURFACES — 1024+ DESKTOP VIEW STYLES
+   File: assets/css/desktop-1024.css
+   Target Devices: Laptops, Desktops & Displays 1024px and Above
+   Viewport Range: Min-width 1024px
+   ==========================================================================
+   NOTICE:
+   This file applies EXCLUSIVELY to 1024+ Desktop View.
+   ANY CHANGE MADE HERE WILL ONLY AFFECT 1024+ SCREENS.
+   It will NEVER affect Mobile View (< 768px) or Tablet View (768px-1023px).
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+
+  /* ------------------------------------------------------------------------
+     1. 1024+ DESKTOP VISIBILITY UTILITIES
+     ------------------------------------------------------------------------ */
+  .show-on-1024,
+  .desktop-only {
+    display: block !important;
+  }
+
+  .show-on-1024-flex {
+    display: flex !important;
+  }
+
+  .show-on-1024-grid {
+    display: grid !important;
+  }
+
+  .hide-on-1024 {
+    display: none !important;
+  }
+
+  /* Ensure mobile-only and tablet-only elements are completely hidden on 1024+ */
+  .show-on-mobile,
+  .mobile-only,
+  .show-on-tab,
+  .tab-only {
+    display: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     2. CONTAINER & GENERAL SPACING (1024+)
+     ------------------------------------------------------------------------ */
+  .container {
+    padding-inline: var(--space-5) !important;
+    max-width: var(--container-max) !important;
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      padding-inline: var(--space-6) !important;
+    }
+  }
+
+  .section {
+    padding-block: var(--space-12) !important;
+  }
+
+  .section-header--split {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+  }
+
+  .section-header--split .section-header__main {
+    max-width: 640px !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     3. HEADER & NAVIGATION (TAB PRO 1024px-1199.98px VS 1200px+ DESKTOP)
+     ------------------------------------------------------------------------ */
+  :root {
+    --header-height: 80px;
+  }
+
+  .site-header {
+    height: 80px !important;
+  }
+
+  /* Announcement Bar */
+  .announcement-bar__sep,
+  .announcement-bar__hide-mobile {
+    display: inline !important;
+  }
+
+  /* --- A. TAB PRO (1024px to 1199.98px): HAMBURGER MENU SAME AS TAB VIEWS --- */
+  @media (max-width: 1199.98px) {
+    /* Hide desktop horizontal nav and CTAs from header bar */
+    .main-nav {
+      display: none !important;
+    }
+
+    .header-ctas {
+      display: none !important;
+    }
+
+    /* Move 3 icons (Search, Theme, RTL) from header bar inside hamburger menu */
+    .header-actions__tools,
+    .header-actions .icon-btn {
+      display: none !important;
+    }
+
+    /* Hamburger button is strictly VISIBLE on Tab Pro */
+    .hamburger-btn {
+      display: inline-flex !important;
+    }
+
+    /* Drawer overlay styling: identical to Tab View */
+    .mobile-nav-overlay {
+      top: 80px !important;
+      padding: 3rem 2rem !important;
+    }
+
+    .mobile-nav-overlay nav {
+      width: 100% !important;
+      max-width: 580px !important;
+      margin-inline: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    /* 3 Tools inside Hamburger Menu on Tab Pro: ALIGNED CENTER */
+    .mobile-nav__actions {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-inline: auto !important;
+      gap: 14px !important;
+      padding-bottom: 1.5rem !important;
+      margin-bottom: 1.5rem !important;
+      border-bottom: 1px solid var(--border-subtle) !important;
+      width: 100% !important;
+    }
+
+    .mobile-nav__actions .icon-btn {
+      display: inline-flex !important;
+      width: 48px !important;
+      height: 48px !important;
+      border: 1px solid var(--border-strong) !important;
+      background-color: var(--bg-elevated) !important;
+      border-radius: var(--radius-xs) !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: var(--text-primary) !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+    }
+
+    .mobile-nav__actions .icon-btn:hover {
+      background-color: var(--accent) !important;
+      color: #FAF7F2 !important;
+      border-color: var(--accent) !important;
+    }
+
+    /* Hamburger Menu Links on Tab Pro: Strictly Centered, Arrows Removed */
+    .mobile-nav__list {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      list-style: none !important;
+    }
+
+    .mobile-nav__list li {
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    .mobile-nav__list a,
+    .mobile-nav__list li a {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      font-size: 1.6rem !important;
+      padding-block: 14px !important;
+    }
+
+    /* Remove arrows from hamburger menu */
+    .mobile-nav__list a i,
+    .mobile-nav__list a svg {
+      display: none !important;
+    }
+
+    .mobile-nav__ctas {
+      display: flex !important;
+      justify-content: center !important;
+      width: 100% !important;
+      margin-top: 2rem !important;
+    }
+
+    .mobile-nav__ctas .btn {
+      width: 100% !important;
+      max-width: 360px !important;
+      margin-inline: auto !important;
+      justify-content: center !important;
+    }
+
+    .mobile-nav__meta {
+      text-align: center !important;
+      margin-inline: auto !important;
+    }
+  }
+
+  /* --- B. WIDE DESKTOP (1200px+): FULL HORIZONTAL NAVIGATION --- */
+  @media (min-width: 1200px) {
+    .main-nav {
+      display: flex !important;
+      align-items: center !important;
+      gap: var(--space-4) !important;
+    }
+
+    .main-nav a,
+    .main-nav li a {
+      white-space: nowrap !important;
+    }
+
+    .header-ctas {
+      display: flex !important;
+    }
+
+    .header-actions__tools {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+    }
+
+    .header-actions .icon-btn {
+      display: inline-flex !important;
+    }
+
+    .hamburger-btn {
+      display: none !important;
+    }
+
+    .mobile-nav-overlay,
+    .mobile-nav__actions {
+      display: none !important;
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     4. HOME 1 HERO SECTION (1024+)
+     ------------------------------------------------------------------------ */
+  .hero-home1 {
+    padding-block: var(--space-8) var(--space-10) !important;
+  }
+
+  .hero-home1__grid {
+    grid-template-columns: 1.05fr 1.15fr !important;
+    gap: var(--space-8) !important;
+    align-items: center !important;
+  }
+
+  .hero-home1__title {
+    font-size: var(--text-display) !important;
+  }
+
+  .hero-home1__metrics {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-3) !important;
+  }
+
+  .hero-mosaic__stage {
+    aspect-ratio: 3 / 2.2 !important;
+  }
+
+  .hero-mosaic__thumbs {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--space-2) !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     5. HOME 2 HERO SECTION (1024+)
+     ------------------------------------------------------------------------ */
+  .hero-home2 {
+    min-height: calc(100vh - 80px) !important;
+    padding-block: var(--space-10) var(--space-8) !important;
+  }
+
+  .hero-home2__title {
+    font-size: clamp(3.2rem, 6.5vw + 0.8rem, 6rem) !important;
+    max-width: 14ch !important;
+  }
+
+  .hero-home2__bottom {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     6. INNER PAGE HEROES (1024+)
+     ------------------------------------------------------------------------ */
+  .page-hero {
+    padding-block: var(--space-12) var(--space-10) !important;
+  }
+
+  .page-hero__content {
+    padding: clamp(2.2rem, 4vw, 3.2rem) !important;
+    max-width: 840px !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     7. CARD GRIDS (1024+)
+     ------------------------------------------------------------------------ */
+  .card-grid--3 > * {
+    width: calc((100% - (2 * var(--space-4))) / 3) !important;
+    flex: 0 0 calc((100% - (2 * var(--space-4))) / 3) !important;
+    max-width: calc((100% - (2 * var(--space-4))) / 3) !important;
+  }
+
+  .card-grid--4 > * {
+    width: calc((100% - (3 * var(--space-4))) / 4) !important;
+    flex: 0 0 calc((100% - (3 * var(--space-4))) / 4) !important;
+    max-width: calc((100% - (3 * var(--space-4))) / 4) !important;
+  }
+
+  .card-grid--5 {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: clamp(0.75rem, 1.4vw, 1.15rem) !important;
+    align-items: stretch !important;
+  }
+
+  .card-grid--5 > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    height: 100% !important;
+  }
+
+  .lux-card--contact {
+    min-height: 350px !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     8. EDITORIAL SECTIONS (1024+)
+     ------------------------------------------------------------------------ */
+  /* Drag-scroll Rail */
+  .rail-track {
+    grid-auto-columns: 40% !important;
+  }
+
+  /* Split Rows */
+  .editorial-split {
+    grid-template-columns: 1.18fr 0.82fr !important;
+    gap: var(--space-8) !important;
+  }
+
+  .editorial-split--reverse {
+    grid-template-columns: 0.82fr 1.18fr !important;
+  }
+
+  .editorial-split--reverse .editorial-split__media {
+    order: 2 !important;
+  }
+
+  /* Ledger List */
+  .ledger-row {
+    grid-template-columns: 90px 1fr 1.25fr !important;
+    gap: var(--space-5) !important;
+  }
+
+  .ledger-row__desc {
+    grid-column: auto !important;
+  }
+
+  /* Stat Counters */
+  .stats-band {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  /* Swatch Collage */
+  .swatch-showcase {
+    grid-template-columns: 0.95fr 1.05fr !important;
+  }
+
+  /* Masonry Grid — 3 columns on 1024+ */
+  .masonry-grid {
+    columns: 3 !important;
+    column-gap: var(--space-4) !important;
+  }
+
+  /* Overlapping Banner */
+  .overlap-banner {
+    grid-template-columns: 1.35fr 0.85fr !important;
+    align-items: center !important;
+  }
+
+  .overlap-banner__card {
+    margin-inline-start: -96px !important;
+    padding: var(--space-6) !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* Sticky Storytelling */
+  .sticky-story {
+    grid-template-columns: 1.05fr 0.95fr !important;
+    gap: var(--space-8) !important;
+    align-items: start !important;
+  }
+
+  .sticky-story__visual {
+    display: block !important;
+    position: sticky !important;
+    top: calc(var(--header-height) + 32px) !important;
+    aspect-ratio: 6 / 5 !important;
+  }
+
+  .story-chapter {
+    min-height: auto !important;
+    padding-block: 2rem 2.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+  }
+
+  .story-chapter:first-child {
+    padding-top: 0.75rem !important;
+  }
+
+  .story-chapter:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .story-chapter__mobile-img {
+    display: none !important;
+  }
+
+  /* Expanding Vertical Lifestyle Panels (Horizontal Accordion on 1024+) */
+  .lifestyle-panels {
+    flex-direction: row !important;
+    height: 540px !important;
+  }
+
+  .lifestyle-panel.is-active,
+  .lifestyle-panel:hover,
+  .lifestyle-panel:focus-within {
+    flex: 2.8 !important;
+  }
+
+  .lifestyle-panel:not(.is-active):not(:hover):not(:focus-within) .lifestyle-panel__desc {
+    opacity: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Sanitaryware Staggered 5-Piece Lookbook */
+  .bath-lookbook {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+
+  .bath-lookbook__item:nth-child(1) { grid-column: span 3 !important; }
+  .bath-lookbook__item:nth-child(2) { grid-column: span 3 !important; }
+  .bath-lookbook__item:nth-child(3) { grid-column: span 2 !important; }
+  .bath-lookbook__item:nth-child(4) { grid-column: span 2 !important; }
+  .bath-lookbook__item:nth-child(5) { grid-column: span 2 !important; }
+
+  /* About Page Showroom Experience 3-Card Grid (Web Views / Desktop 1024px+) */
+  .showroom-exp-grid,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  .showroom-exp-grid .bath-lookbook__item,
+  .showroom-exp-grid .bath-lookbook__item:nth-child(n),
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item:nth-child(n) {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .showroom-exp-grid .bath-lookbook__item h3,
+  .showroom-exp-grid .bath-lookbook__item p,
+  .showroom-exp-grid .bath-lookbook__item .lux-card__code,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item h3,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item p,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item .lux-card__code {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Finish Guide & Sector Rows */
+  .finish-panel {
+    grid-template-columns: 1.1fr 0.9fr !important;
+    padding: var(--space-5) !important;
+  }
+
+  .sector-showcase {
+    grid-template-columns: 1fr 1.05fr !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     9. PRODUCTS & VISUALIZER PAGES (1024+)
+     ------------------------------------------------------------------------ */
+  .filter-toolbar__grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .spec-modal__drawer {
+    max-width: 680px !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     10. CONTACT & SHOWROOM MAP (1024+)
+     ------------------------------------------------------------------------ */
+  .showroom-map-container {
+    min-height: 480px !important;
+  }
+
+  .showroom-map-frame {
+    height: 480px !important;
+    min-height: 480px !important;
+  }
+
+  .showroom-map-card {
+    position: absolute !important;
+    bottom: 24px !important;
+    left: 24px !important;
+    max-width: 390px !important;
+    padding: 1.5rem 2rem !important;
+  }
+
+  .form-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     11. FOOTER & FLOATING STACK (1024+)
+     ------------------------------------------------------------------------ */
+  .site-footer__grid {
+    grid-template-columns: 1.35fr 0.85fr 1fr 1.2fr !important;
+  }
+
+  /* Mobile visit bar is strictly HIDDEN on 1024+ */
+  .mobile-visit-bar {
+    display: none !important;
+  }
+
+  /* Custom Cursor for pointer fine desktop */
+  @media (hover: hover) and (pointer: fine) {
+    .custom-cursor {
+      display: flex !important;
+    }
+  }
+}
+

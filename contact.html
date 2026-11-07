@@ -21,9 +21,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
+  <!-- Core & Theme Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- View-Specific Stylesheets (Separated Codes for Mobile, Tab, and 1024 Views) -->
+  <link rel="stylesheet" href="assets/css/mobile.css" media="(max-width: 767.98px)" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)" />
+  <link rel="stylesheet" href="assets/css/desktop-1024.css" media="(min-width: 1024px)" />
 
   <script type="application/ld+json">
   {
@@ -73,9 +79,11 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-actions__tools">
+          <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        </div>
         <div class="header-ctas">
           <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
         </div>
@@ -88,13 +96,18 @@
 
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
     <nav aria-label="Mobile Navigation">
+      <div class="mobile-nav__actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+      </div>
       <ul class="mobile-nav__list">
-        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="visualizer-gallery.html">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="contact.html" class="is-active">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="visualizer-gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
       </ul>
       <div class="mobile-nav__ctas">
         <a href="products.html" class="btn btn--primary">Shop Collection</a>
@@ -221,7 +234,7 @@
           <p class="section-lead">Complete your project parameters below. Our specification engineers respond within 4 business hours with pricing, box coverage, and showroom appointment slots.</p>
         </div>
 
-        <div style="max-width: 920px; margin-inline: auto; background: var(--bg-elevated); border: 1px solid var(--border-strong); padding: clamp(1.5rem, 4vw, 3rem); box-shadow: var(--shadow-soft);">
+        <div class="quote-form-card" style="max-width: 920px; margin-inline: auto; background: var(--bg-elevated); border: 1px solid var(--border-strong); padding: clamp(1.5rem, 4vw, 3rem); box-shadow: var(--shadow-soft);">
           <!-- TODO: Replace Formspree / Netlify placeholder action URL with your live form endpoint -->
           <form name="aurelia-quote-request" action="https://formspree.io/f/placeholder-quote" method="POST" data-netlify="true" data-validate-form data-success-msg="Thank you! Your quotation request has been registered. A Senior Surface Advisor will contact you within 4 business hours." novalidate>
             <div class="hp-trap" aria-hidden="true">
@@ -312,7 +325,7 @@
               </div>
             </div>
 
-            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+            <div class="form-submit-row" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
               <p style="font-size: 0.8rem;">Your details remain strictly confidential with Aurelia's in-house advisory desk.</p>
               <button type="submit" class="btn btn--primary">Send Quote Request <i data-lucide="arrow-right" aria-hidden="true"></i></button>
             </div>
@@ -514,7 +527,7 @@
         <p class="section-lead" style="margin-inline: auto; max-width: 50ch; margin-bottom: 2rem;">
           Speak directly with a senior surface specialist right now or message our showroom concierge on WhatsApp.
         </p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+        <div class="btn-group-mobile" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
           <a href="tel:+442079460920" class="btn btn--primary"><i data-lucide="phone" aria-hidden="true"></i> Call Us</a>
           <a href="https://wa.me/447700900840?text=Hello%20Aurelia%20Surfaces%2C%20I%20would%20like%20a%20project%20quotation." target="_blank" rel="noopener noreferrer" class="btn btn--outline-light"><i data-lucide="message-circle" aria-hidden="true"></i> WhatsApp Us</a>
         </div>

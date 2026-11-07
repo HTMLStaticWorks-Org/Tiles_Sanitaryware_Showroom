@@ -1,0 +1,1210 @@
+/* ==========================================================================
+   AURELIA SURFACES — TABLET / TAB VIEW STYLES
+   File: assets/css/tablet.css
+   Target Devices: iPads, Tablets & Medium Screens
+   Viewport Range: Min-width 768px and Max-width 1023.98px
+   ==========================================================================
+   NOTICE:
+   This file applies EXCLUSIVELY to Tablet / Tab View (768px - 1023.98px).
+   ANY CHANGE MADE HERE WILL ONLY AFFECT THE TABLET VIEW.
+   It will NEVER affect Mobile View (< 768px) or 1024+ Desktop View.
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+
+  /* ------------------------------------------------------------------------
+     1. TABLET VISIBILITY UTILITIES
+     ------------------------------------------------------------------------ */
+  .show-on-tab,
+  .tab-only {
+    display: block !important;
+  }
+
+  .show-on-tab-flex {
+    display: flex !important;
+  }
+
+  .show-on-tab-grid {
+    display: grid !important;
+  }
+
+  .hide-on-tab {
+    display: none !important;
+  }
+
+  /* Ensure mobile-only and 1024 desktop-only elements are hidden on tablet */
+  .show-on-mobile,
+  .mobile-only,
+  .show-on-1024,
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     2. CONTAINER, HEADINGS, TAGS & GENERAL SPACING (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .container {
+    padding-inline: 2rem !important;
+    max-width: 100% !important;
+  }
+
+  .section {
+    padding-block: 3.5rem 4rem !important;
+  }
+
+  /* All Headings strictly Center-Aligned on Tablet */
+  h1, h2, h3, h4, h5, h6,
+  .serif-heading,
+  .section-header__title,
+  .section-title {
+    text-align: center !important;
+  }
+
+  /* All Eyebrow Tags strictly Center-Aligned on Tablet */
+  .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 1px !important;
+    background-color: var(--accent) !important;
+  }
+
+  /* Editorial & Card Tags Center-Aligned */
+  .editorial-split__tag {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+  }
+
+  .masonry-item__tag {
+    align-self: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .lux-card__badge {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+  }
+
+  /* Section Headers & Leads Center-Aligned */
+  .section-header {
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .section-header--split {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    margin-inline: auto !important;
+  }
+
+  .section-header--split .section-header__main {
+    max-width: 100% !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .section-header--split > .btn,
+  .section-header--split > a.btn,
+  .section-header--split > .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  .section-lead {
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 65ch !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     3. BUTTONS & ACTIONS (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto;
+  }
+
+  .btn-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* Any container with buttons on tablet: centered */
+  .btn-group-mobile,
+  .hero-home1__ctas,
+  .hero-home2__ctas,
+  .editorial-hero__ctas,
+  .overlap-banner__card > div:has(.btn),
+  .container--narrow div[style*="display: flex"]:has(.btn),
+  div[style*="display: flex"]:has(> .btn + .btn),
+  div[style*="display: flex"]:has(> a.btn + a.btn),
+  div[style*="display: flex"]:has(> .btn + a.btn),
+  div[style*="display: flex"]:has(> a.btn + button.btn) {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 1rem !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .btn-group-mobile .btn,
+  .btn-group-mobile a.btn,
+  .btn-group-mobile button.btn,
+  .hero-home1__ctas .btn,
+  .hero-home1__ctas a.btn,
+  .hero-home2__ctas .btn,
+  .hero-home2__ctas a.btn,
+  .editorial-hero__ctas .btn {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     4. HEADER, TOP BAR & TABLET NAVIGATION
+     ------------------------------------------------------------------------ */
+  :root {
+    --header-height: 76px;
+  }
+
+  .site-header {
+    height: 76px !important;
+  }
+
+  .brand-logo__mark {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .brand-logo__name {
+    font-size: 1.38rem !important;
+  }
+
+  /* Announcement Bar */
+  .announcement-bar__sep,
+  .announcement-bar__hide-mobile {
+    display: inline !important;
+  }
+
+  /* Tablet Navigation: clean drawer with visible hamburger */
+  .main-nav {
+    display: none !important;
+  }
+
+  .header-ctas {
+    display: none !important;
+  }
+
+  /* Move 3 icons (Search, Theme, RTL) from header bar inside hamburger menu */
+  .header-actions__tools,
+  .header-actions .icon-btn {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: inline-flex !important;
+  }
+
+  .mobile-nav-overlay {
+    top: 76px !important;
+    padding: 2.5rem 2rem !important;
+  }
+
+  .mobile-nav-overlay nav {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-inline: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 3 Tools inside Hamburger Menu on Tablet: ALIGNED CENTER */
+  .mobile-nav__actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    gap: 14px !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    width: 100% !important;
+  }
+
+  .mobile-nav__actions .icon-btn {
+    display: inline-flex !important;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border-strong);
+    background-color: var(--bg-elevated);
+    border-radius: var(--radius-xs);
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .mobile-nav__actions .icon-btn:hover {
+    background-color: var(--accent);
+    color: #FAF7F2;
+    border-color: var(--accent);
+  }
+
+  /* Hamburger Menu Links on Tablet: Strictly Centered, Arrows Removed */
+  .mobile-nav__list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .mobile-nav__list li {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .mobile-nav__list a,
+  .mobile-nav__list li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 1.55rem !important;
+    padding-block: 14px !important;
+  }
+
+  /* Remove arrows from hamburger menu */
+  .mobile-nav__list a i,
+  .mobile-nav__list a svg {
+    display: none !important;
+  }
+
+  .mobile-nav__ctas {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 2rem !important;
+  }
+
+  .mobile-nav__ctas .btn {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .mobile-nav__meta {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     5. HOME 1 HERO SECTION (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .hero-home1 {
+    padding-block: 2.5rem 3.5rem !important;
+  }
+
+  .hero-home1__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .hero-home1__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 780px !important;
+  }
+
+  .hero-home1__title {
+    font-size: clamp(2.6rem, 5vw, 3.4rem) !important;
+    max-width: 24ch !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home1__lead {
+    font-size: 1.05rem !important;
+    max-width: 60ch !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home1__ctas {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+    gap: 1rem !important;
+  }
+
+  .hero-home1__metrics {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+    justify-items: center !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-metric {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-metric__num {
+    font-size: 2.1rem !important;
+    text-align: center !important;
+  }
+
+  .hero-metric__label {
+    text-align: center !important;
+  }
+
+  .hero-mosaic__stage {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .hero-mosaic__thumbs {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     6. HOME 2 HERO SECTION (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .hero-home2 {
+    min-height: calc(100vh - 76px) !important;
+    padding-block: 4.5rem 3rem !important;
+  }
+
+  .hero-home2__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 800px !important;
+  }
+
+  .hero-home2__title {
+    font-size: clamp(3rem, 6.5vw, 4.4rem) !important;
+    max-width: 18ch !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home2__bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .hero-home2__lead {
+    font-size: 1.05rem !important;
+    max-width: 52ch !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home2__ctas {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+    gap: 1rem !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     7. INNER PAGE HEROES (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .page-hero {
+    padding-block: 3.5rem 3rem !important;
+  }
+
+  .page-hero__content {
+    padding: 2.25rem 2rem !important;
+    max-width: 720px !important;
+    margin-inline: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.2rem, 4.2vw, 2.85rem) !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .page-hero p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     8. CARD GRIDS — STRICT 2-COLUMN LAYOUT ON TABLET (CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .card-grid {
+    gap: 1.5rem !important;
+  }
+
+  .card-grid > * {
+    width: calc((100% - 1.5rem) / 2) !important;
+    flex: 0 0 calc((100% - 1.5rem) / 2) !important;
+    max-width: calc((100% - 1.5rem) / 2) !important;
+  }
+
+  .card-grid--3 > * {
+    width: calc((100% - 1.5rem) / 2) !important;
+    flex: 0 0 calc((100% - 1.5rem) / 2) !important;
+    max-width: calc((100% - 1.5rem) / 2) !important;
+  }
+
+  .card-grid--4 > * {
+    width: calc((100% - 1.5rem) / 2) !important;
+    flex: 0 0 calc((100% - 1.5rem) / 2) !important;
+    max-width: calc((100% - 1.5rem) / 2) !important;
+  }
+
+  .card-grid--5 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.25rem !important;
+  }
+
+  .card-grid--5 > * {
+    width: calc((100% - 1.25rem) / 2) !important;
+    flex: 0 0 calc((100% - 1.25rem) / 2) !important;
+    max-width: calc((100% - 1.25rem) / 2) !important;
+    height: auto !important;
+  }
+
+  .lux-card__title {
+    text-align: center !important;
+  }
+
+  .lux-card__actions {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .lux-card__actions .btn {
+    margin-inline: auto !important;
+  }
+
+  .lux-card--contact {
+    min-height: 340px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .lux-card--contact .lux-card__body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .lux-card--contact .lux-card__title,
+  .lux-card--contact .lux-card__meta,
+  .lux-card--contact p {
+    text-align: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     9. EDITORIAL SECTIONS (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  /* Drag-scroll Rail */
+  .rail-track {
+    grid-auto-columns: 56% !important;
+    gap: 1.25rem !important;
+  }
+
+  .rail-controls {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rail-slide__info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Split Rows */
+  .editorial-split {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .editorial-split__media img {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .editorial-split__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .editorial-split__content h2,
+  .editorial-split__content h3,
+  .editorial-split__content p {
+    text-align: center !important;
+  }
+
+  .editorial-split__content .btn,
+  .editorial-split__content .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* About Milestones & Segments */
+  .about-milestones-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-milestones-grid .serif-heading,
+  .about-milestones-grid p {
+    text-align: center !important;
+  }
+
+  .about-segments-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-segments-grid h4,
+  .about-segments-grid p {
+    text-align: center !important;
+  }
+
+  /* Ledger List */
+  .ledger-row {
+    grid-template-columns: 70px 1fr 1.2fr !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+  }
+
+  .ledger-row__desc {
+    grid-column: auto !important;
+  }
+
+  /* Stat Counters — 4 across on Tablet */
+  .stats-band {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-top: 2.5rem !important;
+    padding-top: 2rem !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  .stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .stat-item__value,
+  .stat-item__label {
+    text-align: center !important;
+  }
+
+  /* Swatch Collage */
+  .swatch-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .swatch-btn {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .swatch-collage {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .swatch-collage__caption {
+    text-align: center !important;
+  }
+
+  /* Masonry Grid — 2 columns on Tablet */
+  .masonry-grid {
+    columns: 2 !important;
+    column-gap: 1.5rem !important;
+  }
+
+  .masonry-item.is-active .masonry-item__overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .masonry-item__overlay {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .masonry-item__title {
+    text-align: center !important;
+  }
+
+  .masonry-item__actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    margin-inline: auto !important;
+  }
+
+  .masonry-item__actions .btn {
+    margin-inline: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Overlapping Banner */
+  .overlap-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .overlap-banner__card {
+    margin-inline-start: 0 !important;
+    margin-top: -40px !important;
+    padding: 2.5rem 2rem !important;
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .overlap-banner__card h2,
+  .overlap-banner__card h3,
+  .overlap-banner__card p {
+    text-align: center !important;
+  }
+
+  .overlap-banner__card .btn,
+  .overlap-banner__card .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* Sticky Storytelling */
+  .sticky-story {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    text-align: center !important;
+  }
+
+  .sticky-story__visual {
+    display: none !important;
+  }
+
+  .story-chapter {
+    min-height: auto !important;
+    padding-block: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .story-chapter h2,
+  .story-chapter h3,
+  .story-chapter p {
+    text-align: center !important;
+  }
+
+  .story-chapter .btn,
+  .story-chapter .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  .story-chapter__mobile-img {
+    display: block !important;
+  }
+
+  /* Expanding Lifestyle Panels */
+  .lifestyle-panels {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 1rem !important;
+  }
+
+  .lifestyle-panel {
+    min-height: 240px !important;
+    flex: none !important;
+  }
+
+  .lifestyle-panel__content {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .lifestyle-panel__title,
+  .lifestyle-panel__desc {
+    text-align: center !important;
+  }
+
+  .lifestyle-panel__desc {
+    opacity: 1 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Sanitaryware Staggered 5-Piece Lookbook */
+  .bath-lookbook {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .bath-lookbook__item {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bath-lookbook__item h3,
+  .bath-lookbook__item p {
+    text-align: center !important;
+  }
+
+  .bath-lookbook__item:nth-child(1) { grid-column: span 3 !important; }
+  .bath-lookbook__item:nth-child(2) { grid-column: span 3 !important; }
+  .bath-lookbook__item:nth-child(3) { grid-column: span 2 !important; }
+  .bath-lookbook__item:nth-child(4) { grid-column: span 2 !important; }
+  .bath-lookbook__item:nth-child(5) { grid-column: span 2 !important; }
+
+  /* About Page Showroom Experience 3-Card Grid (Tab Views / 768px - 1023.98px) */
+  .showroom-exp-grid,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .showroom-exp-grid .bath-lookbook__item,
+  .showroom-exp-grid .bath-lookbook__item:nth-child(n),
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item:nth-child(n) {
+    grid-column: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .showroom-exp-grid .bath-lookbook__item h3,
+  .showroom-exp-grid .bath-lookbook__item p,
+  .showroom-exp-grid .bath-lookbook__item .lux-card__code,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item h3,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item p,
+  section[aria-labelledby="showroom-exp-heading"] .bath-lookbook__item .lux-card__code {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Finish Guide & Sector Rows */
+  .finish-tabs__nav {
+    justify-content: center !important;
+  }
+
+  .finish-panel {
+    grid-template-columns: 1fr !important;
+    padding: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .finish-panel h3,
+  .finish-panel p {
+    text-align: center !important;
+  }
+
+  .finish-specs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.25rem 2rem !important;
+    margin-top: 1.5rem !important;
+    padding-top: 1.25rem !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    width: 100% !important;
+  }
+
+  .finish-specs > div {
+    text-align: center !important;
+  }
+
+  .sector-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .sector-row-btn {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .sector-preview__body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .sector-preview__body h3,
+  .sector-preview__body p {
+    text-align: center !important;
+  }
+
+  .sector-preview__body .btn,
+  .sector-preview__body .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     10. PRODUCTS & VISUALIZER PAGES (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .filter-toolbar__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .pill-rail {
+    justify-content: center !important;
+  }
+
+  .filter-toolbar__footer {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+
+  .filter-toolbar__footer .btn {
+    margin-inline: auto !important;
+  }
+
+  .spec-modal__drawer {
+    width: 600px !important;
+    max-width: 80% !important;
+    padding: 2rem !important;
+    text-align: center !important;
+  }
+
+  .spec-modal__drawer h2,
+  .spec-modal__drawer h3,
+  .spec-modal__drawer p {
+    text-align: center !important;
+  }
+
+  .spec-modal__drawer .btn {
+    margin-inline: auto !important;
+  }
+
+  .compare-bar__inner {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .compare-bar__inner .btn {
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     11. CONTACT & SHOWROOM MAP (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .showroom-map-container {
+    min-height: 440px !important;
+  }
+
+  .showroom-map-frame {
+    height: 440px !important;
+    min-height: 440px !important;
+  }
+
+  .showroom-map-card {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    max-width: 360px !important;
+    padding: 1.5rem 1.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .showroom-map-card h3,
+  .showroom-map-card p {
+    text-align: center !important;
+  }
+
+  .showroom-map-card .btn {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* Contact Quote Request Form (Tablet: Contained, Symmetrical 2-Column Grid) */
+  .quote-form-card,
+  #quote-form .quote-form-card {
+    width: 100% !important;
+    max-width: 820px !important;
+    margin-inline: auto !important;
+    padding: 2.25rem 2rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #quote-form form {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-grid,
+  .form-grid--2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-field {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .form-field--full {
+    grid-column: 1 / -1 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-label {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0.35rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .form-control,
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    border-radius: var(--radius-xs) !important;
+  }
+
+  select.form-control {
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    padding-inline: 1rem !important;
+  }
+
+  textarea.form-control {
+    min-height: 120px !important;
+    resize: vertical !important;
+  }
+
+  .form-submit-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .form-submit-row p {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .form-submit-row .btn {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     12. FOOTER & FLOATING STACK (TABLET CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .site-footer {
+    padding-top: 3.5rem !important;
+    text-align: center !important;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .site-footer__grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-heading {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-links {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-links li {
+    text-align: center !important;
+  }
+
+  .footer-socials {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .footer-map-box {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .site-footer__bottom p {
+    text-align: center !important;
+  }
+
+  /* Newsletter Form Row */
+  .newsletter-form-row {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Mobile visit bar is strictly HIDDEN on tablet */
+  .mobile-visit-bar {
+    display: none !important;
+  }
+
+  /* Floating stack normal position */
+  .floating-stack {
+    bottom: 2rem !important;
+  }
+
+  /* Custom cursor is disabled on tablet touch devices */
+  .custom-cursor {
+    display: none !important;
+  }
+}

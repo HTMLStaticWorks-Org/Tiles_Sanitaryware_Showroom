@@ -92,3 +92,30 @@ Search for `TODO:` across all `.html` files to update endpoints prior to product
 | `404.html` | Custom 404 Navigation & Search Recovery | Utility (not in main nav) |
 | `coming-soon.html` | 2027 Exhibition Countdown & VIP Pass Signup | Utility (not in main nav) |
 
+---
+
+## 5. Separate Code for Mobile, Tab, and 1024 Views
+
+To ensure edits in one device view **never affect other views**, responsive code is strictly separated into 3 dedicated stylesheets linked across all HTML pages:
+
+| View Name | Dedicated Stylesheet | Device Viewport Range | Description |
+|---|---|---|---|
+| **Mobile View** | `assets/css/mobile.css` | `< 768px` (phones) | Mobile single-column layouts, mobile hamburger, mobile bottom visit bar, compact padding |
+| **Tab / Tablet View** | `assets/css/tablet.css` | `768px` to `1023px` (tablets/iPads) | 2-column card grids, tablet hero scaling, 4-column stat band, 2-column footer |
+| **1024+ Desktop View** | `assets/css/desktop-1024.css` | `1024px and above` (desktops/laptops) | Full horizontal navigation bar, 3/4/5-column grids, split heroes, expanding panels, fine cursor |
+
+### How to make changes to a specific view:
+- **To change Mobile only:** Open `assets/css/mobile.css`. Any CSS property changed here applies **only** when viewed on a phone or screen under 768px. It will not touch tablet or desktop.
+- **To change Tablet only:** Open `assets/css/tablet.css`. Any CSS property changed here applies **only** when viewed on a tablet (768px - 1023px). It will not touch mobile or desktop.
+- **To change 1024 Desktop only:** Open `assets/css/desktop-1024.css`. Any CSS property changed here applies **only** on screens 1024px and wider. It will not touch mobile or tablet.
+
+### View-Specific HTML Utility Classes:
+If you want to show or hide HTML elements only on specific views:
+- `.mobile-only` / `.show-on-mobile`: Visible only on mobile (<768px).
+- `.tab-only` / `.show-on-tab`: Visible only on tablet (768px-1023px).
+- `.desktop-only` / `.show-on-1024`: Visible only on 1024+ desktop.
+- `.hide-on-mobile`: Hidden on mobile.
+- `.hide-on-tab`: Hidden on tablet.
+- `.hide-on-1024`: Hidden on desktop.
+
+

@@ -1,0 +1,1353 @@
+/* ==========================================================================
+   AURELIA SURFACES — MOBILE VIEW STYLES
+   File: assets/css/mobile.css
+   Target Devices: Smartphones & Small Screens
+   Viewport Range: Max-width 767.98px (0px to 767.98px)
+   ==========================================================================
+   NOTICE:
+   This file applies EXCLUSIVELY to Mobile View (< 768px).
+   ANY CHANGE MADE HERE WILL ONLY AFFECT THE MOBILE VIEW.
+   It will NEVER affect Tablet View (768px-1023px) or 1024+ Desktop View.
+   ========================================================================== */
+
+@media (max-width: 767.98px) {
+
+  /* ------------------------------------------------------------------------
+     1. MOBILE VISIBILITY UTILITIES
+     ------------------------------------------------------------------------ */
+  .show-on-mobile,
+  .mobile-only {
+    display: block !important;
+  }
+
+  .show-on-mobile-flex {
+    display: flex !important;
+  }
+
+  .show-on-mobile-grid {
+    display: grid !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /* Ensure tab and desktop-only elements are completely hidden on mobile */
+  .show-on-tab,
+  .tab-only,
+  .show-on-1024,
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     2. CONTAINER, HEADINGS & GENERAL SPACING (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .container {
+    padding-inline: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  .section {
+    padding-block: 2.5rem 3rem !important;
+  }
+
+  /* All Headings strictly Center-Aligned on Mobile */
+  h1, h2, h3, h4, h5, h6,
+  .serif-heading {
+    text-align: center !important;
+  }
+
+  /* All Eyebrow Tags strictly Center-Aligned on Mobile */
+  .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 24px !important;
+    height: 1px !important;
+    background-color: var(--accent) !important;
+  }
+
+  /* Section Headers & Leads Center-Aligned */
+  .section-header {
+    margin-bottom: 2rem !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .section-header--split {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.25rem !important;
+  }
+
+  .section-header--split .section-header__main {
+    max-width: 100% !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .section-lead {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     3. HEADER, TOP BAR & MOBILE NAVIGATION
+     ------------------------------------------------------------------------ */
+  :root {
+    --header-height: 70px;
+  }
+
+  .site-header {
+    height: 70px !important;
+  }
+
+  .brand-logo__mark {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .brand-logo__name {
+    font-size: 1.25rem !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .brand-logo__sub {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  /* Announcement Bar on Mobile */
+  .announcement-bar__sep,
+  .announcement-bar__hide-mobile {
+    display: none !important;
+  }
+
+  .announcement-bar__inner {
+    padding-block: 8px !important;
+  }
+
+  .announcement-bar__messages {
+    font-size: 0.72rem !important;
+  }
+
+  /* Desktop Nav & CTAs are HIDDEN on Mobile */
+  .main-nav {
+    display: none !important;
+  }
+
+  .header-ctas {
+    display: none !important;
+  }
+
+  /* Move 3 icons (Search, Theme, RTL) from header bar inside hamburger menu */
+  .header-actions__tools,
+  .header-actions .icon-btn {
+    display: none !important;
+  }
+
+  /* Hamburger Button is strictly VISIBLE on Mobile */
+  .hamburger-btn {
+    display: inline-flex !important;
+  }
+
+  /* Fullscreen Mobile Navigation Overlay */
+  .mobile-nav-overlay {
+    top: 70px !important;
+    padding: 1.5rem 1.25rem 5rem !important;
+  }
+
+  .mobile-nav-overlay nav {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-inline: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 3 Tools inside Hamburger Menu on Mobile: ALIGNED CENTER */
+  .mobile-nav__actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    gap: 12px !important;
+    padding-bottom: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    width: 100% !important;
+  }
+
+  .mobile-nav__actions .icon-btn {
+    display: inline-flex !important;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-strong);
+    background-color: var(--bg-elevated);
+    border-radius: var(--radius-xs);
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .mobile-nav__actions .icon-btn:hover {
+    background-color: var(--accent);
+    color: #FAF7F2;
+    border-color: var(--accent);
+  }
+
+  /* Hamburger Menu Links: Strictly Centered, Arrows Removed */
+  .mobile-nav__list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .mobile-nav__list li {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .mobile-nav__list a,
+  .mobile-nav__list li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 1.35rem !important;
+    padding-block: 12px !important;
+  }
+
+  /* Remove arrows from hamburger menu */
+  .mobile-nav__list a i,
+  .mobile-nav__list a svg {
+    display: none !important;
+  }
+
+  .mobile-nav__ctas {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .mobile-nav__ctas .btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .mobile-nav__meta {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     4. BUTTONS & ACTIONS (MOBILE: BOTH BUTTONS MUST BE THE SAME SIZE & CENTERED)
+     ------------------------------------------------------------------------ */
+  .btn {
+    min-height: 48px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.72rem;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-inline: auto;
+  }
+
+  .btn-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* Any container with multiple/paired buttons on mobile: both buttons same size */
+  .btn-group-mobile,
+  .hero-home1__ctas,
+  .hero-home2__ctas,
+  .editorial-hero__ctas,
+  .overlap-banner__card > div:has(.btn),
+  .container--narrow div[style*="display: flex"]:has(.btn),
+  div[style*="display: flex"]:has(> .btn + .btn),
+  div[style*="display: flex"]:has(> a.btn + a.btn),
+  div[style*="display: flex"]:has(> .btn + a.btn),
+  div[style*="display: flex"]:has(> a.btn + button.btn) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+    margin-inline: auto !important;
+  }
+
+  .btn-group-mobile .btn,
+  .btn-group-mobile a.btn,
+  .btn-group-mobile button.btn,
+  .hero-home1__ctas .btn,
+  .hero-home1__ctas a.btn,
+  .hero-home2__ctas .btn,
+  .hero-home2__ctas a.btn,
+  .editorial-hero__ctas .btn,
+  .overlap-banner__card .btn,
+  .container--narrow div[style*="display: flex"] .btn,
+  div[style*="display: flex"]:has(> .btn + .btn) .btn,
+  div[style*="display: flex"]:has(> a.btn + a.btn) a.btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-inline: auto !important;
+  }
+
+  /* Inline Newsletter & Subscription Forms (Mobile: Input and Submit Button exact same size) */
+  .newsletter-form-row,
+  section[aria-labelledby="journal-lead-title"] form > div,
+  section[aria-labelledby="newsletter-heading"] form > div,
+  form[data-validate-form] > div[style*="flex"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-inline: auto !important;
+    gap: 0.75rem !important;
+  }
+
+  .newsletter-form-row .form-field,
+  section[aria-labelledby="journal-lead-title"] form .form-field,
+  section[aria-labelledby="newsletter-heading"] form .form-field,
+  form[data-validate-form] > div[style*="flex"] .form-field {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin-inline: auto !important;
+    flex: none !important;
+  }
+
+  .newsletter-form-row .form-control,
+  section[aria-labelledby="journal-lead-title"] form .form-control,
+  section[aria-labelledby="newsletter-heading"] form .form-control,
+  form[data-validate-form] > div[style*="flex"] .form-control {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-inline: auto !important;
+  }
+
+  .newsletter-form-row .btn,
+  .newsletter-form-row button[type="submit"],
+  section[aria-labelledby="journal-lead-title"] form .btn,
+  section[aria-labelledby="newsletter-heading"] form .btn,
+  form[data-validate-form] > div[style*="flex"] .btn,
+  form[data-validate-form] > div[style*="flex"] button[type="submit"] {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    margin-inline: auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: inline-flex !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     5. HOME 1 HERO SECTION (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .hero-home1 {
+    padding-block: 1.75rem 2.5rem !important;
+  }
+
+  .hero-home1__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+
+  .hero-home1__copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-home1__title {
+    font-size: clamp(2.1rem, 8.5vw, 2.75rem) !important;
+    line-height: 1.12 !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home1__lead {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 48ch !important;
+  }
+
+  .hero-home1__ctas {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home1__ctas .btn {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home1__metrics {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.25rem 1rem !important;
+    padding-top: 1.25rem !important;
+    text-align: center !important;
+    justify-items: center !important;
+    width: 100% !important;
+  }
+
+  .hero-home1__metrics > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-home1__metrics > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .hero-metric__num {
+    font-size: 1.85rem !important;
+    text-align: center !important;
+  }
+
+  .hero-metric__label {
+    text-align: center !important;
+  }
+
+  .hero-mosaic__stage {
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  .hero-mosaic__thumbs {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .hero-mosaic__thumb {
+    padding: 8px 10px !important;
+    text-align: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     6. HOME 2 HERO SECTION (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .hero-home2 {
+    min-height: calc(100vh - 70px) !important;
+    padding-block: 3.5rem 2rem !important;
+  }
+
+  .hero-home2__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .hero-home2__title {
+    font-size: clamp(2.35rem, 9.5vw, 3.4rem) !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home2__bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .hero-home2__lead {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home2__ctas {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-home2__ctas .btn {
+    width: 100% !important;
+    max-width: 360px !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     7. INNER PAGE HEROES (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .page-hero {
+    padding-block: 2.5rem 2.5rem !important;
+  }
+
+  .page-hero__content {
+    padding: 1.5rem 1.25rem !important;
+    border-top-width: 3px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.85rem, 6.8vw, 2.35rem) !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .page-hero p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .breadcrumb-bar {
+    text-align: center !important;
+  }
+
+  .breadcrumb-list {
+    justify-content: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     8. CARD GRIDS & LUXURY CARDS (MOBILE)
+     ------------------------------------------------------------------------ */
+  .card-grid {
+    gap: 1.25rem !important;
+  }
+
+  .card-grid > * {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-grid--3 > * {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-grid--4 > * {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card-grid--5 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+  }
+
+  .card-grid--5 > * {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .lux-card {
+    width: 100% !important;
+  }
+
+  .lux-card__body {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .lux-card--contact {
+    min-height: auto !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     9. EDITORIAL SECTIONS (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  /* Drag-scroll Rail */
+  .rail-track {
+    grid-auto-columns: 86% !important;
+    gap: 1rem !important;
+  }
+
+  .rail-controls {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .rail-slide__info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    border-inline-start: none !important;
+    padding-inline-start: 0 !important;
+  }
+
+  /* Split Rows */
+  .editorial-split {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .editorial-split--reverse .editorial-split__media {
+    order: 0 !important;
+  }
+
+  .editorial-split__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .editorial-split__content h2,
+  .editorial-split__content p {
+    text-align: center !important;
+  }
+
+  .editorial-split__content .btn,
+  .editorial-split__content .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* About Page Provenance & Heritage Milestones (Stacked & Centered on Mobile) */
+  .about-milestones-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-inline: auto !important;
+    gap: 1.5rem !important;
+    padding-top: 1.5rem !important;
+    border-top: 1px solid var(--border-subtle) !important;
+  }
+
+  .about-milestones-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .about-milestones-grid .serif-heading {
+    display: block !important;
+    text-align: center !important;
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .about-milestones-grid p {
+    text-align: center !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* About Page Client Segments (Stacked & Centered on Mobile) */
+  .about-segments-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-inline: auto !important;
+    gap: 1.5rem !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .about-segments-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .about-segments-grid h4 {
+    display: block !important;
+    text-align: center !important;
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.35rem !important;
+    color: var(--text-primary) !important;
+  }
+
+  .about-segments-grid p {
+    text-align: center !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    color: var(--text-secondary) !important;
+    max-width: 36ch !important;
+    margin-inline: auto !important;
+  }
+
+  .editorial-split__num {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .editorial-split__tag {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+  }
+
+  /* Ledger List */
+  .ledger-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.5rem !important;
+    padding-block: 1rem !important;
+  }
+
+  .ledger-row__index {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .ledger-row__desc {
+    grid-column: auto !important;
+    text-align: center !important;
+  }
+
+  /* Stat Counters */
+  .stats-band {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem 1rem !important;
+    margin-top: 2rem !important;
+    padding-top: 1.75rem !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  .stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .stat-item__value {
+    font-size: 2.15rem !important;
+    text-align: center !important;
+  }
+
+  .stat-item__label {
+    text-align: center !important;
+  }
+
+  /* Swatch Collage */
+  .swatch-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    text-align: center !important;
+  }
+
+  .swatch-btn {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .swatch-collage {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .swatch-collage__caption {
+    text-align: center !important;
+  }
+
+  /* Masonry Grid (Visualizer Gallery) */
+  .masonry-grid {
+    columns: 1 !important;
+  }
+
+  .masonry-item {
+    position: relative !important;
+    overflow: hidden !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: var(--radius-sm) !important;
+  }
+
+  .masonry-item img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  /* In mobile view, image is 100% visible by default; hovering text overlay only appears on hover/tap */
+  .masonry-item__overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+    background: linear-gradient(
+      to top,
+      rgba(14, 12, 10, 0.94) 0%,
+      rgba(14, 12, 10, 0.72) 48%,
+      rgba(14, 12, 10, 0.28) 82%,
+      transparent 100%
+    ) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    z-index: 3 !important;
+  }
+
+  .masonry-item:hover .masonry-item__overlay,
+  .masonry-item:focus-within .masonry-item__overlay,
+  .masonry-item:active .masonry-item__overlay,
+  .masonry-item.is-active .masonry-item__overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .masonry-item__tag {
+    align-self: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .masonry-item__title {
+    text-align: center !important;
+  }
+
+  .masonry-item__actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    margin-inline: auto !important;
+  }
+
+  .masonry-item__actions .btn,
+  .masonry-item__actions a,
+  .masonry-item__actions button {
+    flex: 1 1 0 !important;
+    width: 50% !important;
+    min-width: 120px !important;
+    max-width: 140px !important;
+    min-height: 44px !important;
+    height: 44px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 0 0.5rem !important;
+  }
+
+  /* Overlapping Banner */
+  .overlap-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .overlap-banner__card {
+    margin-inline-start: 0 !important;
+    margin-top: -30px !important;
+    padding: 1.5rem !important;
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .overlap-banner__card h2,
+  .overlap-banner__card p {
+    text-align: center !important;
+  }
+
+  .overlap-banner__card .btn {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  /* Sticky Storytelling */
+  .sticky-story {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+
+  .sticky-story__visual {
+    display: none !important;
+  }
+
+  .story-chapter {
+    min-height: auto !important;
+    padding-block: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .story-chapter h2,
+  .story-chapter h3,
+  .story-chapter p {
+    text-align: center !important;
+  }
+
+  .story-chapter .btn,
+  .story-chapter .btn-link {
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  .story-chapter__mobile-img {
+    display: block !important;
+  }
+
+  /* Expanding Lifestyle Panels */
+  .lifestyle-panels {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .lifestyle-panel {
+    min-height: 220px !important;
+    flex: none !important;
+  }
+
+  .lifestyle-panel__content {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .lifestyle-panel__title {
+    text-align: center !important;
+  }
+
+  .lifestyle-panel__desc {
+    opacity: 1 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    text-align: center !important;
+  }
+
+  /* Sanitaryware Lookbook & About Showroom Experience */
+  .bath-lookbook,
+  .showroom-exp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .bath-lookbook__item,
+  .showroom-exp-grid .bath-lookbook__item {
+    grid-column: auto !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bath-lookbook__item h3,
+  .bath-lookbook__item p,
+  .showroom-exp-grid .bath-lookbook__item .lux-card__code {
+    text-align: center !important;
+  }
+
+  /* Finish Guide & Sector */
+  .finish-tabs__nav {
+    justify-content: center !important;
+  }
+
+  .finish-panel {
+    grid-template-columns: 1fr !important;
+    padding: 1.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .finish-panel h3,
+  .finish-panel p {
+    text-align: center !important;
+  }
+
+  .finish-specs {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin-inline: auto !important;
+    margin-top: 1.25rem !important;
+    padding-top: 1rem !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    gap: 0.75rem !important;
+  }
+
+  .finish-specs > div {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .finish-specs strong {
+    color: var(--text-primary) !important;
+    margin-inline-end: 0.25rem !important;
+  }
+
+  .sector-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .sector-row-btn {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .sector-preview__body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     10. PRODUCTS & VISUALIZER PAGES (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .filter-toolbar__grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .filter-toolbar__footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .filter-toolbar__footer .btn {
+    margin-inline: auto !important;
+  }
+
+  .pill-rail {
+    justify-content: center !important;
+  }
+
+  .spec-modal__drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1rem !important;
+    text-align: center !important;
+  }
+
+  .spec-table th,
+  .spec-table td {
+    text-align: center !important;
+  }
+
+  .compare-bar__inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .compare-bar__inner .btn {
+    margin-inline: auto !important;
+  }
+
+  .compare-modal__box {
+    padding: 1.25rem 1rem !important;
+    text-align: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     11. CONTACT & SHOWROOM MAP (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .showroom-map-container {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+  }
+
+  .showroom-map-frame {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .showroom-map-card {
+    position: static !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    padding: 1.5rem 1.25rem !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .showroom-map-card h3,
+  .showroom-map-card p {
+    text-align: center !important;
+  }
+
+  /* Contact Quote Request & Universal Forms (Mobile: Full-Width, Centered, Contained) */
+  .form-grid,
+  .form-grid--2 {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .form-field,
+  .form-field--full {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .form-label {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0.4rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.12em !important;
+    color: var(--text-primary) !important;
+  }
+
+  .form-control,
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    text-align: center !important;
+    text-align-last: center !important;
+    -moz-text-align-last: center !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    border-radius: var(--radius-xs) !important;
+  }
+
+  select.form-control {
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    padding-inline: 1rem !important;
+  }
+
+  textarea.form-control {
+    min-height: 110px !important;
+    text-align: center !important;
+  }
+
+  .quote-form-card,
+  #quote-form > .container > div[style*="max-width: 920px"] {
+    padding: 1.5rem 1rem !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+  }
+
+  .form-submit-row,
+  #quote-form form > div[style*="justify-content: space-between"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .form-submit-row p,
+  #quote-form form > div[style*="justify-content: space-between"] p {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .form-submit-row .btn,
+  #quote-form form > div[style*="justify-content: space-between"] .btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 48px !important;
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     12. FOOTER & FLOATING STACK (MOBILE CENTER-ALIGNED)
+     ------------------------------------------------------------------------ */
+  .site-footer {
+    padding-top: 2.75rem !important;
+    text-align: center !important;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding-bottom: 2rem !important;
+    text-align: center !important;
+  }
+
+  .site-footer__grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-heading {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-links {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-links li {
+    text-align: center !important;
+  }
+
+  .footer-socials {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .footer-map-box {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+  }
+
+  .site-footer__bottom p {
+    text-align: center !important;
+  }
+
+  /* Mobile Sticky Micro-Bar: removed in mobile view as requested */
+  .mobile-visit-bar {
+    display: none !important;
+  }
+
+  /* Floating WhatsApp Stack sits comfortably near bottom */
+  .floating-stack {
+    bottom: var(--space-4) !important;
+  }
+
+  /* Custom cursor is disabled on mobile touch devices */
+  .custom-cursor {
+    display: none !important;
+  }
+}
+

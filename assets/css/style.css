@@ -1,7 +1,17 @@
 /* ==========================================================================
    AURELIA SURFACES — Premium Tiles & Sanitaryware Showroom
-   Main Stylesheet (assets/css/style.css)
-   Architecture: Mobile-First · 8px Spacing Scale · Logical Properties · WCAG AA
+   Base Stylesheet (assets/css/style.css)
+   ==========================================================================
+   CRITICAL VIEWPORT CODE SEPARATION ARCHITECTURE:
+   To ensure changes made to a particular device view ONLY affect that view
+   and NEVER affect other views, code is strictly separated into dedicated files:
+   
+   1. MOBILE VIEW (< 768px):          assets/css/mobile.css
+   2. TABLET / TAB VIEW (768-1023px): assets/css/tablet.css
+   3. 1024+ DESKTOP VIEW (>= 1024px): assets/css/desktop-1024.css
+   
+   This base stylesheet (style.css) provides only viewport-independent design
+   tokens, resets, color themes, accessible primitives, and core utilities.
    ========================================================================== */
 
 @import url('./fonts.css');
@@ -237,13 +247,11 @@ em.editorial-italic {
   padding-inline: var(--space-3);
 }
 
-@media (min-width: 640px) {
-  .container { padding-inline: var(--space-5); }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1280px) {
-  .container { padding-inline: var(--space-6); }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1280px) */
+
 
 .container--narrow {
   max-width: var(--container-narrow);
@@ -254,11 +262,8 @@ em.editorial-italic {
   position: relative;
 }
 
-@media (min-width: 1024px) {
-  .section {
-    padding-block: var(--space-12);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .section--stone {
   background-color: var(--bg-secondary-soft);
@@ -316,16 +321,8 @@ em.editorial-italic {
   margin-bottom: var(--space-6);
 }
 
-@media (min-width: 768px) {
-  .section-header--split {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  .section-header--split .section-header__main {
-    max-width: 640px;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 768px) */
+
 
 .eyebrow {
   display: inline-flex;
@@ -621,14 +618,11 @@ em.editorial-italic {
   color: var(--accent);
 }
 
-@media (min-width: 900px) {
-  .announcement-bar__sep { display: inline; }
-  .announcement-bar__hide-mobile { display: inline; }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 900px) */
 
-@media (max-width: 899px) {
-  .announcement-bar__hide-mobile { display: none; }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (max-width: 899px) */
+
 
 .announcement-bar__close {
   color: var(--text-on-dark-muted);
@@ -759,13 +753,8 @@ em.editorial-italic {
   display: none;
 }
 
-@media (min-width: 1140px) {
-  .main-nav {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1140px) */
+
 
 .nav-item {
   position: relative;
@@ -867,6 +856,12 @@ em.editorial-italic {
   gap: 6px;
 }
 
+.header-actions__tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .icon-btn {
   width: 44px;
   height: 44px;
@@ -900,11 +895,8 @@ em.editorial-italic {
   margin-inline-start: var(--space-1);
 }
 
-@media (min-width: 1140px) {
-  .header-ctas {
-    display: flex;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1140px) */
+
 
 /* Mobile Menu Hamburger */
 .hamburger-btn {
@@ -917,11 +909,8 @@ em.editorial-italic {
   gap: 6px;
 }
 
-@media (min-width: 1140px) {
-  .hamburger-btn {
-    display: none;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1140px) */
+
 
 .hamburger-btn span {
   display: block;
@@ -989,11 +978,8 @@ em.editorial-italic {
   margin-top: var(--space-5);
 }
 
-@media (min-width: 480px) {
-  .mobile-nav__ctas {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 480px) */
+
 
 .mobile-nav__meta {
   margin-top: var(--space-5);
@@ -1134,26 +1120,11 @@ em.editorial-italic {
   align-self: stretch;
 }
 
-@media (min-width: 640px) {
-  .card-grid > * {
-    width: calc((100% - var(--space-4)) / 2);
-    flex: 0 0 calc((100% - var(--space-4)) / 2);
-    max-width: calc((100% - var(--space-4)) / 2);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1024px) {
-  .card-grid--3 > * {
-    width: calc((100% - (2 * var(--space-4))) / 3);
-    flex: 0 0 calc((100% - (2 * var(--space-4))) / 3);
-    max-width: calc((100% - (2 * var(--space-4))) / 3);
-  }
-  .card-grid--4 > * {
-    width: calc((100% - (3 * var(--space-4))) / 4);
-    flex: 0 0 calc((100% - (3 * var(--space-4))) / 4);
-    max-width: calc((100% - (3 * var(--space-4))) / 4);
-  }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 /* Ensure full-width notification / empty-state banners span completely */
 .card-grid > [style*="grid-column"],
@@ -1380,29 +1351,11 @@ em.editorial-italic {
   gap: clamp(0.75rem, 1.4vw, 1.15rem);
 }
 
-@media (min-width: 640px) and (max-width: 1023px) {
-  .card-grid--5 > * {
-    width: calc((100% - clamp(0.75rem, 1.4vw, 1.15rem)) / 2);
-    flex: 0 0 calc((100% - clamp(0.75rem, 1.4vw, 1.15rem)) / 2);
-    max-width: calc((100% - clamp(0.75rem, 1.4vw, 1.15rem)) / 2);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) and (max-width: 1023px) */
 
-@media (min-width: 1024px) {
-  .card-grid--5 {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: clamp(0.75rem, 1.4vw, 1.15rem);
-    align-items: stretch !important;
-  }
 
-  .card-grid--5 > * {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: none !important;
-    height: 100% !important;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .lux-card--contact {
   padding: 0;
@@ -1545,26 +1498,8 @@ em.editorial-italic {
   line-height: 1.55;
 }
 
-@media (max-width: 768px) {
-  .showroom-map-container {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-  }
-  .showroom-map-frame {
-    height: 350px;
-    min-height: 350px;
-  }
-  .showroom-map-card {
-    position: static;
-    max-width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    box-shadow: none;
-    padding: 1.5rem 1.25rem;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (max-width: 768px) */
+
 
 /* --------------------------------------------------------------------------
    9. HOME 1 HERO — SPLIT-SCREEN SHOWROOM MOSAIC & CAROUSEL
@@ -1574,11 +1509,8 @@ em.editorial-italic {
   border-bottom: 1px solid var(--border-subtle);
 }
 
-@media (min-width: 1024px) {
-  .hero-home1 {
-    padding-block: var(--space-8) var(--space-10);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .hero-home1__grid {
   display: grid;
@@ -1587,12 +1519,8 @@ em.editorial-italic {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
-  .hero-home1__grid {
-    grid-template-columns: 1.05fr 1.15fr;
-    gap: var(--space-8);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .hero-home1__title {
   font-size: var(--text-display);
@@ -1770,13 +1698,8 @@ em.editorial-italic {
   gap: var(--space-4);
 }
 
-@media (min-width: 900px) {
-  .hero-home2__bottom {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 900px) */
+
 
 .hero-home2__lead {
   color: rgba(245, 240, 232, 0.88);
@@ -1799,11 +1722,8 @@ em.editorial-italic {
   overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-  .page-hero {
-    padding-block: var(--space-12) var(--space-10);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .page-hero__bg {
   position: absolute;
@@ -1938,13 +1858,11 @@ em.editorial-italic {
   cursor: grabbing;
 }
 
-@media (min-width: 640px) {
-  .rail-track { grid-auto-columns: 58%; }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1024px) {
-  .rail-track { grid-auto-columns: 40%; }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .rail-slide {
   scroll-snap-align: start;
@@ -1992,18 +1910,8 @@ em.editorial-italic {
   align-items: center;
 }
 
-@media (min-width: 960px) {
-  .editorial-split {
-    grid-template-columns: 1.18fr 0.82fr;
-    gap: var(--space-8);
-  }
-  .editorial-split--reverse {
-    grid-template-columns: 0.82fr 1.18fr;
-  }
-  .editorial-split--reverse .editorial-split__media {
-    order: 2;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .editorial-split__media {
   position: relative;
@@ -2069,12 +1977,8 @@ em.editorial-italic {
   border-bottom-color: var(--border-subtle);
 }
 
-@media (min-width: 820px) {
-  .ledger-row {
-    grid-template-columns: 90px 1fr 1.25fr;
-    gap: var(--space-5);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 820px) */
+
 
 .ledger-row:hover {
   padding-inline-start: var(--space-2);
@@ -2090,11 +1994,8 @@ em.editorial-italic {
   grid-column: 2 / -1;
 }
 
-@media (min-width: 820px) {
-  .ledger-row__desc {
-    grid-column: auto;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 820px) */
+
 
 /* Stat Counters Row */
 .stats-band {
@@ -2106,11 +2007,8 @@ em.editorial-italic {
   border-top: 1px solid var(--border-on-dark);
 }
 
-@media (min-width: 768px) {
-  .stats-band {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 768px) */
+
 
 .stat-item__value {
   font-family: var(--font-serif);
@@ -2132,11 +2030,8 @@ em.editorial-italic {
   align-items: center;
 }
 
-@media (min-width: 960px) {
-  .swatch-showcase {
-    grid-template-columns: 0.95fr 1.05fr;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .swatch-list {
   display: flex;
@@ -2213,13 +2108,11 @@ em.editorial-italic {
   column-gap: var(--space-4);
 }
 
-@media (min-width: 640px) {
-  .masonry-grid { columns: 2; }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1024px) {
-  .masonry-grid { columns: 3; }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .masonry-item {
   break-inside: avoid;
@@ -2265,18 +2158,6 @@ em.editorial-italic {
 .masonry-item:hover .masonry-item__overlay,
 .masonry-item:focus-within .masonry-item__overlay {
   opacity: 1;
-}
-
-@media (hover: none) {
-  .masonry-item__overlay {
-    opacity: 1;
-    background: linear-gradient(
-      to top,
-      rgba(14, 12, 10, 0.94) 0%,
-      rgba(14, 12, 10, 0.78) 50%,
-      transparent 100%
-    );
-  }
 }
 
 .masonry-item__tag {
@@ -2538,12 +2419,8 @@ em.editorial-italic {
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 960px) {
-  .overlap-banner {
-    grid-template-columns: 1.35fr 0.85fr;
-    align-items: center;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .overlap-banner__media img {
   width: 100%;
@@ -2559,14 +2436,8 @@ em.editorial-italic {
   box-shadow: var(--shadow-elevated);
 }
 
-@media (min-width: 960px) {
-  .overlap-banner__card {
-    margin-inline-start: -96px;
-    padding: var(--space-6);
-    position: relative;
-    z-index: 2;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 /* I. Home 2 Sticky-Image Storytelling (Signature Collections) */
 .sticky-story {
@@ -2575,28 +2446,15 @@ em.editorial-italic {
   gap: var(--space-6);
 }
 
-@media (min-width: 960px) {
-  .sticky-story {
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: var(--space-8);
-    align-items: start;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .sticky-story__visual {
   display: none;
 }
 
-@media (min-width: 960px) {
-  .sticky-story__visual {
-    display: block;
-    position: sticky;
-    top: calc(var(--header-height) + 32px);
-    aspect-ratio: 6 / 5;
-    overflow: hidden;
-    border: 1px solid var(--border-strong);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .sticky-story__frame {
   position: absolute;
@@ -2620,17 +2478,8 @@ em.editorial-italic {
   border-bottom: 1px solid var(--border-subtle);
 }
 
-@media (min-width: 960px) {
-  .story-chapter {
-    min-height: 62vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .story-chapter__mobile-img {
-    display: none;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .story-chapter__mobile-img {
   margin-bottom: var(--space-3);
@@ -2644,12 +2493,8 @@ em.editorial-italic {
   gap: var(--space-2);
 }
 
-@media (min-width: 960px) {
-  .lifestyle-panels {
-    flex-direction: row;
-    height: 540px;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .lifestyle-panel {
   position: relative;
@@ -2661,13 +2506,8 @@ em.editorial-italic {
   transition: flex 0.6s var(--ease-out-expo);
 }
 
-@media (min-width: 960px) {
-  .lifestyle-panel.is-active,
-  .lifestyle-panel:hover,
-  .lifestyle-panel:focus-within {
-    flex: 2.8;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .lifestyle-panel img {
   position: absolute;
@@ -2708,13 +2548,8 @@ em.editorial-italic {
   max-width: 38ch;
 }
 
-@media (min-width: 960px) {
-  .lifestyle-panel:not(.is-active):not(:hover):not(:focus-within) .lifestyle-panel__desc {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 /* K. Home 2 Sanitaryware Staggered 5-Piece Lookbook Mosaic */
 .bath-lookbook {
@@ -2723,16 +2558,8 @@ em.editorial-italic {
   gap: var(--space-4);
 }
 
-@media (min-width: 768px) {
-  .bath-lookbook {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .bath-lookbook__item:nth-child(1) { grid-column: span 3; }
-  .bath-lookbook__item:nth-child(2) { grid-column: span 3; }
-  .bath-lookbook__item:nth-child(3) { grid-column: span 2; }
-  .bath-lookbook__item:nth-child(4) { grid-column: span 2; }
-  .bath-lookbook__item:nth-child(5) { grid-column: span 2; }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 768px) */
+
 
 .bath-lookbook__item {
   display: flex;
@@ -2754,6 +2581,27 @@ em.editorial-italic {
 
 .bath-lookbook__item:hover .bath-lookbook__media img {
   transform: scale(1.05);
+}
+
+/* About Page Showroom Experience 3-Card Grid */
+.showroom-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.showroom-exp-grid .bath-lookbook__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.showroom-exp-grid .bath-lookbook__item h3,
+.showroom-exp-grid .bath-lookbook__item p,
+.showroom-exp-grid .bath-lookbook__item .lux-card__code {
+  text-align: center;
+  margin-inline: auto;
 }
 
 /* L. Interactive Before & After Renovation Slider */
@@ -2905,12 +2753,8 @@ em.editorial-italic {
   padding: var(--space-4);
 }
 
-@media (min-width: 900px) {
-  .finish-panel {
-    grid-template-columns: 1.1fr 0.9fr;
-    padding: var(--space-5);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 900px) */
+
 
 .finish-panel.is-active {
   display: grid;
@@ -2934,11 +2778,8 @@ em.editorial-italic {
   align-items: center;
 }
 
-@media (min-width: 960px) {
-  .sector-showcase {
-    grid-template-columns: 1fr 1.05fr;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 960px) */
+
 
 .sector-row-btn {
   width: 100%;
@@ -3042,17 +2883,11 @@ em.editorial-italic {
   gap: var(--space-3);
 }
 
-@media (min-width: 640px) {
-  .filter-toolbar__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1024px) {
-  .filter-toolbar__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1024px) */
+
 
 .filter-toolbar__footer {
   display: flex;
@@ -3246,22 +3081,23 @@ em.editorial-italic {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
-}
-
-@media (min-width: 640px) {
-  .form-grid--2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  width: 100%;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-field--full {
   grid-column: 1 / -1;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-label {
@@ -3277,6 +3113,10 @@ em.editorial-italic {
 }
 
 .form-control {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   min-height: 48px;
   padding: 11px 14px;
   background-color: var(--bg-primary);
@@ -3284,6 +3124,12 @@ em.editorial-italic {
   border-radius: var(--radius-xs);
   color: var(--text-primary);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select.form-control {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 textarea.form-control {
@@ -3431,17 +3277,11 @@ textarea.form-control {
   border-bottom: 1px solid var(--border-on-dark);
 }
 
-@media (min-width: 640px) {
-  .site-footer__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
 
-@media (min-width: 1080px) {
-  .site-footer__grid {
-    grid-template-columns: 1.35fr 0.85fr 1fr 1.2fr;
-  }
-}
+
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 1080px) */
+
 
 .footer-heading {
   font-family: var(--font-sans);
@@ -3570,11 +3410,8 @@ textarea.form-control {
   gap: 12px;
 }
 
-@media (max-width: 639px) {
-  .floating-stack {
-    bottom: 74px; /* Clears mobile sticky Book Visit micro-bar */
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (max-width: 639px) */
+
 
 .whatsapp-float {
   width: 52px;
@@ -3626,23 +3463,20 @@ textarea.form-control {
   transform: rotate(-90deg);
 }
 
-/* Mobile Sticky "Book a Showroom Visit" Micro-Bar */
+/* Mobile Sticky "Book a Showroom Visit" Micro-Bar (Hidden) */
 .mobile-visit-bar {
+  display: none !important;
   position: fixed;
   bottom: 0;
   inset-inline: 0;
   z-index: 875;
-  display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--bg-dark);
   border-top: 1px solid var(--accent);
 }
 
-@media (min-width: 640px) {
-  .mobile-visit-bar {
-    display: none;
-  }
-}
+/* [Separated into mobile.css / tablet.css / desktop-1024.css]: @media (min-width: 640px) */
+
 
 .mobile-visit-bar a {
   min-height: 52px;

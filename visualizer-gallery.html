@@ -21,9 +21,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
 
+  <!-- Core & Theme Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- View-Specific Stylesheets (Separated Codes for Mobile, Tab, and 1024 Views) -->
+  <link rel="stylesheet" href="assets/css/mobile.css" media="(max-width: 767.98px)" />
+  <link rel="stylesheet" href="assets/css/tablet.css" media="(min-width: 768px) and (max-width: 1023.98px)" />
+  <link rel="stylesheet" href="assets/css/desktop-1024.css" media="(min-width: 1024px)" />
 
   <script type="application/ld+json">
   {
@@ -73,9 +79,11 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
-        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        <div class="header-actions__tools">
+          <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+        </div>
         <div class="header-ctas">
           <a href="products.html" class="btn btn--primary btn--sm">Shop Collection</a>
         </div>
@@ -88,13 +96,18 @@
 
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
     <nav aria-label="Mobile Navigation">
+      <div class="mobile-nav__actions">
+        <button type="button" class="icon-btn js-open-search" aria-label="Search products"><i data-lucide="search" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-theme-toggle" aria-label="Toggle colour theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button type="button" class="icon-btn js-rtl-toggle" aria-label="Switch layout direction">RTL</button>
+      </div>
       <ul class="mobile-nav__list">
-        <li><a href="index.html">Home 01 — Showroom Experience <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="home-2.html">Home 02 — Architectural Editorial <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="about.html">About <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="products.html">Products Catalogue <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="visualizer-gallery.html" class="is-active">Gallery <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
-        <li><a href="contact.html">Contact <i data-lucide="arrow-right" aria-hidden="true"></i></a></li>
+        <li><a href="index.html">Home 1</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="visualizer-gallery.html" class="is-active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="mobile-nav__ctas">
         <a href="products.html" class="btn btn--primary">Shop Collection</a>
