@@ -551,12 +551,5 @@
   .mobile-visit-bar {
     display: none !important;
   }
-
-  /* Custom Cursor for pointer fine desktop */
-  @media (hover: hover) and (pointer: fine) {
-    .custom-cursor {
-      display: flex !important;
-    }
-  }
 }
 

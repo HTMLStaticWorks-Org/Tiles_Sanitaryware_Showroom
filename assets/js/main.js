@@ -305,23 +305,10 @@
   window.initAureliaTilt = initAureliaTilt;
 
   /**
-   * 8. Desktop Custom Cursor & Subtle Magnetic Primary Buttons
+   * 8. Subtle Magnetic Primary Buttons
    */
-  function initCursorAndMagnetic() {
+  function initMagneticButtons() {
     if (prefersReducedMotion() || isTouchOrCoarse()) return;
-
-    const cursor = document.querySelector('.custom-cursor');
-    if (cursor) {
-      window.addEventListener('mousemove', (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-      }, { passive: true });
-
-      document.addEventListener('mouseover', (e) => {
-        const hoverTarget = e.target.closest('a, button, .lux-card, .masonry-item, .lifestyle-panel');
-        cursor.classList.toggle('is-expanded', Boolean(hoverTarget));
-      });
-    }
 
     document.querySelectorAll('.btn--primary').forEach((btn) => {
       btn.addEventListener('mousemove', (e) => {
@@ -754,7 +741,7 @@
     initLiveSearch();
     initScrollProgressAndTop();
     initAureliaTilt(document);
-    initCursorAndMagnetic();
+    initMagneticButtons();
     initRevealsAndCounters();
     initHome1Widgets();
     initHome2Widgets();

@@ -487,7 +487,7 @@ em.editorial-italic {
 }
 
 /* --------------------------------------------------------------------------
-   5. PAGE LOADER, SCROLL PROGRESS & CUSTOM CURSOR
+   5. PAGE LOADER & SCROLL PROGRESS
    -------------------------------------------------------------------------- */
 .scroll-progress {
   position: fixed;
@@ -539,38 +539,9 @@ em.editorial-italic {
   color: var(--text-on-dark);
 }
 
-/* Custom Cursor (Desktop Pointer Devices Only) */
+/* Custom Cursor (Removed to avoid obscuring content) */
 .custom-cursor {
-  display: none;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .custom-cursor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: width 0.25s var(--ease-out-expo), height 0.25s var(--ease-out-expo), background-color 0.25s;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #FAF7F2;
-  }
-  .custom-cursor.is-expanded {
-    width: 64px;
-    height: 64px;
-    background-color: rgba(166, 124, 82, 0.88);
-    border-color: transparent;
-  }
+  display: none !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -3187,6 +3158,67 @@ textarea.form-control {
   left: -9999px;
   opacity: 0;
   pointer-events: none;
+}
+
+/* Contact Page Social Icons Bar (Centered Gap Placement) */
+.contact-social-bar {
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.contact-social-bar__title {
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-social-bar__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-social-bar__icons a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-strong);
+  background-color: var(--bg-elevated);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  border-radius: 4px;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.contact-social-bar__icons a svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+
+.contact-social-bar__icons a svg.lucide {
+  fill: none;
+  stroke: currentColor;
+}
+
+.contact-social-bar__icons a:hover {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  color: #141210;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(166, 124, 82, 0.28);
 }
 
 /* Accessible WAI-ARIA Accordion */

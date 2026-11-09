@@ -816,8 +816,40 @@
   }
 
   .swatch-btn {
-    justify-content: center !important;
-    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: start !important;
+    gap: 1rem !important;
+    padding: 0.85rem 1rem !important;
+    width: 100% !important;
+  }
+
+  .swatch-chip {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .swatch-btn > div {
+    flex: 1 !important;
+    text-align: start !important;
+    min-width: 0 !important;
+  }
+
+  .swatch-btn strong {
+    display: block !important;
+    text-align: start !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .swatch-btn p {
+    text-align: start !important;
+    margin: 0 !important;
+    line-height: 1.35 !important;
   }
 
   .swatch-collage {
